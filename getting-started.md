@@ -187,13 +187,13 @@ Here are some more in-depth sections covering various aspects of FusionJS:
 
 #### Core concepts
 
-* [Universal code](https://github.com/fusionjs/fusion-core/blob/master/docs/guides/universal-code.md)
-* [Creating a plugin](https://github.com/fusionjs/fusion-core/blob/master/docs/guides/creating-a-plugin.md)
-  * [Dependencies](https://github.com/fusionjs/fusion-core/blob/master/docs/guides/dependencies.md)
-  * [Creating endpoints](https://github.com/fusionjs/fusion-core/blob/master/docs/guides/creating-endpoints.md)
-  * [Creating providers](https://github.com/fusionjs/fusion-core/blob/master/docs/guides/creating-providers.md)
-  * [Modifying the HTML template](https://github.com/fusionjs/fusion-core/blob/master/docs/guides/modifying-html-template.md)
-  * [Working with secrets](https://github.com/fusionjs/fusion-core/blob/master/docs/guides/working-with-secrets.md)
+* [Universal code](/universal-code.md)
+* [Creating a plugin](/creating-a-plugin.md)
+  * [Dependencies](/dependencies.md)
+  * [Creating endpoints](/creating-endpoints.md)
+  * [Creating providers](/creating-providers.md)
+  * [Modifying the HTML template](/modifying-html-template.md)
+  * [Working with secrets](/working-with-secrets.md)
 
 #### Plugins
 

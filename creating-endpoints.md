@@ -4,7 +4,7 @@ FusionJS provides an [RPC plugin](https://github.com/fusionjs/fusion-plugin-rpc-
 
 Here we will implement an HTTP endpoint manually to better understand how FusionJS middlewares work.
 
-The simplest way to write a FusionJS plugin is a [middleware plugin](https://github.com/fusionjs/fusion-core/blob/master/docs/guides/creating-a-plugin.md#middlewares):
+The simplest way to write a FusionJS plugin is a [middleware plugin](/creating-a-plugin.md#middlewares):
 
 ```js
 // src/plugins/example.js
@@ -39,7 +39,7 @@ export default createPlugin({
 });
 ```
 
-There's one issue left with the code above: FusionJS code runs isomorphically by default, but we only want to run that code in the server. To do so, add a [code fence](https://github.com/fusionjs/fusion-core/blob/master/docs/guides/universal-code.md):
+There's one issue left with the code above: FusionJS code runs isomorphically by default, but we only want to run that code in the server. To do so, add a [code fence](/universal-code.md):
 
 ```js
 // src/plugins/example.js

@@ -23,4 +23,4 @@ If you want to know how FusionJS compares to similar projects, see the [framewor
 
 ### Next steps
 
-* [Getting started](/getting-started.md)
+* [Getting started](getting-started.md)

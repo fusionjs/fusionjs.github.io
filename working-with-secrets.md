@@ -21,7 +21,7 @@ export default () => {
 };
 ```
 
-Remember that typically we should only expose secrets in the server. In the example above, the `__NODE__ && process.env.SESSION_SECRET` expression [gets removed from the browser bundle](/universal-code.md) via UglifyJS' dead code elimination.
+Remember that typically we should only expose secrets in the server. In the example above, the `__NODE__ && process.env.SESSION_SECRET` expression [gets removed from the browser bundle](universal-code) via UglifyJS' dead code elimination.
 
 # Secret rotation
 

@@ -187,13 +187,13 @@ Here are some more in-depth sections covering various aspects of Fusion.js:
 
 #### Core concepts
 
-* [Universal code](universal-code)
-* [Creating a plugin](creating-a-plugin)
-  * [Dependencies](dependencies)
-  * [Creating endpoints](creating-endpoints)
-  * [Creating providers](creating-providers)
-  * [Modifying the HTML template](modifying-html-template)
-  * [Working with secrets](working-with-secrets)
+* [Universal code](universal-code.md)
+* [Creating a plugin](creating-a-plugin.md)
+  * [Dependencies](dependencies.md)
+  * [Creating endpoints](creating-endpoints.md)
+  * [Creating providers](creating-providers.md)
+  * [Modifying the HTML template](modifying-html-template.md)
+  * [Working with secrets](working-with-secrets.md)
 
 #### Plugins
 

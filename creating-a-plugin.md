@@ -136,7 +136,8 @@ Plugins can provide a programmatic interface and be registered as dependencies f
 
 ```js
 // src/plugins/example.js
-import {createToken, LoggerToken} from 'fusion-tokens';
+import {LoggerToken} from 'fusion-tokens';
+import {createToken} from 'fusion-core';
 
 export const ExampleToken = createToken('ExampleToken');
 
@@ -161,7 +162,8 @@ We can expand the `Example` plugin above to consume the logger that we registere
 
 ```js
 // src/plugins/example.js
-import {createToken, LoggerToken} from 'fusion-tokens';
+import {LoggerToken} from 'fusion-tokens';
+import {createToken} from 'fusion-core';
 
 export const ExampleToken = createToken('ExampleToken');
 
@@ -181,7 +183,7 @@ Similarly, if we wanted to log `"hello world"`, we can create another plugin tha
 
 ```js
 // src/plugins/foo.js
-import {createToken} from 'fusion-tokens';
+import {createToken} from 'fusion-core';
 import {ExampleToken} from '';
 
 export const ExampleToken = createToken('ExampleToken');
@@ -265,7 +267,8 @@ The `middleware` method also receives the return value of `provides` as its seco
 
 ```js
 // src/plugins/example.js
-import {createToken, LoggerToken} from 'fusion-tokens';
+import {LoggerToken} from 'fusion-tokens';
+import {createToken} from 'fusion-core';
 
 export const ExampleToken = createToken('ExampleToken');
 
@@ -304,8 +307,7 @@ export default () => {
 };
 
 // src/plugins/some-plugin.js
-import {createPlugin} from 'fusion-core';
-import {createToken} from 'fusion-tokens';
+import {createPlugin, createToken} from 'fusion-core';
 
 export const ConfigToken = createToken('ConfigToken');
 export default createPlugin({

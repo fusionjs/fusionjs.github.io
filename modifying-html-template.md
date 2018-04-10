@@ -16,19 +16,19 @@ ctx.template = {
 To modify the title, use:
 
 ```js
-export default () => (ctx, next) => {
+app.middleware((ctx, next) => {
   ctx.template.title = 'the new title';
   return next();
-};
+});
 ```
 
 Similarly, to add attributes to the `<html>` tag, use:
 
 ```js
-export default () => (ctx, next) => {
+app.middleware((ctx, next) => {
   ctx.template.htmlAttrs.lang = 'en-US';
   return next();
-};
+});
 ```
 
 To add arbitrary HTML to `<head>` and `<body>`, however, you must sanitize the HTML to ensure that there's no risk of an XSS attack from unsanitized user data.
@@ -38,12 +38,12 @@ To sanitize HTML, use the `html` template tag:
 ```js
 import {html} from 'fusion-core';
 
-export default () => (ctx, next) => {
+app.middleware((ctx, next) => {
   ctx.template.head.push(
     html`<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />`
   );
   return next();
-};
+});
 ```
 
 The `html` template tag sanitizes template string interpolations and return a _safe_ string.
@@ -67,7 +67,7 @@ On the browser, we use `unescape` to get the original data.
 ```js
 import {html, unescape} from 'fusion-core';
 
-export default () => (ctx, next) => {
+app.middleware((ctx, next) => {
   if (__NODE__) {
     const data = {
       /* some data */
@@ -81,5 +81,5 @@ export default () => (ctx, next) => {
     );
   }
   return next();
-};
+});
 ```

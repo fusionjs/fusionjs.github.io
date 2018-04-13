@@ -2,7 +2,7 @@
 
 Fusion.js is a web application framework developed by Uber. Because Uber operates on a large scale in countries with slow mobile networks, performance is a big driving factor for Fusion.js.
 
-It has a modular architecture in order to promote small bundle sizes, and it is designed in such a way that performance milestones in Fusion.js' development pipeline can be rolled out to consumers of the framework via version bumps, as opposed to requiring big migrations or entirely offloading that work to app developers.
+Fusion.js has a modular architecture to promote small bundle sizes, and is designed in such a way that performance milestones in its development pipeline can be rolled out to consumers via version bumps, as opposed to requiring big migrations or entirely offloading that work to app developers.
 
 Here are the features you'll find in Fusion.js:
 
@@ -14,7 +14,7 @@ Here are the features you'll find in Fusion.js:
 * server-side development via Koa.js
 * plugin-based architecture (so you only include what you need in your browser bundles)
 * a curated set of plugins for data fetching, styling, etc maintained by the Fusion.js team
-* plugins for error logging, security, etc
+* plugins for error logging, security, etc.
 * bundle analysis tooling
 
 If you want to know how Fusion.js compares to similar projects, see the [framework comparison page](framework-comparison.md).

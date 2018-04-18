@@ -2,9 +2,9 @@
 
 ### Set up Fusion.js packages
 
-Fusion.js let's you customize virtually all aspects of an application. In this example, we'll see how to setup a React-based application.
+Fusion.js lets you customize virtually all aspects of an application. In this example, we'll see how to set up a React-based application.
 
-First, let's install packages we'll need:
+First, let's install the packages we'll need:
 
 ```sh
 yarn add fusion-core fusion-cli fusion-react fusion-react-async react react-dom
@@ -40,7 +40,7 @@ The `App` class constructor takes a React element. This is the root element of t
 new App(<div>Hello world</div>);
 ```
 
-Now that we configured our application, we just need to export a function that returns it:
+Now that we've configured our application, we just need to export a function that returns it:
 
 ```js
 // src/main.js

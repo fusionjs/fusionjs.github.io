@@ -1,2 +1,27 @@
 theme: jekyll-theme-slate
 title: FusionJS Documentation
+main_nav:
+  - page: What is Fusion.js
+    url: /
+    children:
+      - page: 'Framework comparison'
+        url: '/framework-comparison'
+      - page: 'Getting started'
+        url: '/getting-started'
+      - page: 'Universal code'
+        url: '/universal-code'
+      - page: 'Creating a plugin'
+        url: '/creating-a-plugin'
+        children:
+          - page: 'Dependencies'
+            url: '/dependencies'
+          - page: 'Creating endpoints'
+            url: '/creating-endpoints'
+          - page: 'Creating providers'
+            url: '/creating-providers'
+          - page: 'Modifying the HTML template'
+            url: '/modifying-html-template'
+          - page: 'Working with secrets'
+            url: '/working-with-secrets'
+      - page: 'Virtual modules'
+        url: '/virtual-modules'

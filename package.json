@@ -1,0 +1,11 @@
+{
+  "name": "fusion-docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:fusionjs/fusionjs.github.io.git",
+  "author": "Kevin Grandon <kevingrandon@yahoo.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "bundle install && bundle exec jekyll serve"
+  }
+}

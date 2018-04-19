@@ -1,26 +1,33 @@
-# What is Fusion.js
+# Fusion.js Documentation
 
-Fusion.js is a web application framework developed by Uber. Because Uber operates on a large scale in countries with slow mobile networks, performance is a big driving factor for Fusion.js.
+## Contribute
 
-Fusion.js has a modular architecture to promote small bundle sizes, and is designed in such a way that performance milestones in its development pipeline can be rolled out to consumers via version bumps, as opposed to requiring big migrations or entirely offloading that work to app developers.
+Install the dependencies:
 
-Here are the features you'll find in Fusion.js:
+`yarn install`
 
-* server side rendering and async rendering
-* ES2017 and JSX support out of the box
-* hot module reloading in development mode
-* bundle splitting
-* universal rendering (run the same code in the server and the browser)
-* server-side development via Koa.js
-* plugin-based architecture (so you only include what you need in your browser bundles)
-* a curated set of plugins for data fetching, styling, etc maintained by the Fusion.js team
-* plugins for error logging, security, etc.
-* bundle analysis tooling
+Bootstrap:
 
-If you want to know how Fusion.js compares to similar projects, see the [framework comparison page](framework-comparison.md).
+`yarn boostrap`
 
----
+It clones all the documentation.
 
-### Next steps
+Run in dev mode:
 
-* [Getting started](getting-started.md)
+`yarn dev`
+
+The `replaceRenderer` from `gatsby-ssr.js` is not called during a development build (https://github.com/gatsbyjs/gatsby/issues/3166), that results in a Styletron error `"Uncaught TypeError: Cannot read property 'sheet' of undefined"`.
+As a temporary solution while in dev mode, remove the `styleElements` from passing to the client's Styletron instance in the `gatsby-browser.js`:
+`const styletron = new Styletron(styleElements);` => `const styletron = new Styletron();`.
+
+Build docs website locally:
+
+`yarn build-docs`
+
+To add a new package to render its documentation:
+- for public packages from github add the repo name to `packages-oss.txt`;
+
+Then add a newly added package's docs to the side navigation menu in `/src/nav-api.yml`.
+A doc page of README of a package will be created with the path `/api/[package_name]`. Additional documentation for the package can live under its `/docs` folder, and pages for that documentation will be created with a full path like `/api/[package_name]/docs/[file_name]`.
+
+While adding or removing any documentation files in this repo under `/documentation` folder, don't forget to add/remove a side menu items to the docs in `/src/nav-docs.yml`.

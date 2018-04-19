@@ -59,11 +59,21 @@ html * {
             font-weight: bold;
           }
         }
+
+        &.active > a {
+          color: #000;
+          font-weight: bold;
+        }
+
+        &.active > a:before {
+          border-left: 4px solid #4db5d9;
+        }
       }
     }
   }
 
   #main_content {
     flex: 1;
+    padding: 40px 0;
   }
 }

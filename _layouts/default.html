@@ -36,15 +36,15 @@
       <nav>
         <ul>
           {% for item in site.main_nav %}
-          <li>
+          <li class="{% if item.url == page.url %}active{% endif %}">
             <a href="{{ item.url }}">{{ item.page }}</a>
             <ul>
               {% for entry in item.children %}
-              <li>
+              <li class="{% if entry.url == page.url %}active{% endif %}">
                 <a href="{{ entry.url }}">{{ entry.page }}</a>
                 <ul>
                   {% for entry2 in entry.children %}
-                  <li>
+                  <li class="{% if entry2.url == page.url %}active{% endif %}">
                     <a href="{{ entry2.url }}">{{ entry2.page }}</a>
                   </li>
                   {% endfor %}

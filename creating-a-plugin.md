@@ -356,6 +356,30 @@ export default createPlugin({
 });
 ```
 
+---
+
+### Token aliasing
+
+Token aliasing allows for overriding the canonical token dependency of a service with another token. This is useful when you want to register a token for use in most places, but special case a few.
+
+An example of using token aliasing:
+
+```js
+import {createToken} from 'fusion-core';
+const FetchTokenPolyfill = createToken('FetchTokenPolyfill');
+
+// Register the canonical value for FetchToken.
+app.register(FetchToken, window.fetch);
+
+// Register a new token, with a different fetch implementation.
+app.register(FetchTokenPolyfill, unfetch);
+
+// Use the new fetch functionality for deps of PluginA.
+app.register(PluginA).alias(FetchToken, FetchTokenPolyfill);
+```
+
+---
+
 ##### Troubleshooting hang-ups
 
 **Note**: The `next` function should normally be called once - and only once - per middleware call. We recommend avoiding complex conditional trees to prevent unexpected bugs that could occur when the function inadvertedly gets called multiple times (resulting in an error), or cases where it doesn't get called at all.

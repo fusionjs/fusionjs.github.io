@@ -13,6 +13,8 @@ main_nav:
       - page: 'Creating a plugin'
         url: '/creating-a-plugin.html'
         children:
+          - page: 'Tokens'
+            url: '/tokens.html'
           - page: 'Dependencies'
             url: '/dependencies.html'
           - page: 'Creating endpoints'

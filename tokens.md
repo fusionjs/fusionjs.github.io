@@ -1,6 +1,6 @@
 # Tokens
 
-Tokens are used by the Fusion.js [dependency injection](creating-a-plugin.html#dependency-injection) system to define the dependency tree of an application. Tokens are designed to bridge the gap between the type checking and runtime information. Your app may register your own Fusion.js plugin to a token to control behavior of your application or test.
+Tokens are used by the Fusion.js [dependency injection](creating-a-plugin.md#dependency-injection) system to define the dependency tree of an application. Tokens are designed to bridge the gap between the type checking and runtime information. Your app may register your own Fusion.js plugin to a token to control behavior of your application or test.
 
 ## Type safety
 

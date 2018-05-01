@@ -47,12 +47,13 @@ class Template extends React.Component {
     return (
       <Page>
         <Helmet
-          defaultTitle="Uber Web Engineering"
-          titleTemplate="%s | Uber Web Engineering"
+          defaultTitle="Fusion.js Documentation"
+          titleTemplate="%s | Fusion.js Documentation"
           meta={[
             {
               name: 'description',
-              content: 'The latest and greatest Javascript Framework.',
+              content:
+                'A modular javascript framework for creating plugin-based React applications.',
             },
             {name: 'keywords', content: 'web, light, java script, react, ssr'},
           ]}

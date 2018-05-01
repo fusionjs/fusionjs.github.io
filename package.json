@@ -27,7 +27,7 @@
     "react-dom": "^16.0.0",
     "react-helmet": "^5.2.0",
     "styletron-client": "^3.0.0-rc.1",
-    "styletron-react": "^3.0.0-rc.2",
+    "styletron-react": "^4.0.0",
     "styletron-server": "^3.0.0-rc.1",
     "unist-util-visit": "^1.2.0"
   },

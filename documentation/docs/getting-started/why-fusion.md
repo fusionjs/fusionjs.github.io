@@ -45,7 +45,7 @@ We've spent a lot of time thinking about tooling and APIs to increase the overal
 * [Flow typing](/docs/guides/typing) is included out-of-the-box; we still have a bit more work left in order to fully type the Fusion architecture, but even without that adding Flow types to applications will lessen errors
 * We've added [Yarn](https://yarnpkg.com/en/) as our dependency installer, which means we will now get consistent builds across local, CI and prod using [lockfiles](https://yarnpkg.com/lang/en/docs/yarn-lock/); it's very fast!
 
-#### Same core technologies
+#### Core technologies
 
 All of these technology choices can be daunting, but much of them are in the core architecture and build system, meaning:
 

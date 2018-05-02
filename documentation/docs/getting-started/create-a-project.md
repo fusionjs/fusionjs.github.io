@@ -9,6 +9,8 @@ The easiest way to create a project is to clone one of our boilerplate applicati
 
 We are working on creating tools which will automatically scaffold a new application in the future.
 
+Alternatively, visit the [project structure](/docs/getting-started/project-structure) page and emulate the project structure, creating an application from scratch.
+
 ### Next steps
 
 * [Project structure](/docs/getting-started/project-structure)

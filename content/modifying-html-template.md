@@ -13,7 +13,7 @@ const Root = () => (
   <div>
     <Helmet>
       <title>Hello World</title>
-      <link rel="canonical" href="https://www.tacobell.com/" />
+      <link rel="canonical" href="https://www.fusionjs.com/" />
     </Helmet>
     <h1>Hello World</h1>
   </div>

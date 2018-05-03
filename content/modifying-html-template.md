@@ -1,6 +1,28 @@
 # Modifying the HTML template
 
-Modify the HTML template of a Fusion.js plugin with middleware plugins.
+The HTML template consists of the HTML tag that get served from the server which contains metadata such as the `<title>` and `<meta>` tags.
+
+The easiest way to edit those tags is via [`fusion-plugin-react-helmet-async`](https://github.com/fusionjs/fusion-plugin-react-helmet-async).
+
+Add the `Helmet` component to your React tree and add HTML elements inside of it to add/modify the respective HTML tag.
+
+```js
+import {Helmet} from 'fusion-plugin-react-helmet-async';
+
+const Root = () => (
+  <div>
+    <Helmet>
+      <title>Hello World</title>
+      <link rel="canonical" href="https://www.fusionjs.com/" />
+    </Helmet>
+    <h1>Hello World</h1>
+  </div>
+);
+```
+
+### Modifying HTML without React
+
+It's also possible to modify the HTML template of a Fusion.js app by using middleware plugins.
 
 When a page is server-side rendered, the `ctx.template` property in the middleware is an object:
 

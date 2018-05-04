@@ -72,7 +72,7 @@ test('getUser works', async assert => {
     }
   });
   const simulator = getSimulator(app);
-  const ctx = await render(app, '/');
+  const ctx = await simulator.render(app, '/');
   assert.equal(ctx.rendered.find(Hello).text(), 'Hello Bob', 'renders');
 });
 ```

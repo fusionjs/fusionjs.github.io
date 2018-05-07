@@ -140,15 +140,17 @@ export default browserCodeGoesHere;
 
 ## Disabling server-side rendering
 
-Sometimes it is desirable to avoid server-side rendering. To do that, override the `render` argument when instantiating `App`:
+Sometimes it is desirable to avoid server-side rendering. To do that, register a custom render function on the `RenderToken` on the server.
 
 ```js
 // src/main.js
+import {RenderToken} from 'fusion-core';
 import App from 'fusion-react';
-import ReactDOM from 'react-dom';
+// ...
 
-const render = __NODE__
-  ? () => '<div id="root"></div>'
-  : el => ReactDOM.render(el, document.getElementById('root'));
-const app = new App(root, render);
+if (__NODE__) {
+  app.register(RenderToken, () => {
+    return '<div id="root"></div>';
+  });
+}
 ```

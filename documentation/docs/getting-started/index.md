@@ -5,7 +5,7 @@ path: /getting-started/
 
 # Getting started
 
-At the core of modern web applications at Uber is Fusion.js, a web framework for building high quality universal React/Redux/Node applications. If you've never used React/Redux before, [start here](/docs/getting-started/required-knowledge).
+Fusion.js is an open source web application framework for building high quality universal React/Redux/Node applications. If you've never used React/Redux before, [start here](/docs/getting-started/required-knowledge).
 
 Fusion.js is a collection of packages which form the core runtime, CLI, and build system. In addition, there are a set of [plugins](/api/plugins) that integrate with Fusion.js's Plugin API. Most of Fusion.js's functionality is added through these plugins.
 

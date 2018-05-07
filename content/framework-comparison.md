@@ -1,6 +1,6 @@
 # Framework comparison
 
-Fusion.js is a web framework developed by Uber. It's comprised of a CLI, a webpack/babel transpilation pipeline, a Koa server, and a plugin-based isomorphic runtime architecture.
+Fusion.js is an open source web framework, originally created by Uber. It's comprised of a CLI, a webpack/babel transpilation pipeline, a Koa server, and a plugin-based isomorphic runtime architecture.
 
 In addition to these core areas, the Fusion.js team provides several plugins for various things: from React and Redux to translations and CSRF protection. This makes Fusion.js a one-stop shop for full stack development, while at the same time making it easy to keep bundle size small by allowing developers to only include what they need.
 

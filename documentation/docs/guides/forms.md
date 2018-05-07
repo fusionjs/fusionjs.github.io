@@ -220,7 +220,3 @@ import Form from './form';
 
 export default <Form />;
 ```
-
-### Running the app
-
-Don't forget to run `cerberus` from the command line. Then start the app via `yarn dev`.

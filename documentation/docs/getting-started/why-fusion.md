@@ -31,7 +31,7 @@ One of Fusion's goals was to have a more maintainable and easily-upgradeable arc
 Fusion was created with development and performance in mind, and was built with a focus on a lightweight, flexible system:
 
 * Initial DOMContentLoaded is fast. Asset URLs, translations, and experiments are not sent down in the application state in the page body; they are split per page-bundle, resulting in minimal HTML page size
-* Our vendor JavaScript bundle small through usage of our modern build system, and we still have more improvements to come
+* Our vendor JavaScript bundle is small through usage of our modern build system, and we still have more improvements to come
 * Brotli compression is turned on by default, resulting in another 15-20% improvement on modern browsers (Edge, Chrome, Safari, Firefox, etc.)
 * [Bundle splitting](/docs/guides/routing#async-loading-routes) is extremely easy, allowing you to break down large applications into smaller parts and loading as necessary; in addition, we split translations, asset URLs and experiments along with each new bundle
 * Performance gains can easily be added into the system over time because of the way the core libraries and build tooling work; we already plan to improve our vendor bundle size even more, create ES2015-specific code bundles (no polyfill or babel-transpiled code) and Preact-fusion plugins (Preact is 87% smaller than React).
@@ -49,7 +49,7 @@ We've spent a lot of time thinking about tooling and APIs to increase the overal
 
 All of these technology choices can be daunting, but much of them are in the core architecture and build system, meaning:
 
-* The core technologies recommended in these guids, such as React and Redux, follow emerging best practices for web development.
+* The core technologies recommended in these guides, such as React and Redux, follow emerging best practices for web development.
 * For major performance improvements, though, there may need to be changes in areas around [font loading](/docs/guides/performance#font-preloading), using heavy 3rd-party dependencies and using the old Superfine CSS file (vs [Styletron](https://github.com/rtsao/styletron))
 
 #### Unified documentation & open source development

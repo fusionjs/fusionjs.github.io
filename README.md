@@ -8,7 +8,7 @@ Install the dependencies:
 
 Bootstrap:
 
-`yarn boostrap`
+`yarn bootstrap`
 
 It clones all the documentation.
 

@@ -37,6 +37,7 @@ exports.Header = styled('div', {
   left: 0,
   right: 0,
   height: '52px',
+  overflow: 'hidden',
   background: '#041725',
   color: whiteColor,
   zIndex: '999',

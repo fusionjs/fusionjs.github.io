@@ -28,7 +28,7 @@ Tokens allow Fusion.js developers to avoid collisions by using a reference to th
 
 **Use case:**
 
-* You have a Fusion.js application with with many dependencies.
+* You have a Fusion.js application with many dependencies.
 * One type of dependency is a function that takes a string and returns a string.
 * There are are ten plugins in your application that conform to that type.
 

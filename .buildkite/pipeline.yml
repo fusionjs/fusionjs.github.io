@@ -1,0 +1,16 @@
+steps:
+  - name: ':docker: build'
+    plugins:
+      'docker-compose#v1.7.0':
+        build: fusionjs-github-io
+        image-repository: 027047743804.dkr.ecr.us-east-2.amazonaws.com/uber
+    agents:
+      queue: builders
+  - wait
+  - command: yarn build
+    name: ':book:'
+    plugins:
+      'docker-compose#v1.7.0':
+        run: fusionjs-github-io
+    agents:
+      queue: workers

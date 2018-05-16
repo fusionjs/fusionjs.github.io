@@ -7,6 +7,7 @@ The easiest way to edit those tags is via [`fusion-plugin-react-helmet-async`](h
 Add the `Helmet` component to your React tree and add HTML elements inside of it to add/modify the respective HTML tag.
 
 ```js
+import React from 'react';
 import {Helmet} from 'fusion-plugin-react-helmet-async';
 
 const Root = () => (

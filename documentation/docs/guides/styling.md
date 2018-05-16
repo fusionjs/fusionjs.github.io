@@ -5,6 +5,13 @@ path: /styling/
 
 # Styling components
 
+- [Custom styling](#custom-styling)
+- [3rd party stylesheets](#3rd-party-stylesheets)
+
+---
+
+### Custom styling
+
 For custom styling, we recommend using Styletron (via [`fusion-plugin-styletron-react`](https://github.com/fusionjs/fusion-plugin-styletron-react)).
 
 This plugin automatically sets up SSR, hydration, and context provider boilerplate and re-exports the styling functions from `styletron-react` so you can just focus on styling.
@@ -225,4 +232,24 @@ class Component extends React.Component {
     }}
   />
 }
+```
+
+---
+
+### 3rd party stylesheets
+
+To add 3rd party stylesheets to an app, use the `fusion-plugin-react-helmet-async` plugin.
+
+```js
+import React from 'react';
+import {Helmet} from 'fusion-plugin-react-helmet-async';
+
+const Root = () => (
+  <div>
+    <Helmet>
+      <link rel="stylesheet" href={assetUrl('../node_modules/a-library/styles.css')} />
+    </Helmet>
+    <h1>Hello World</h1>
+  </div>
+);
 ```

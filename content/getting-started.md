@@ -127,34 +127,38 @@ The application in your browser should automatically reload to display the silve
 
 ### Font loading
 
-Fonts can be loaded via a custom plugin:
+Fonts can be loaded via the `fusion-plugin-font-loader-react` plugin:
 
 ```js
 // src/main.js
 import App from 'fusion-react';
-import Fonts from './plugins/fonts';
+import Fonts, {
+  FontLoaderReactConfigToken
+} from 'fusion-plugin-font-loader-react';
 import root from './components/root';
 
 export default () => {
   const app = new App(root);
 
   app.register(Fonts);
+  app.register(FontLoaderReactConfigToken, {
+    preloadDepth: 1,
+    fonts: {
+      'Lato-Regular': {
+        urls: {
+          woff: assetUrl('../static/Lato-Regular.woff'),
+          woff2: assetUrl('../static/Lato-Regular.woff2'),
+        },
+        fallback: {
+          name: 'Helvetica',
+        },
+      }
+    }
+  });
 
   return app;
 }
-
-// src/plugins/fonts.js
-import {html} from 'fusion-core';
-
-export default () => (ctx, next) => {
-  if (ctx.element) {
-    ctx.template.head.push(html`<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />`);
-  }
-  return next();
-}
 ```
-
-**Note**: Stay tuned, we're working on an official Fusion.js plugin for optimized font loading, which will replace the workflow above.
 
 ---
 

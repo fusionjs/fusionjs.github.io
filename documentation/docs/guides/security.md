@@ -38,9 +38,9 @@ app.register(CsrfIgnoreRoutesToken, ['/_errors']);
 
 ### dangerouslySetHTML
 
-When authoring plugins that affect the server-rendered template, you will often need to add values to the `ctx.template.head` and `ctx.template.body` arrays.
+When authoring plugins that affect the server-rendered template, you should always prefer using the `fusion-plugin-react-helmet-async` plugin over using `ctx.template` outside of React.
 
-These values must be sanitized HTML values, which are produced by the `html` template tag. Sanitized HTML values are actually not strings at all. This restriction exists to prevent potential XSS attacks. You should always use `html` when hard-coding HTML into the template:
+In the unlikely case that you need to add values to the `ctx.template.head` and `ctx.template.body` arrays, these values must be sanitized HTML values, which are produced by the `html` template tag. Sanitized HTML values are actually not strings at all. This restriction exists to prevent potential XSS attacks. You should always use `html` when hard-coding HTML into the template:
 
 ```js
 import {html} from 'fusion-core';

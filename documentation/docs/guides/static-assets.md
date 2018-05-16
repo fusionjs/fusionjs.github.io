@@ -43,43 +43,22 @@ assetUrl(path);
 
 ### Adding 3rd party assets
 
-> **NOTE:** We are working on a more elegant and streamlined solution for serving up third-party assets.  In the mean time, the following is a work-around.
+To include an asset in the `<head>` container, use the [`fusion-plugin-react-helmet-async`](https://github.com/fusionjs/fusion-plugin-react-helmet-async) plugin.
 
-Resolve assets stored in `node_modules` at compile time with `assetUrl` (e.g. `assetUrl(../../node_modules/some-module/example-asset.css')`).
-
-To include asset in the `<head>` container, create a plugin:
+You can use the `assetUrl` utility to resolve assets stored in `node_modules` at compile time, e.g. `assetUrl('../../node_modules/some-module/example-asset.css')`.
 
 ```js
-import {assetUrl, dangerouslySetHTML, createPlugin} from 'fusion-core';
+import React from 'react';
+import {Helmet} from 'fusion-plugin-react-helmet-async';
+import {assetUrl} from 'fusion-core';
 
-export default createPlugin({
-  middleware: () => {
-    const url = assetUrl('../../node_modules/some-path-to-asset');
-    const escaped = dangerouslySetHTML(`<link rel="stylesheet" href="${url}">`);
-    return (ctx, next) => {
-      if(ctx.element) {
-        ctx.template.head.push(escaped);
-      }
-      return next();
-    }
-  }
-});
-```
-
-And register the plugin:
-
-```js
-// src/app.js
-import MyStaticAssetPlugin from './plugins/my-static-asset-plugin';
-// ...
-export default app => {
-  // ...
-  app.register(MyStaticAssetPlugin);
-  // ...
+export default function Root() {
+  return (
+    <main>
+      <Helmet>
+        <link rel="stylesheet" href={assetUrl('../../node_modules/some-path-to-asset')} />
+      </Helmet>
+    </main>
+  );
 }
 ```
-
-#### What about externally hosted assets?
-
-We do not recommend using externally hosted static assets in your application due to security and reliability concerns.  If necessary, download and serve the asset as outlined above.
-

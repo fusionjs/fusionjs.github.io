@@ -24,7 +24,7 @@ class DocTemplate extends React.Component {
   render() {
     const {pathContext, location} = this.props;
     return (
-      <DocsWrapper>
+      <DocsWrapper className="docSearch-content">
         {pathContext.remoteUrl ? (
           <EditLink href={pathContext.remoteUrl}>Edit</EditLink>
         ) : null}

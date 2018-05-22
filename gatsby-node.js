@@ -46,7 +46,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
             path: localPath,
             component: templates[node.sourceInstanceName] || templates.docs,
             context: {
-              path: localPath,
+              localPath: localPath,
               metadata: node.childMarkdownRemark.frontmatter,
               html: node.childMarkdownRemark.html,
               remoteUrl,

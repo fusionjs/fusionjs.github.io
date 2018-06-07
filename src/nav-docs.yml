@@ -17,6 +17,8 @@ children:
         path: '/project-structure'
       - title: 'Run your project'
         path: '/run-your-project'
+      - title: 'Core concepts'
+        path: '/core-concepts'
   - title: 'Guides'
     path: '/guides'
     pathPrefix: '/guides'

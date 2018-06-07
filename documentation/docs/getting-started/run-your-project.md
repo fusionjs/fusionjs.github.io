@@ -27,6 +27,7 @@ production mode locally, run:
 ```sh
 yarn build-production && NODE_ENV=production yarn start
 ```
+
 Refer to the [debugging](/docs/guides/debugging#debugging-your-production-build-locally) section if you get any error while running a production build locally.
 
 **Note**: Development tooling such as hot reloading is not available in
@@ -45,7 +46,7 @@ example, to run the application in development mode, run `yarn run fusion dev`.
     "cover": "fusion test --cover",
     "build": "fusion build",
     "build-production": "npm run build -- --production && upload-assets-to-s3",
-    "start": "PORT_HTTP=\"$UBER_PORT_HTTP\" fusion start",
+    "start": "PORT_HTTP=\"$PORT_HTTP\" fusion start",
     "lint": "eslint ."
   }
 }

@@ -5,11 +5,28 @@ path: /create-a-project/
 
 # Create a project
 
-The easiest way to create a project is to clone one of our boilerplate applications here: https://github.com/kevingrandon/fusion-boilerplate
+Make sure you have reviewed the [required knowledge](/docs/getting-started/required-knowledge/) section and [set up your environment](/docs/getting-started/environment-setup/) prior to starting project development.
 
-We are working on creating tools which will automatically scaffold a new application in the future.
+## Using yarn create
 
-Alternatively, visit the [project structure](/docs/getting-started/project-structure) page and emulate the project structure, creating an application from scratch.
+To create a new Fusion.js application we recommend using [yarn create](https://yarnpkg.com/lang/en/docs/cli/create/). In a terminal, run the following:
+
+```
+yarn create fusion-app my-fusion-app
+```
+
+The last argument provided will be used as the application name and for a generating a project within your current working directory.
+
+In the future we will be adding additional questions during the creation process to enable additional features. Those questions will be documented here.
+
+## Example Fusion.js projects
+
+Here is a curated list of example Fusion.js open source applications. You might use these as a starting point to see what Fusion.js application development looks like. [File an issue](https://github.com/fusionjs/fusionjs.github.io/issues/new) to have your Fusion.js application added.
+
+* [simple-boilerplate](https://github.com/KevinGrandon/fusion-boilerplate/tree/master/simple-boilerplate) - A minimal example of a Fusion.js application
+* [redux-boilerplate](https://github.com/KevinGrandon/fusion-boilerplate/tree/master/redux-boilerplate) - Using redux with Fusion.js
+* [redux-reactors-boilerplate](https://github.com/KevinGrandon/fusion-boilerplate/tree/master/redux-reactors-boilerplate) - Using redux and reactors with Fusion.js
+* [apollo-graphcool-boilerplate](https://github.com/KevinGrandon/fusion-boilerplate/tree/master/apollo-graphcool-boilerplate) - Using Apollo, GraphQL and Graph.cool with Fusion.js
 
 ### Next steps
 

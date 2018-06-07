@@ -1,8 +1,8 @@
 # Core Concepts
 
-### Middlewares
+### Middleware
 
-A middleware in Fusion.js is similar to middlewares in HTTP servers like Express.js (in fact, they are built on top of Koa middlewares). Fusion.js middlewares are functions that run on the server when an HTTP request occurs. However, unlike Koa/Express middlewares, Fusion.js middleware functions also run on the browser on page load.
+A middleware in Fusion.js is similar to middleware in HTTP servers like Express.js (in fact, they are built on top of Koa middleware). Fusion.js middleware are functions that run on the server when an HTTP request occurs. However, unlike Koa/Express middleware, Fusion.js middleware functions also run on the browser on page load.
 
 ### Services
 
@@ -10,13 +10,13 @@ A service is any library that exposes a programmatic API. The main difference be
 
 ### Plugin
 
-A Fusion.js plugin is a container that encapsulates a service and a middleware. Plugins declare what dependencies they rely on (via the DI system) and may expose a service, a middleware, or both. Services and middlewares that are exposed by a plugin can consume services from other plugins.
+A [Fusion.js plugin](https://fusionjs.com/api/fusion-docs/creating-a-plugin) is a container that encapsulates a service and a middleware. Plugins declare what dependencies they rely on (via the DI system) and may expose a service, a middleware, or both. Services and middleware that are exposed by a plugin can consume services from other plugins.
 
 Fusion.js plugins are suitable for encapsulating integrations with libraries, even when they require making changes to multiple areas of concern (e.g. server, browser, React providers).
 
 ### Dependency injection
 
-Fusion.js has a type-aware dependency injection system. Dependency injection is a way to modularize code, similar to how you would use ES6 import statements instead of putting your whole app in a single file. The main difference is that ES6 import statements are static (meaning they always import the same thing) and dependency injection is dynamic (meaning that what is imported can be changed through runtime configuration, for example for mocking in tests).
+Fusion.js has a [type-aware dependency injection system](https://fusionjs.com/api/fusion-docs/dependencies). Dependency injection is a way to modularize code, similar to how you would use ES6 import statements instead of putting your whole app in a single file. The main difference is that ES6 import statements are static (meaning they always import the same thing) and dependency injection is dynamic (meaning that what is imported can be changed through runtime configuration, for example for mocking in tests).
 
 ---
 
@@ -56,7 +56,7 @@ Code splitting (aka bundle splitting) is a technique that lazily loads of parts 
 
 ### Context
 
-A context is a state object that represents the HTTP request and response values in middlewares on the server. The context object can also hold intermediate state such as a React tree. Each HTTP request has exactly one context object associated with it, which is passed from middleware to middleware. Once all middlewares in an application have finished running for a request in the server, this state object is translated into an HTTP response. The context object can also be used by middlewares on the browser.
+A [context](https://fusionjs.com/api/fusion-core#context) is a state object that represents the HTTP request and response values in middleware on the server. The context object can also hold intermediate state such as a React tree. Each HTTP request has exactly one context object associated with it, which is passed from middleware to middleware. Once all middleware in an application have finished running for a request in the server, this state object is translated into an HTTP response. The context object can also be used by middleware on the browser.
 
 ### CSRF
 
@@ -74,7 +74,7 @@ DI stands for [dependency injection](#dependency-injection) system.
 
 Fusion.js middleware functions must call and await a `next` function. Everything that happens before the `next` function call is known as the "downstream". Everything that happens after it is the "upstream". The `next` function call itself represents React rendering.
 
-If an application has many plugins (or rather, many middlewares), all the downstreams are run in order of dependency. Then, rendering occurs, then all the upstreams are run in reverse order.
+If an application has many plugins (or rather, many middleware), all the downstreams are run in order of dependency. Then, rendering occurs, then all the upstreams are run in reverse order.
 
 ### Dynamic importing
 
@@ -142,7 +142,7 @@ Tree-shaking is a compiler optimization that removes unused imports. In Fusion.j
 
 ### Universal code
 
-Universal code refers to code that lives in a single file but runs on both the server and the browser. Note that it's possible to conditionally run code only on the server or only on the browser via `if (__NODE__) {}` and `if (__BROWSER__) {}` statements, respectively.
+[Universal code](https://fusionjs.com/api/fusion-docs/universal-code) refers to code that lives in a single file but runs on both the server and the browser. Note that it's possible to conditionally run code only on the server or only on the browser via `if (__NODE__) {}` and `if (__BROWSER__) {}` statements, respectively.
 
 ### Yarn
 

@@ -5,7 +5,7 @@ path: /required-knowledge/
 
 # Required knowledge
 
-Many Fusion.js applications will use React and Redux as well as abstractions built on top of these technologies. If you are not well-versed in React and/or Redux, below we have compiled a few tutorials and documentation pages that will help give you a good base for building a web application at Uber.
+Many Fusion.js applications will use React and Redux as well as abstractions built on top of these technologies. If you are not well-versed in React and/or Redux, below we have compiled a few tutorials and documentation pages that will help give you a good base for building a modern web application.
 
 ### React
 

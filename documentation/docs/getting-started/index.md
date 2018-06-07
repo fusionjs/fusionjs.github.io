@@ -9,6 +9,8 @@ Fusion.js is an open source web application framework for building high quality 
 
 Fusion.js is a collection of packages which form the core runtime, CLI, and build system. In addition, there are a set of [plugins](/api/plugins) that integrate with Fusion.js's Plugin API. Most of Fusion.js's functionality is added through these plugins.
 
+The Fusion.js scaffold generated when you [create a new project](/docs/getting-started/create-a-project) comes with a set of pre-configured plugins, allowing you the freedom to just start writing your product features.
+
 Check out the [Fusion API documentation](/api/fusion-docs) for a deeper look into Fusion's functionality.
 
 ### Example app

@@ -39,6 +39,9 @@ children:
     pathPrefix: '/fusion-core'
   - title: 'CLI'
     path: '/fusion-cli'
+    children:
+      - title: '.fusionrc.js'
+        path: '/fusion-cli/docs/fusionrc'
   - title: 'React app'
     path: '/fusion-react'
   - title: 'React with asynchronous dependencies'

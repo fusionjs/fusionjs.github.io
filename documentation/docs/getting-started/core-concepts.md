@@ -1,3 +1,8 @@
+---
+title: Core concepts
+path: /core-concepts/
+---
+
 # Core Concepts
 
 ### Middleware

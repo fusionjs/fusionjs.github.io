@@ -312,7 +312,7 @@ import {createPlugin, createToken} from 'fusion-core';
 export const ConfigToken = createToken('ConfigToken');
 export default createPlugin({
   deps: {config: ConfigToken},
-  provides() {
+  provides({config}) {
     return {
       greet() {
         return config; // returns 'hello'

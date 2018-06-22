@@ -135,6 +135,7 @@ import App from 'fusion-react';
 import Fonts, {
   FontLoaderReactConfigToken
 } from 'fusion-plugin-font-loader-react';
+import {assetUrl} from 'fusion-core';
 import root from './components/root';
 
 export default () => {

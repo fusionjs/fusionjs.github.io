@@ -3,12 +3,12 @@ const express = require('express');
 const port = process.env['PORT'] || 3000;
 
 const app = express();
-app.use('/web', express.static('./public'));
+app.use('/', express.static('./public'));
 app.get('/health', function(req, res) {
   res.send('OK');
 });
-app.use('/web/*', (req, res, next) => {
-  res.redirect('/web');
+app.use('/*', (req, res, next) => {
+  res.redirect('/');
 });
 
 app.listen(port, err => {

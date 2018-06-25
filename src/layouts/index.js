@@ -22,6 +22,7 @@ import apiContents from '../nav-api.yml';
 
 import '../css/normalize.css';
 import '../css/prism.css';
+import '../css/doc-search.css';
 
 class Template extends React.Component {
   render() {

@@ -11,6 +11,39 @@ const {
 
 exports.MainNavContainer = styled('div', {});
 
+exports.SearchField = styled('input', {
+  boxSizing: 'border-box',
+  display: 'inline-block',
+  fontFamily: fontFamily,
+  fontSize: '14px',
+  fontWeight: 'normal',
+  lineHeight: '18px',
+  color: white120Color,
+  width: '90px',
+  height: '100%',
+  border: 'none',
+  borderRadius: '2px',
+  backgroundColor: 'transparent',
+  outline: 'none',
+  verticalAlign: 'baseline',
+  transition: 'width .3s',
+  padding: '7px 12px',
+  '::placeholder': {
+    opacity: 1,
+    color: white120Color,
+    fontFamily: fontFamily,
+    fontWeight: 'bold',
+    fontSize: '11px',
+    letterSpacing: '2px',
+    textTransform: 'uppercase',
+  },
+  ':focus': {
+    width: '120px',
+    color: blackColor,
+    backgroundColor: 'rgba(250, 250, 250, 1)',
+  },
+});
+
 exports.MainNavItem = styled('span', ({styleProps = {}}) => ({
   display: 'inline-block',
   fontFamily: fontFamily,

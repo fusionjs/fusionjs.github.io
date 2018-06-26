@@ -52,9 +52,9 @@ module.exports = class HTML extends React.Component {
           <template
             dangerouslySetInnerHTML={{
               __html: `
-            <!-- Piwik -->
-            <!-- End Piwik Code -->
-          `,
+                <!-- Piwik -->
+                <!-- End Piwik Code -->
+              `,
             }}
           />
         </head>
@@ -66,6 +66,25 @@ module.exports = class HTML extends React.Component {
             dangerouslySetInnerHTML={{__html: this.props.body}}
           />
           {this.props.postBodyComponents}
+          <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
+          />
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.onload = () => {
+                window.docsearch({ 
+                  apiKey: '380d5368678eb99d4faa6ce5077c4827', 
+                  indexName: 'fusionjs', 
+                  inputSelector: '#search-field', 
+                  debug: false // Set debug to true if you want to inspect the dropdown 
+                });
+              };
+            `,
+            }}
+          />
         </body>
       </html>
     );

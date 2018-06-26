@@ -2,7 +2,7 @@ import React from 'react';
 import {styled} from 'styletron-react';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
-import {MainNavContainer, MainNavItem} from './styled-elements';
+import {MainNavContainer, MainNavItem, SearchField} from './styled-elements';
 import {getPath} from '../utils';
 
 const InternalLink = props => {
@@ -13,6 +13,17 @@ const ExternalLink = styled('a', ({styleProps = {}}) => ({
   backgroundColor: 'transparent',
   ...styleProps.overrides,
 }));
+
+class DocsSearch extends React.Component {
+  render() {
+    return (
+      <SearchField
+        placeholder="Search"
+        id="search-field"
+      />
+    );
+  }
+}
 
 const Nav = props => {
   const {data, location, pathPrefix} = props;
@@ -61,6 +72,7 @@ const Nav = props => {
           Support
         </MainNavItem>
       </InternalLink>
+      <DocsSearch />
     </MainNavContainer>
   );
 };

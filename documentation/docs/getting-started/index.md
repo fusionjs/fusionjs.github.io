@@ -13,17 +13,17 @@ The Fusion.js scaffold generated when you [create a new project](/docs/getting-s
 
 Check out the [Fusion API documentation](/api/fusion-docs) for a deeper look into Fusion's functionality.
 
-### Example app
+### Example applications
 
-We have a list of Fusion.js boilerplate applications at: https://github.com/kevingrandon/fusion-boilerplate. We're looking to expand upon these boilerplate applications.
+We have a list of Fusion.js example applications at on the [getting started page](https://fusionjs.com/docs/getting-started/create-a-project/#example-fusionjs-projects). There you can also find CLI tools to generate new Fusion.js applications and plugins.
 
 ### Create a new web application
 
 When you're ready to start on a new web project, run through these steps:
 
-* [Why Fusion.js](/docs/getting-started/why-fusion)
-* [Required knowledge](/docs/getting-started/required-knowledge)
-* [Environment setup](/docs/getting-started/environment-setup)
-* [Create a project](/docs/getting-started/create-a-project)
-* [Project structure](/docs/getting-started/project-structure)
-* [Run your project](/docs/getting-started/run-your-project)
+- [Why Fusion.js](/docs/getting-started/why-fusion)
+- [Required knowledge](/docs/getting-started/required-knowledge)
+- [Environment setup](/docs/getting-started/environment-setup)
+- [Create a project](/docs/getting-started/create-a-project)
+- [Project structure](/docs/getting-started/project-structure)
+- [Run your project](/docs/getting-started/run-your-project)

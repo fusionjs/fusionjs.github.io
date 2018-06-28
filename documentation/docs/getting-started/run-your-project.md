@@ -129,3 +129,7 @@ Opens source-map-explorer
 -->
 
 ---
+
+### Next steps
+
+- [Core Concepts](/docs/getting-started/core-concepts)

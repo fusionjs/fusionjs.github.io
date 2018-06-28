@@ -156,3 +156,9 @@ Yarn is a package manager for Node.js, similar to (and interchangeable with) NPM
 ### Zopfli
 
 A compression algorithm, compatible with gzip. Provides better compression rates than regular gzip. Fusion.js uses zopfli compression by default.
+
+---
+
+### Next steps
+
+- [Guides](/docs/guides)

@@ -53,6 +53,8 @@ children:
     children:
       - title: 'Apollo'
         path: '/fusion-apollo'
+      - title: 'Apollo server'
+        path: '/fusion-plugin-apollo-server'
       - title: 'Apollo universal client'
         path: '/fusion-apollo-universal-client'
       - title: 'Browser performance emitter'

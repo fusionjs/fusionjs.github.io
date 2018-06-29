@@ -1,4 +1,5 @@
 fusion-apollo
+fusion-plugin-apollo-server
 fusion-apollo-universal-client
 fusion-core
 fusion-cli

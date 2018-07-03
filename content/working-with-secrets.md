@@ -32,7 +32,6 @@ To accomplish dynamic secret rotation, plugins can receive an EventEmitter or si
 ```js
 import {createPlugin} from 'fusion-core';
 import {UniversalEventsToken} from 'fusion-plugin-universal-events';
-const {SingletonPlugin} = require('fusion-core');
 
 export default createPlugin({
   deps: {SecretsEmitter: UniversalEventsToken},

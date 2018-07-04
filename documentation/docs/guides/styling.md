@@ -220,7 +220,7 @@ const Foo = styled("div", /* ... */);
 
 #### `$ref` for setting refs
 
-The the `$ref` prop to set a React `ref` on the underlying element.
+Use the `$ref` prop to set a React `ref` on the underlying element.
 
 ```jsx
 const Foo = styled("div", /* ... */);

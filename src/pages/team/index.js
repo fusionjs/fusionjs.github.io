@@ -2,6 +2,7 @@ import React from 'react';
 import {styled} from 'styletron-react';
 import {white60Color} from '../../components/style-settings';
 import team from '../../team';
+import peopleImg from '../../images/people.svg';
 
 const Container = styled('div', {
   paddingTop: '52px',
@@ -85,6 +86,24 @@ const Team = () => {
           </FlexContainer>
         );
       })}
+      <FlexContainer>
+        <BlockLeft>
+          <span />
+          <Photo
+            src={peopleImg}
+            alt="Join us!"
+            height="100px"
+          />
+        </BlockLeft>
+        <BlockRight>
+          <p>
+            <BoldText>You?</BoldText>
+          </p>
+          <p>
+            <a href="/join-us">Join Us!</a>
+          </p>
+        </BlockRight>
+      </FlexContainer>
     </Container>
   );
 };

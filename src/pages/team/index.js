@@ -2,7 +2,7 @@ import React from 'react';
 import {styled} from 'styletron-react';
 import {white60Color} from '../../components/style-settings';
 import team from '../../team';
-import peopleImg from '../../images/people.svg';
+import peopleImgSquare from '../../images/people-square.png';
 
 const Container = styled('div', {
   paddingTop: '52px',
@@ -90,7 +90,7 @@ const Team = () => {
         <BlockLeft>
           <span />
           <Photo
-            src={peopleImg}
+            src={peopleImgSquare}
             alt="Join us!"
             height="100px"
           />

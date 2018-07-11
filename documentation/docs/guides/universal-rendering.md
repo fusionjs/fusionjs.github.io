@@ -140,7 +140,7 @@ export default browserCodeGoesHere;
 
 ## Disabling server-side rendering
 
-Sometimes it is desirable to avoid server-side rendering. To do that, register a custom render function on the `RenderToken` on the server.
+Sometimes it is desirable to avoid server-side rendering. To do that, register a custom render function on the `RenderToken` on the server. However, instead of disabling SSR entirely, it is probably better to [create components that only render in the browser](#client-rendered-components).
 
 ```js
 // src/main.js
@@ -153,4 +153,19 @@ if (__NODE__) {
     return '<div id="root"></div>';
   });
 }
+```
+
+## Client-rendered components
+
+```js
+import {split} from 'fusion-react-async';
+
+const ClientRenderedOnly = split({
+  defer: true,
+  load: () => import("./browser-only-component.js"),
+  LoadingComponent: () => <div>SSR placeholder...</div>,
+  ErrorComponent: () => <div>Error</div>
+});
+
+<ClientRenderedOnly/>
 ```

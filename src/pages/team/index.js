@@ -2,14 +2,14 @@ import React from 'react';
 import {styled} from 'styletron-react';
 import {white60Color} from '../../components/style-settings';
 import team from '../../team';
-import peopleImgSquare from '../../images/people-square.png';
+import sway from '../../images/sway.svg';
 
 const Container = styled('div', {
   paddingTop: '52px',
   paddingBottom: '52px',
   display: 'grid',
   gridGap: '24px',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
   gridTemplateRows: 'repeat(3, auto)',
   '@media (max-width: 600px)': {
     paddingTop: '24px',
@@ -89,11 +89,7 @@ const Team = () => {
       <FlexContainer>
         <BlockLeft>
           <span />
-          <Photo
-            src={peopleImgSquare}
-            alt="Join us!"
-            height="100px"
-          />
+          <Photo src={sway} alt="Join us!" height="100px" />
         </BlockLeft>
         <BlockRight>
           <p>

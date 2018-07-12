@@ -5,14 +5,14 @@ path: /styling/
 
 # Styling components
 
-- [Custom styling](#custom-styling)
-- [3rd party stylesheets](#3rd-party-stylesheets)
+* [Custom styling](#custom-styling)
+* [3rd party stylesheets](#3rd-party-stylesheets)
 
 ---
 
 ### Custom styling
 
-For custom styling, we recommend using Styletron (via [`fusion-plugin-styletron-react`](https://github.com/fusionjs/fusion-plugin-styletron-react)).
+For custom styling, we recommend using Styletron (via [`fusion-plugin-styletron-react`](https://github.com/fusionjs/fusion-plugin-styletron-react)). Styletron allows you to write styled components that get compiled to atomic CSS for maximum performance.
 
 This plugin automatically sets up SSR, hydration, and context provider boilerplate and re-exports the styling functions from `styletron-react` so you can just focus on styling.
 
@@ -22,8 +22,8 @@ import {
   styled,
   withStyle,
   withStyleDeep,
-  withTransform
-} from "fusion-plugin-styletron-react";
+  withTransform,
+} from 'fusion-plugin-styletron-react';
 ```
 
 **See the [main README for a thorough guide on using Styletron](https://github.com/rtsao/styletron/tree/v4-beta/packages/styletron-react).**
@@ -67,9 +67,9 @@ export default <Panel $bg="gold">Hello</Panel>;
 Styled components automatically pass through all props to their underlying base except those prefixed by `$`, which will be filtered out. Use this namespace for props only used for styling. React will [no longer automatically filter out non-HTML props](https://reactjs.org/blog/2017/09/08/dom-attributes-in-react-16.html) so this convention avoids the need for burdensome manual prop filtering.
 
 ```jsx
-const StyledInput = styled("input", props => ({
-  color: props.disabled ? "gray" : "black",
-  background: props.$variant === "error" ? "red" : "blue"
+const StyledInput = styled('input', props => ({
+  color: props.disabled ? 'gray' : 'black',
+  background: props.$variant === 'error' ? 'red' : 'blue',
 }));
 
 <StyledInput disabled={true} $variant="error" />;
@@ -183,10 +183,10 @@ If a font face object is used in place of a string for `fontFamily`, a correspon
 
 ```jsx
 const font = {
-  src: "..."
+  src: '...',
 };
 
-const Foo = styled("div", {fontFamily: font});
+const Foo = styled('div', {fontFamily: font});
 
 <Foo />;
 ```
@@ -197,11 +197,11 @@ If a keyframes object is used in place of a string for `animationName`, a corres
 
 ```jsx
 const animation = {
-  from: {color: "red"},
-  to: {color: "blue"}
+  from: {color: 'red'},
+  to: {color: 'blue'},
 };
 
-const Foo = styled("div", {animationName: animation});
+const Foo = styled('div', {animationName: animation});
 
 <Foo />;
 ```
@@ -211,7 +211,7 @@ const Foo = styled("div", {animationName: animation});
 #### `$as` for rendering a different element
 
 ```jsx
-const Foo = styled("div", /* ... */);
+const Foo = styled('div' /* ... */);
 
 <Foo />;
 <Foo $as="span" />;
@@ -247,7 +247,10 @@ import {Helmet} from 'fusion-plugin-react-helmet-async';
 const Root = () => (
   <div>
     <Helmet>
-      <link rel="stylesheet" href={assetUrl('../node_modules/a-library/styles.css')} />
+      <link
+        rel="stylesheet"
+        href={assetUrl('../node_modules/a-library/styles.css')}
+      />
     </Helmet>
     <h1>Hello World</h1>
   </div>

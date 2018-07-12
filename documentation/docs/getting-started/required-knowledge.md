@@ -25,4 +25,4 @@ Watch [Building React Applications with Idiomatic Redux](https://egghead.io/cour
 
 ### Next steps
 
-* [Environment setup](/docs/getting-started/environment-setup)
+* [Create a project](/docs/getting-started/create-a-project)

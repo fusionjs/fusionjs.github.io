@@ -24,11 +24,11 @@ Because Fusion.js provides the compilation pipeline, as well as both the server 
 
 [Express](https://expressjs.com/) is the most popular HTTP server framework for Node.js. While it is agnostic of rendering libraries (being compatible with libraries such as pug or handlebars), it's generally not as trivial to integrate to modern React tooling (e.g. HMR) unless you adopt a more opinionated framework on top of Express.
 
-Both Express and Fusion.js can be used as a Node.js server and both can be composed via middlewares. The major difference is that Fusion.js uses Koa.js middlewares. Koa uses a more modern async/await based middleware architecture, which gives a better stack trace/debugging experience.
+Both Express and Fusion.js can be used as a Node.js server and both can be composed via middlewares. The major difference is that Fusion.js uses Koa.js middlewares. Koa uses a more modern async/await based middleware architecture, which gives a better stack trace/debugging experience and is easier to test.
 
 ### Next.js
 
-[Next.js](https://github.com/zeit/next.js/) is a framework developer by Zeit.co designed for building server-rendered React applications. It's very similar in scope to Fusion.js.
+[Next.js](https://github.com/zeit/next.js/) is a framework developer by Zeit.co designed for building server-rendered React applications. [Electrode](http://www.electrode.io/) is a framework developed by Walmart Labs designed for building server-rendered React applications. It's very similar in scope to Fusion.js.
 
 The main difference is that Next.js focuses on React development and doesn't provide facilities for developing full-on backends, whereas Fusion.js is a full stack framework, which supports backend development through [Koa](http://koajs.com/) middlewares and RPC plugins.
 
@@ -36,6 +36,6 @@ Both Next.js and Fusion.js can be used with a variety of 3rd party libraries, bu
 
 ### Electrode.io
 
-[Electrode](http://www.electrode.io/) is a framework developed by Walmart Labs designed for building server-rendered React applications. It's very similar in scope to Fusion.js, and offers many of the same features (e.g. server rendering, hot reloading, etc).
+[Electrode](http://www.electrode.io/) is a framework developed by Walmart Labs designed for building server-rendered React applications. It's very similar in scope to Fusion.js.
 
-Electrode has been around longer and has more mature tooling surrounding bundle analysis and deployment. Fusion.js is a much younger project and we plan on focusing more on automating performance optimization strategies and solidifying features related to application health monitoring.
+Instead of providing a single monolythic scaffold, Fusion.js architecture encapsulates complex integrations on a per-library basis, allowing scaffolds to be as simple or as complex as you need. For example, installing support for atomic CSS takes a single line of code, and different styling strategies can be packaged and shared easily.

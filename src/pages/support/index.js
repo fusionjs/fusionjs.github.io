@@ -1,6 +1,6 @@
 import React from 'react';
 import {styled} from 'styletron-react';
-import support from '../../images/support.svg';
+import social from '../../images/social.svg';
 import chat from '../../images/chat-message.svg';
 import webDevGroup from '../../images/web-dev-group.svg';
 import stack from '../../images/stack.svg';
@@ -61,7 +61,7 @@ const Component = () => {
     <div>
       <FlexContainer>
         <ImgContainer>
-          <img src={support} alt="need help?" width="220px" />
+          <img src={social} alt="need help?" width="220px" />
         </ImgContainer>
         <Title>
           Need something but don't see it or want us to make an improvement?
@@ -71,9 +71,8 @@ const Component = () => {
       <FlexContainer
         styleProps={{
           overrides: {
-            paddingRight: '999px',
-            marginRight: '-999px',
             marginLeft: '-52px',
+            marginBottom: '30px',
             backgroundColor: white10Color,
             flexFlow: 'wrap',
             alignItems: 'flex-start',
@@ -85,19 +84,13 @@ const Component = () => {
         }}
       >
         <FocusBlock>
-          <LinkImg
-            href="https://stackoverflow.com"
-            target="_blank"
-          >
+          <LinkImg href="https://stackoverflow.com" target="_blank">
             <img src={stack} alt="stackoverflow" height="120px" />
           </LinkImg>
           <h4>Stack Overflow</h4>
           <p>
             Ask your question and share knowledge on{' '}
-            <a
-              href="https://stackoverflow.com"
-              target="_blank"
-            >
+            <a href="https://stackoverflow.com" target="_blank">
               Stack Overflow
             </a>. We are working on getting a "fusion.js" tag created for this.
           </p>
@@ -108,8 +101,8 @@ const Component = () => {
           </LinkImg>
           <h4>File a Bug Report</h4>
           <p>
-            If you have found an bug or other issue in Fusion.js
-            please file a bug report in one of our repos{' '}
+            If you have found an bug or other issue in Fusion.js please file a
+            bug report in one of our repos{' '}
             <a href="https://github.com/fusionjs" target="_blank">
               https://github.com/fusionjs
             </a>.

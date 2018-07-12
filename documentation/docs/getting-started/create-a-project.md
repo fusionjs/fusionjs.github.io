@@ -5,7 +5,7 @@ path: /create-a-project/
 
 # Create a project
 
-Make sure you have reviewed the [required knowledge](/docs/getting-started/required-knowledge/) section and [set up your environment](/docs/getting-started/environment-setup/) prior to starting project development.
+Make sure you have reviewed the [required knowledge](/docs/getting-started/required-knowledge/) section prior to starting project development.
 
 ## Using yarn create
 

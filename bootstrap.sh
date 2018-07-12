@@ -14,4 +14,3 @@ done < $oss
 
 # Custom handling for fusionjs.github.io
 mkdir -p fusion/fusion-docs
-cp -R content/* fusion/fusion-docs/.

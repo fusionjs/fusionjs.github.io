@@ -11,7 +11,7 @@ const {
 
 exports.MainNavContainer = styled('div', {});
 
-exports.SearchField = styled('input', {
+exports.SearchField = styled('input', ({styleProps = {}}) => ({
   boxSizing: 'border-box',
   display: 'inline-block',
   fontFamily: fontFamily,
@@ -42,7 +42,8 @@ exports.SearchField = styled('input', {
     color: blackColor,
     backgroundColor: 'rgba(250, 250, 250, 1)',
   },
-});
+  ...styleProps.overrides,
+}));
 
 exports.MainNavItem = styled('span', ({styleProps = {}}) => ({
   display: 'inline-block',

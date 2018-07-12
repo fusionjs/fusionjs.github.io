@@ -1,48 +1,15 @@
 title: 'Fusion API'
 pathPrefix: '/api'
 children:
-  - title: 'What is Fusion.js'
-    # Add a trailing slash here to have the relative links
-    # in this docs work correctly.
-    # Detail: When a relative link not starting with /
-    # it adds it to a current pathname,
-    # if the current path doesn't have a trailing slash
-    # it loses the last part of the pathname
-    path: '/fusion-docs/'
-    pathPrefix: '/fusion-docs'
-    children:
-      - title: 'Framework comparison'
-        path: '/framework-comparison'
-      - title: 'Getting started'
-        path: '/getting-started'
-      - title: 'Universal code'
-        path: '/universal-code'
-      - title: 'Creating a plugin'
-        path: '/creating-a-plugin'
-        children:
-          - title: 'Tokens'
-            path: '/tokens'
-          - title: 'Dependencies'
-            path: '/dependencies'
-          - title: 'Creating endpoints'
-            path: '/creating-endpoints'
-          - title: 'Creating providers'
-            path: '/creating-providers'
-          - title: 'Modifying the HTML template'
-            path: '/modifying-html-template'
-          - title: 'Working with secrets'
-            path: '/working-with-secrets'
-      - title: 'Virtual modules'
-        path: '/virtual-modules'
-  - title: 'Core'
+  - title: 'Fusion.js Core'
     path: '/fusion-core'
     pathPrefix: '/fusion-core'
-  - title: 'CLI'
+  - title: 'Fusion.js CLI'
     path: '/fusion-cli'
     children:
-      - title: '.fusionrc.js'
+      - title: 'Compiler configuration'
         path: '/fusion-cli/docs/fusionrc'
-  - title: 'React app'
+  - title: 'React integration'
     path: '/fusion-react'
   - title: 'React with asynchronous dependencies'
     path: '/fusion-react-async'

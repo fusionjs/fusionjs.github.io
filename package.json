@@ -23,6 +23,7 @@
     "gatsby-remark-prismjs": "^1.2.8",
     "gatsby-source-filesystem": "^1.4.12",
     "gatsby-transformer-remark": "^1.7.7",
+    "prismjs": "^1.15.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-helmet": "^5.2.0",
@@ -46,13 +47,11 @@
     "build-only": "gatsby build --prefix-paths",
     "build": "yarn run bootstrap && yarn run build-only",
     "clean-docs": "rm -rf docs",
-    "cp-docs":
-      "yarn run clean-docs && mkdir -p docs/_build/html && cp -a public/. docs/_build/html/",
+    "cp-docs": "yarn run clean-docs && mkdir -p docs/_build/html && cp -a public/. docs/_build/html/",
     "build-docs": "yarn run build && yarn run cp-docs",
     "start": "node src/server/index.js",
     "dev": "NODE_ENV=development gatsby develop",
-    "format":
-      "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "yarn run lint"
   },
   "engines": {

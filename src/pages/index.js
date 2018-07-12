@@ -82,14 +82,8 @@ const Snippet = styled('div', {
 });
 
 const FocusBlock = styled('div', {
-  flex: '1 1 320px',
+  flex: '1 1 300px',
   padding: '16px 52px',
-  '@media (max-width: 1320px)': {
-    flex: '1 1 450px',
-  },
-  '@media (max-width: 890px)': {
-    flex: '1 1 320px',
-  },
 });
 
 const LinkImg = styled('a', {

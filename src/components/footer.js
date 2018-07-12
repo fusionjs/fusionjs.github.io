@@ -62,44 +62,53 @@ export default ({styleProps = {}}) => {
         </FlexContainer>
       </PageWidth>
       <PageWidth>
-        <small>
-          Icons made by{' '}
-          <ExternalLink
-            href="https://www.flaticon.com/authors/monkik"
-            title="monkik"
-          >
-            monkik
-          </ExternalLink>,{' '}
-          <ExternalLink
-            href="https://www.flaticon.com/authors/geotatah"
-            title="geotatah"
-          >
-            geotatah
-          </ExternalLink>,{' '}
-          <ExternalLink
-            href="https://www.flaticon.com/authors/pixel-perfect"
-            title="Pixel perfect"
-          >
-            Pixel perfect
-          </ExternalLink>,{' '}
-          <ExternalLink
-            href="https://www.flaticon.com/authors/freepik"
-            title="freepik"
-          >
-            freepik
-          </ExternalLink>, from{' '}
-          <ExternalLink href="https://www.flaticon.com/" title="Flaticon">
-            www.flaticon.com
-          </ExternalLink>{' '}
-          are licensed by{' '}
-          <ExternalLink
-            href="http://creativecommons.org/licenses/by/3.0/"
-            title="Creative Commons BY 3.0"
-            target="_blank"
-          >
-            CC 3.0 BY
-          </ExternalLink>
-        </small>
+        <FlexContainer
+          styleProps={{
+            overrides: {
+              ...(styleProps.hasSideNav && {paddingLeft: '336px'}),
+            },
+          }}
+        >
+          {' '}
+          <small>
+            Icons made by{' '}
+            <ExternalLink
+              href="https://www.flaticon.com/authors/monkik"
+              title="monkik"
+            >
+              monkik
+            </ExternalLink>,{' '}
+            <ExternalLink
+              href="https://www.flaticon.com/authors/geotatah"
+              title="geotatah"
+            >
+              geotatah
+            </ExternalLink>,{' '}
+            <ExternalLink
+              href="https://www.flaticon.com/authors/pixel-perfect"
+              title="Pixel perfect"
+            >
+              Pixel perfect
+            </ExternalLink>,{' '}
+            <ExternalLink
+              href="https://www.flaticon.com/authors/freepik"
+              title="freepik"
+            >
+              freepik
+            </ExternalLink>, from{' '}
+            <ExternalLink href="https://www.flaticon.com/" title="Flaticon">
+              www.flaticon.com
+            </ExternalLink>{' '}
+            are licensed by{' '}
+            <ExternalLink
+              href="http://creativecommons.org/licenses/by/3.0/"
+              title="Creative Commons BY 3.0"
+              target="_blank"
+            >
+              CC 3.0 BY
+            </ExternalLink>
+          </small>{' '}
+        </FlexContainer>
       </PageWidth>
     </Footer>
   );

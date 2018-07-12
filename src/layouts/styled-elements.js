@@ -88,6 +88,8 @@ exports.SideNavContainer = styled('div', () => ({
   position: 'fixed',
   height: 'calc(100vh - 52px)',
   overflowY: 'auto',
+  marginLeft: '-999px',
+  paddingLeft: '999px',
   paddingRight: '0',
   paddingTop: '1.45rem',
   paddingBottom: '1.45rem',

@@ -9,7 +9,7 @@ category: Guides
 
 ### Redux
 
-Redux is the recommended state management library for web applications at Uber. Fusion.js provides Redux integrations for its RPC plugins, and there are also [open source developer tools available](https://github.com/zalmoxisus/redux-devtools-extension).
+Redux is a state management library for web applications and works especially well with React. Fusion.js provides Redux integrations for its RPC plugins, and there are also [open source developer tools available](https://github.com/zalmoxisus/redux-devtools-extension).
 
 If you've never used Redux, refer to the [required knowledge](/docs/getting-started/required-knowledge#redux) section.
 

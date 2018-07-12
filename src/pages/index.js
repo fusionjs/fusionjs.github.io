@@ -2,9 +2,9 @@ import React from 'react';
 import {styled} from 'styletron-react';
 import Link from 'gatsby-link';
 import Prism from 'prismjs';
-import peopleImg from '../images/people.svg';
+import peopleImg from '../images/person.svg';
 import alarm from '../images/alarm-clock.svg';
-import chat from '../images/chat-message.svg';
+import help from '../images/help.svg';
 import github from '../images/github.svg';
 import {white10Color} from '../components/style-settings';
 import startup from '../images/startup.svg';
@@ -276,9 +276,9 @@ export const TeamService = createPlugin({
       </AltContainer>
       <FlexContainer>
         <FocusBlock>
-          <Link to="/team">
+          <LinkImg to="/team">
             <img src={peopleImg} alt="Fusion.js Core Team" height="120px" />
-          </Link>
+          </LinkImg>
           <h4>Fusion.js Core Team</h4>
           <p>
             Meet the <Link to="/team">Fusion.js core team</Link>. They work on
@@ -287,9 +287,9 @@ export const TeamService = createPlugin({
           </p>
         </FocusBlock>
         <FocusBlock>
-          <Link to="/support">
-            <img src={chat} alt="Fusion.js support" height="120px" />
-          </Link>
+          <LinkImg to="/support">
+            <img src={help} alt="Fusion.js support" height="120px" />
+          </LinkImg>
           <h4>Need Help?</h4>
           <p>
             Find out how to get help from the Fusion.js community on the{' '}

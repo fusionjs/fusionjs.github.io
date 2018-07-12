@@ -19,7 +19,7 @@ exports.Page = styled('div', {
 });
 
 exports.PageWidth = styled('div', {
-  maxWidth: '970px',
+  width: '970px',
   margin: '0 auto',
 });
 
@@ -88,7 +88,6 @@ exports.SideNavContainer = styled('div', () => ({
   position: 'fixed',
   height: 'calc(100vh - 52px)',
   overflowY: 'auto',
-  paddingLeft: '20px',
   paddingRight: '0',
   paddingTop: '1.45rem',
   paddingBottom: '1.45rem',

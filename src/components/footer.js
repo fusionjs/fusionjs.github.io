@@ -53,6 +53,10 @@ export default ({styleProps = {}}) => {
               <InternalLink to="/">
                 <LinkText>Home</LinkText>
               </InternalLink>
+              &nbsp;&nbsp; | &nbsp;&nbsp;
+              <InternalLink to="/join-us">
+                <LinkText>Join us!</LinkText>
+              </InternalLink>
             </p>
           </FlexItem>
         </FlexContainer>

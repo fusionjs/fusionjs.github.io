@@ -68,7 +68,7 @@ const Description = styled('div', {
 const SectionHeader = styled('h3', {});
 
 const Advantage = styled('div', {
-  padding: '0 50px',
+  padding: '0 40px',
   flexGrow: '1',
   flexBasis: '400px',
 });

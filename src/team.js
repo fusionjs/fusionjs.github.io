@@ -79,7 +79,6 @@ export default [
     name: 'Gergely Nemeth',
     username: 'gergelyke',
   },
-
   {
     face: swojitm,
     name: 'Swojit Mohapatra',

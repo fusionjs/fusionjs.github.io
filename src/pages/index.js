@@ -7,8 +7,8 @@ import alarm from '../images/alarm-clock.svg';
 import chat from '../images/chat-message.svg';
 import github from '../images/github.svg';
 import {white10Color} from '../components/style-settings';
-import balloons from '../images/balloons.png';
-import airplane from '../images/airplane.png';
+import startup from '../images/startup.svg';
+import strategy from '../images/strategy.svg';
 
 const highlight = code =>
   Prism.highlight(code, Prism.languages.javascript, 'javascript');
@@ -33,8 +33,6 @@ const AltContainer = styled('div', ({styleProps = {}}) => ({
   justifyContent: 'space-between',
   paddingTop: '52px',
   paddingBottom: '52px',
-  paddingRight: '999px',
-  marginRight: '-999px',
   marginLeft: '-27px',
   paddingLeft: '27px',
   backgroundColor: white10Color,
@@ -76,17 +74,16 @@ const Advantage = styled('div', {
 });
 
 const Snippet = styled('div', {
-  flexBasis: '670px',
+  flexBasis: '100%',
   overflow: 'auto',
-  padding: '0 50px',
+  margin: '0',
+  padding: '0 30px 0 0',
   maxWidth: '100%',
 });
 
 const FocusBlock = styled('div', {
   flex: '1 1 320px',
-  paddingLeft: '52px',
-  paddingTop: '16px',
-  paddingBottom: '16px',
+  padding: '16px 52px',
   '@media (max-width: 1320px)': {
     flex: '1 1 450px',
   },
@@ -101,7 +98,9 @@ const LinkImg = styled('a', {
 });
 
 const Image = styled('img', {
-  padding: '20px 50px 40px',
+  margin: '20px 50px 40px',
+  width: '150px',
+  height: '150px',
 });
 
 const Home = () => {
@@ -124,19 +123,18 @@ const Home = () => {
         </Description>
       </FlexContainer>
       <AltContainer>
-        <Image src={balloons} />
+        <Image src={startup} />
         <Advantage>
           <SectionHeader>Build more, configure less</SectionHeader>
           <p>
             Universal plugins enable one-liner library integrations with even
             the most complex requirements
           </p>
-        </Advantage>
-        <Snippet>
-          <pre
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{
-              __html: highlight(`
+          <Snippet>
+            <pre
+              // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{
+                __html: highlight(`
 import App from 'fusion-react';
 import Router from 'fusion-plugin-react-router';
 
@@ -158,23 +156,23 @@ export default () => {
   return app;
 }
               `),
-            }}
-          />
-        </Snippet>
+              }}
+            />
+          </Snippet>
+        </Advantage>
       </AltContainer>
       <FlexContainer>
-        <Image src={airplane} />
+        <Image src={strategy} />
         <Advantage>
           <SectionHeader>Manage complexity like a boss</SectionHeader>
           <p>
             Testable, statically typed primitives that don't get in your way.
           </p>
-        </Advantage>
-        <Snippet>
-          <pre
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{
-              __html: highlight(`
+          <Snippet>
+            <pre
+              // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{
+                __html: highlight(`
 /* @flow */
 
 import {createPlugin, createToken} from 'fusion/core';
@@ -192,9 +190,10 @@ export const TeamService = createPlugin({
   }),
 });
               `),
-            }}
-          />
-        </Snippet>
+              }}
+            />
+          </Snippet>
+        </Advantage>
       </FlexContainer>
       <AltContainer>
         <FocusBlock>

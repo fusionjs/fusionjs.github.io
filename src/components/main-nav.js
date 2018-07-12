@@ -18,6 +18,13 @@ class DocsSearch extends React.Component {
   render() {
     return (
       <SearchField
+        styleProps={{
+          overrides: {
+            '@media (max-width: 355px)': {
+              display: 'none',
+            },
+          },
+        }}
         placeholder="Search"
         id="search-field"
       />

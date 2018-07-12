@@ -21,6 +21,9 @@ exports.Page = styled('div', {
 exports.PageWidth = styled('div', {
   width: '970px',
   margin: '0 auto',
+  '@media (max-width: 800px)': {
+    width: '100%',
+  },
 });
 
 exports.H1 = styled('h1', {
@@ -40,6 +43,9 @@ exports.Header = styled('div', {
   background: '#041725',
   color: whiteColor,
   zIndex: '999',
+  '@media (max-width: 623px)': {
+    height: '100px',
+  },
 });
 
 exports.HeaderTitle = styled('span', {

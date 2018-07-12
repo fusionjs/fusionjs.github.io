@@ -113,8 +113,9 @@ class Template extends React.Component {
               ) : null}
               <FlexItem
                 styleProps={{
-                  width: hasSideNav ? 'calc(100% - 336px)' : '100%',
                   overrides: {
+                    marginRight: '30px',
+                    width: hasSideNav ? 'calc(100% - 336px)' : '100%',
                     '@media (max-width: 800px)': {
                       width: hasSideNav ? 'calc(100% - 76px)' : '100%',
                     },

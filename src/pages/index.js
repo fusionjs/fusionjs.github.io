@@ -263,7 +263,7 @@ export const TeamService = createPlugin({
               loading
             </li>
             <li>
-              and <Link to="/api/fusion-docs/">more</Link>
+              and <Link to="/api/plugins">more</Link>
             </li>
           </ul>
         </FocusBlock>

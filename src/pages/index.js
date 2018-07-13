@@ -13,6 +13,11 @@ import strategy from '../images/strategy.svg';
 const highlight = code =>
   Prism.highlight(code, Prism.languages.javascript, 'javascript');
 
+const HeroContainer = styled('div', {
+  width: '75%',
+  margin: '100px auto'
+});
+
 const FlexContainer = styled('div', ({styleProps = {}}) => ({
   display: 'flex',
   justifyContent: 'space-between',
@@ -45,24 +50,21 @@ const AltContainer = styled('div', ({styleProps = {}}) => ({
   },
 }));
 
-const Title = styled('h2', {
+const Title = styled('h1', {
+  textAlign: 'center',
   fontWeight: '200',
-  fontSize: '3.5rem',
+  textTransform: 'uppercase',
+  fontSize: '80px',
   lineHeight: '1.25',
-  width: '40%',
-  '@media (max-width: 890px)': {
-    width: '100%',
-    fontSize: '2.2em',
-  },
+  margin: '20px 0'
+});
+
+const SubTitle = styled('h2', {
+  textAlign: 'center'
 });
 
 const Description = styled('div', {
-  width: '50%',
-  paddingLeft: '52px',
-  '@media (max-width: 890px)': {
-    width: '100%',
-    paddingLeft: '0',
-  },
+  textAlign: 'center'
 });
 
 const SectionHeader = styled('h3', {});
@@ -100,22 +102,20 @@ const Image = styled('img', {
 const Home = () => {
   return (
     <div>
-      <FlexContainer styleProps={{overrides: {alignItems: 'center'}}}>
-        <Title>
-          Fusion.js<br />
-          <small>A Plugin-Based Universal Web Framework</small>
-        </Title>
+      <HeroContainer>
+        <Title>Fusion.js</Title>
+        <SubTitle>A plugin-based universal web framework</SubTitle>
         <Description>
           <p>
             Fusion.js gives you the developer experience you expect from a
             React/Redux setup, and provides tools to take project quality to the
             next level.<br />
-            <Link to="/docs/getting-started/create-a-project">
-              Create a project &gt;
+            <Link to="/docs/getting-started">
+              Let's get started &gt;
             </Link>
           </p>
         </Description>
-      </FlexContainer>
+      </HeroContainer>
       <AltContainer>
         <Image src={startup} />
         <Advantage>

@@ -11,16 +11,16 @@ Fusion.js has a modular architecture to promote small bundle sizes, and is desig
 
 Here are the features you'll find in Fusion.js:
 
-* server side rendering and async rendering
-* ES2017 and JSX support out of the box
-* hot module reloading in development mode
-* bundle splitting
-* universal rendering (run the same code in the server and the browser)
-* server-side development via Koa.js
-* plugin-based architecture (so you only include what you need in your browser bundles)
-* a curated set of plugins for data fetching, styling, etc maintained by the Fusion.js team
-* plugins for error logging, security, etc.
-* bundle analysis tooling
+- server side rendering and async rendering
+- ES2017 and JSX support out of the box
+- hot module reloading in development mode
+- bundle splitting
+- universal rendering (run the same code in the server and the browser)
+- server-side development via Koa.js
+- plugin-based architecture (so you only include what you need in your browser bundles)
+- a curated set of plugins for data fetching, styling, etc maintained by the Fusion.js team
+- plugins for error logging, security, etc.
+- bundle analysis tooling
 
 If you want to know how Fusion.js compares to similar projects, see the [framework comparison page](framework-comparison.md).
 
@@ -201,11 +201,11 @@ We have a list of Fusion.js example applications at on the [getting started page
 
 When you're ready to start on a new web project, run through these steps:
 
-* [Why Fusion.js](/docs/getting-started/why-fusion)
-* [Required knowledge](/docs/getting-started/required-knowledge)
-* [Create a project](/docs/getting-started/create-a-project)
-* [Project structure](/docs/getting-started/project-structure)
-* [Run your project](/docs/getting-started/run-your-project)
+- [Why Fusion.js](/docs/getting-started/why-fusion)
+- [Required knowledge](/docs/getting-started/required-knowledge)
+- [Create a project](/docs/getting-started/create-a-project)
+- [Project structure](/docs/getting-started/project-structure)
+- [Run your project](/docs/getting-started/run-your-project)
 
 ---
 
@@ -215,21 +215,22 @@ Here are some more in-depth sections covering various aspects of Fusion.js:
 
 #### Core concepts
 
-* [Universal code](universal-code.md)
-* [Creating a plugin](creating-a-plugin.md)
-  * [Dependencies](dependencies.md)
-  * [Creating endpoints](creating-endpoints.md)
-  * [Creating providers](creating-providers.md)
-  * [Modifying the HTML template](modifying-html-template.md)
-  * [Working with secrets](working-with-secrets.md)
+- [Universal rendering](/docs/guides/universal-rendering)
+- [Creating a plugin](/docs/guides/creating-a-plugin)
+  - [Tokens](/docs/guides/creating-a-plugin/tokens)
+  - [Dependencies](/docs/guides/creating-a-plugin/dependencies)
+  - [Creating endpoints](/docs/guides/creating-a-plugin/creating-endpoints)
+  - [Creating providers](/docs/guides/creating-a-plugin/creating-providers)
+  - [Modifying the HTML template](/docs/guides/creating-a-plugin/modifying-html-template)
+- [Working with secrets](/docs/guides/working-with-secrets)
 
 #### Plugins
 
 Check out the links below to help you get familiar with other useful plugins that are provided by the Fusion.js team:
 
-* [Styletron](https://github.com/fusionjs/fusion-plugin-styletron-react)
-* [React Router](https://github.com/fusionjs/fusion-plugin-react-router)
-* [RPC/Redux](https://github.com/fusionjs/fusion-plugin-rpc-redux-react)
-* [I18n](https://github.com/fusionjs/fusion-plugin-i18n-react)
-* [Error handling](https://github.com/fusionjs/fusion-plugin-error-handling)
-* [Logging](https://github.com/fusionjs/fusion-plugin-universal-logger)
+- [Styletron](https://github.com/fusionjs/fusion-plugin-styletron-react)
+- [React Router](https://github.com/fusionjs/fusion-plugin-react-router)
+- [RPC/Redux](https://github.com/fusionjs/fusion-plugin-rpc-redux-react)
+- [I18n](https://github.com/fusionjs/fusion-plugin-i18n-react)
+- [Error handling](https://github.com/fusionjs/fusion-plugin-error-handling)
+- [Logging](https://github.com/fusionjs/fusion-plugin-universal-logger)

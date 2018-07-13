@@ -15,13 +15,13 @@ A service is any library that exposes a programmatic API. The main difference be
 
 ### Plugin
 
-A [Fusion.js plugin](/api/fusion-docs/creating-a-plugin) is a container that encapsulates a service and a middleware. Plugins declare what dependencies they rely on (via the DI system) and may expose a service, a middleware, or both. Services and middleware that are exposed by a plugin can consume services from other plugins.
+A [Fusion.js plugin](/docs/guides/creating-a-plugin) is a container that encapsulates a service and a middleware. Plugins declare what dependencies they rely on (via the DI system) and may expose a service, a middleware, or both. Services and middleware that are exposed by a plugin can consume services from other plugins.
 
 Fusion.js plugins are suitable for encapsulating integrations with libraries, even when they require making changes to multiple areas of concern (e.g. server, browser, React providers).
 
 ### Dependency injection
 
-Fusion.js has a [type-aware dependency injection system](/api/fusion-docs/dependencies). Dependency injection is a way to modularize code, similar to how you would use ES6 import statements instead of putting your whole app in a single file. The main difference is that ES6 import statements are static (meaning they always import the same thing) and dependency injection is dynamic (meaning that what is imported can be changed through runtime configuration, for example for mocking in tests).
+Fusion.js has a [type-aware dependency injection system](/docs/guides/creating-a-plugin/dependencies). Dependency injection is a way to modularize code, similar to how you would use ES6 import statements instead of putting your whole app in a single file. The main difference is that ES6 import statements are static (meaning they always import the same thing) and dependency injection is dynamic (meaning that what is imported can be changed through runtime configuration, for example for mocking in tests).
 
 ---
 
@@ -147,7 +147,11 @@ Tree-shaking is a compiler optimization that removes unused imports. In Fusion.j
 
 ### Universal code
 
-[Universal code](/api/fusion-docs/universal-code) refers to code that lives in a single file but runs on both the server and the browser. Note that it's possible to conditionally run code only on the server or only on the browser via `if (__NODE__) {}` and `if (__BROWSER__) {}` statements, respectively.
+Universal code refers to code that lives in a single file but runs on both the server and the browser. Note that it's possible to conditionally run code only on the server or only on the browser via `if (__NODE__) {}` and `if (__BROWSER__) {}` statements, respectively.
+
+### Universal rendering
+
+[Universal rendering](/docs/guides/universal-rendering) refers to code that lives in a single file but renders HTML on the server and hydrates in the browser.
 
 ### Yarn
 

@@ -91,6 +91,12 @@ export default ({styleProps = {}}) => {
               Pixel perfect
             </ExternalLink>,{' '}
             <ExternalLink
+              href="https://www.flaticon.com/authors/good-ware"
+              title="Good Ware"
+            >
+              Good Ware
+            </ExternalLink>,{' '}
+            <ExternalLink
               href="https://www.flaticon.com/authors/freepik"
               title="freepik"
             >

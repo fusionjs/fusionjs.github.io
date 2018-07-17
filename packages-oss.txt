@@ -13,6 +13,7 @@ fusion-plugin-i18n-react
 fusion-plugin-jwt
 fusion-plugin-node-performance-emitter
 fusion-plugin-react-redux
+fusion-plugin-react-helmet-async
 fusion-plugin-react-router
 fusion-plugin-redux-action-emitter-enhancer
 fusion-plugin-rpc

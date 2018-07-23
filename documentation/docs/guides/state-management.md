@@ -7,7 +7,9 @@ category: Guides
 
 # State management
 
-### Redux
+It's possible to use any state management library with Fusion.js. Below we provide a guide for using Redux, a popular state management library within the React community.
+
+### Using Redux
 
 Redux is a state management library for web applications and works especially well with React. Fusion.js provides Redux integrations for its RPC plugins, and there are also [open source developer tools available](https://github.com/zalmoxisus/redux-devtools-extension).
 

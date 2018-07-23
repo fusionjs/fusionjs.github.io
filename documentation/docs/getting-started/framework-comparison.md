@@ -8,13 +8,13 @@ Here is how Fusion.js compares to some popular frameworks and libraries:
 
 ### React
 
-[React](https://reactjs.org/) is a popular and mature library developed by Facebook for implementing component-based UIs. Fusion.js can be used seamlessly with React: JSX, ES2017, hot module reloading, server-side rendering, etc. all work out of the box. In addition, the Fusion.js core is view-layer agnostic and we are planning on adding plugins for Preact in the future.
+[React](https://reactjs.org/) is a popular and mature library developed by Facebook for implementing component-based UIs. Fusion.js can be used seamlessly with React: JSX, ES2017, hot module reloading, server-side rendering, etc. all work out of the box. In addition, the Fusion.js core is view-layer agnostic and can be used with different view libraries as well.
 
 Through plugins, Fusion.js provides various extra features on top of vanilla React: it provides an easy way to do code splitting, it supports async server-side rendering, it allows plugins to automatically install providers when needed, etc.
 
 #### create-react-app
 
-[create-react-app](https://github.com/facebookincubator/create-react-app) is a CLI that scaffolds a React project, as well as configure Webpack, Babel, Eslint, Jest, etc. There are some things it doesn't support out of the box (most notably, [server rendering and hot reloading of components](https://github.com/facebookincubator/create-react-app#limitations)), but it provides the ability to "eject", so you can use it as a boilerplate generator and customize the build workflow from there.
+[create-react-app](https://github.com/facebookincubator/create-react-app) is a CLI that scaffolds a React project, as well as configure Webpack, Babel, Eslint, Jest, etc. There are some things it doesn't support out of the box (most notably, server rendering and hot reloading of components), but it provides the ability to "eject", so you can use it as a boilerplate generator and customize the build workflow from there.
 
 Fusion.js is similar to create-react-app in the sense that it provides a Webpack/Babel setup, but in addition to that, it provides higher level tools like server-side rendering, more powerful code splitting and fully integrated hot reloading. Fusion.js also provides a modern HTTP server API (through [Koa](http://koajs.com/)) and an universal code environment.
 
@@ -30,7 +30,7 @@ Both Express and Fusion.js can be used as a Node.js server and both can be compo
 
 [Next.js](https://github.com/zeit/next.js/) is a framework developer by Zeit.co designed for building server-rendered React applications. [Electrode](http://www.electrode.io/) is a framework developed by Walmart Labs designed for building server-rendered React applications. It's very similar in scope to Fusion.js.
 
-The main difference is that Next.js focuses on React development and doesn't provide facilities for developing full-on backends, whereas Fusion.js is a full stack framework, which supports backend development through [Koa](http://koajs.com/) middlewares and RPC plugins.
+The main difference is that Next.js focuses on React development and doesn't provide facilities for developing full-on backends, whereas Fusion.js is a full stack framework, which supports backend development through [Koa](http://koajs.com/) middleware, and plugins for tools like GraphQL. In addition, Fusion.js provides facilities such as dependency injection and static typing to improve maintainability of complex projects.
 
 Both Next.js and Fusion.js can be used with a variety of 3rd party libraries, but in the interest of avoiding analysis paralysis, the Fusion.js team also provides a curated set of plugins that we consider important for production-quality applications and that can integrate into a base app in a way that is performant and boilerplate-free.
 
@@ -38,4 +38,4 @@ Both Next.js and Fusion.js can be used with a variety of 3rd party libraries, bu
 
 [Electrode](http://www.electrode.io/) is a framework developed by Walmart Labs designed for building server-rendered React applications. It's very similar in scope to Fusion.js.
 
-Instead of providing a single monolythic scaffold, Fusion.js architecture encapsulates complex integrations on a per-library basis, allowing scaffolds to be as simple or as complex as you need. For example, installing support for atomic CSS takes a single line of code, and different styling strategies can be packaged and shared easily.
+Instead of providing a single monolythic scaffold, Fusion.js architecture encapsulates complex integrations on a per-library basis, allowing scaffolds to be as simple or as complex as you need. For example, installing support for atomic CSS takes a single line of code, and different styling strategies can be packaged and shared across projects easily.

@@ -5,9 +5,7 @@ path: /getting-started/
 
 # Getting started
 
-Fusion.js is an open source web application framework for building high quality universal React/Redux/Node applications. It's meant for both small and large scale web applications. Because many Fusion.js applications are served on a large scale in countries with slow mobile networks, performance is a big driving factor for Fusion.js.
-
-Fusion.js has a modular architecture to promote small bundle sizes, and is designed in such a way that performance milestones in its development pipeline can be rolled out to consumers via version bumps, as opposed to requiring big migrations or entirely offloading that work to app developers.
+Fusion.js is a web application framework for building high quality universal applications. It provides a modular architecture with a strong focus on testability and maintainability.
 
 Here are the features you'll find in Fusion.js:
 

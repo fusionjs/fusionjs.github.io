@@ -75,15 +75,7 @@ However, apps can gain more functionality via plugins. In the next section, we'l
 
 ### Styling
 
-Let's install these packages:
-
-```sh
-yarn add fusion-plugin-styletron-react styletron
-```
-
-This package contains the plugin for Styletron, which, in addition to providing an easy-to-use styled-component-like interface, provides [powerful server-side CSS optimizations](https://ryantsao.com/blog/virtual-css-with-styletron), yielding less CSS code down the wire.
-
-To register the plugin, let's modify `src/main.js` to register the Styletron plugin:
+The basic Fusion.js boilerplate comes with [Styletron](https://github.com/rtsao/styletron) support installed. This is done via a plugin registration, which looks like this in `src/main.js`:
 
 ```js
 // src/main.js
@@ -130,44 +122,6 @@ The application in your browser should automatically reload to display the silve
 
 ---
 
-### Font loading
-
-Fonts can be loaded via the `fusion-plugin-font-loader-react` plugin:
-
-```js
-// src/main.js
-import App from 'fusion-react';
-import Fonts, {
-  FontLoaderReactConfigToken,
-} from 'fusion-plugin-font-loader-react';
-import {assetUrl} from 'fusion-core';
-import root from './components/root';
-
-export default () => {
-  const app = new App(root);
-
-  app.register(Fonts);
-  app.register(FontLoaderReactConfigToken, {
-    preloadDepth: 1,
-    fonts: {
-      'Lato-Regular': {
-        urls: {
-          woff: assetUrl('../static/Lato-Regular.woff'),
-          woff2: assetUrl('../static/Lato-Regular.woff2'),
-        },
-        fallback: {
-          name: 'Helvetica',
-        },
-      },
-    },
-  });
-
-  return app;
-};
-```
-
----
-
 ### Assets
 
 Use the virtual module `assetUrl` for other asset types, such as images.
@@ -182,7 +136,7 @@ const Panel = styled('div', {background: 'silver'});
 
 export default (
   <Panel>
-    <img src={assetUrl('../../static/image.gif')} />
+    <img src={assetUrl('./my-image.gif')} />
   </Panel>
 );
 ```
@@ -199,10 +153,7 @@ We have a list of Fusion.js example applications at on the [getting started page
 
 When you're ready to start on a new web project, run through these steps:
 
-* [Why Fusion.js](/docs/getting-started/why-fusion)
-* [Required knowledge](/docs/getting-started/required-knowledge)
 * [Create a project](/docs/getting-started/create-a-project)
-* [Project structure](/docs/getting-started/project-structure)
 * [Run your project](/docs/getting-started/run-your-project)
 
 ---
@@ -219,7 +170,6 @@ Here are some more in-depth sections covering various aspects of Fusion.js:
   * [Creating endpoints](creating-endpoints.md)
   * [Creating providers](creating-providers.md)
   * [Modifying the HTML template](modifying-html-template.md)
-  * [Working with secrets](working-with-secrets.md)
 
 #### Plugins
 

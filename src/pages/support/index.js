@@ -1,10 +1,9 @@
 import React from 'react';
 import {styled} from 'styletron-react';
 import social from '../../images/social.svg';
-import chat from '../../images/chat-message.svg';
+import chat from '../../images/chat.svg';
 import webDevGroup from '../../images/web-dev-group.svg';
 import stack from '../../images/stack.svg';
-import uchat from '../../images/uchat.svg';
 import bug from '../../images/bug.svg';
 import {white10Color} from '../../components/style-settings';
 
@@ -93,6 +92,25 @@ const Component = () => {
             <a href="https://stackoverflow.com" target="_blank">
               Stack Overflow
             </a>. We are working on getting a "fusion.js" tag created for this.
+          </p>
+        </FocusBlock>
+        <FocusBlock>
+          <LinkImg
+            href="https://join.slack.com/t/fusionjs/shared_invite/enQtMzk3NjM0MTg0MTI4LWJhNzVjYjk5ZDVlYWIxZWViMjA3YzE5OTc4YWZkNzBkZmNkYmJkMDYyOGEzODEwMzRmMWExMzc1NDIzMmY2NDQ"
+            target="_blank"
+          >
+            <img src={chat} alt="slack" height="120px" />
+          </LinkImg>
+          <h4>Slack</h4>
+          <p>
+            Join our{' '}
+            <a
+              href="https://join.slack.com/t/fusionjs/shared_invite/enQtMzk3NjM0MTg0MTI4LWJhNzVjYjk5ZDVlYWIxZWViMjA3YzE5OTc4YWZkNzBkZmNkYmJkMDYyOGEzODEwMzRmMWExMzc1NDIzMmY2NDQ"
+              target="_blank"
+            >
+              Slack
+            </a>{' '}
+            to chat with Fusion.js core developers and the community.
           </p>
         </FocusBlock>
         <FocusBlock>

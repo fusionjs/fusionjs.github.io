@@ -42,6 +42,8 @@ children:
         path: '/fusion-plugin-jwt'
       - title: 'Node performance emitter'
         path: '/fusion-plugin-node-performance-emitter'
+      - title: 'React helmet async'
+        path: '/fusion-plugin-react-helmet-async'
       - title: 'React router'
         path: '/fusion-plugin-react-router'
       - title: 'React/Redux'

@@ -5,12 +5,8 @@ children:
     path: '/getting-started'
     pathPrefix: '/getting-started'
     children:
-      - title: 'Required knowledge'
-        path: '/required-knowledge'
       - title: 'Create a project'
         path: '/create-a-project'
-      - title: 'Project structure'
-        path: '/project-structure'
       - title: 'Run your project'
         path: '/run-your-project'
       - title: 'Core concepts'

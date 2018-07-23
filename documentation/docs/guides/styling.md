@@ -5,6 +5,8 @@ path: /styling/
 
 # Styling components
 
+It's possible to use any CSS framework or library with Fusion.js. Below we provide a guide for using styletron, a high performance atomic CSS library that is maintained by the Fusion.js team.
+
 * [Custom styling](#custom-styling)
 * [3rd party stylesheets](#3rd-party-stylesheets)
 

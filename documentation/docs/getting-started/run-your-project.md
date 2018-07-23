@@ -28,8 +28,6 @@ production mode locally, run:
 yarn build-production && NODE_ENV=production yarn start
 ```
 
-Refer to the [debugging](/docs/guides/debugging#debugging-your-production-build-locally) section if you get any error while running a production build locally.
-
 **Note**: Development tooling such as hot reloading is not available in
 production builds.
 
@@ -45,9 +43,8 @@ example, to run the application in development mode, run `yarn run fusion dev`.
     "test": "fusion test",
     "cover": "fusion test --cover",
     "build": "fusion build",
-    "build-production": "npm run build -- --production && upload-assets-to-s3",
-    "start": "PORT_HTTP=\"$PORT_HTTP\" fusion start",
-    "lint": "eslint ."
+    "build-production": "fusion build --production",
+    "start": "PORT_HTTP=\"$PORT_HTTP\" fusion start"
   }
 }
 ```
@@ -132,4 +129,4 @@ Opens source-map-explorer
 
 ### Next steps
 
-- [Core Concepts](/docs/getting-started/core-concepts)
+* [Core Concepts](/docs/getting-started/core-concepts)

@@ -9,16 +9,16 @@ Fusion.js is a web application framework for building high quality universal app
 
 Here are the features you'll find in Fusion.js:
 
-- server side rendering and async rendering
-- ES2017 and JSX support out of the box
-- hot module reloading in development mode
-- bundle splitting
-- universal rendering (run the same code in the server and the browser)
-- server-side development via Koa.js
-- plugin-based architecture (so you only include what you need in your browser bundles)
-- a curated set of plugins for data fetching, styling, etc maintained by the Fusion.js team
-- plugins for error logging, security, etc.
-- bundle analysis tooling
+* server side rendering and async rendering
+* ES2017 and JSX support out of the box
+* hot module reloading in development mode
+* bundle splitting
+* universal rendering (run the same code in the server and the browser)
+* server-side development via Koa.js
+* plugin-based architecture (so you only include what you need in your browser bundles)
+* a curated set of plugins for data fetching, styling, etc maintained by the Fusion.js team
+* plugins for error logging, security, etc.
+* bundle analysis tooling
 
 If you want to know how Fusion.js compares to similar projects, see the [framework comparison page](framework-comparison.md).
 
@@ -75,15 +75,7 @@ However, apps can gain more functionality via plugins. In the next section, we'l
 
 ### Styling
 
-Let's install these packages:
-
-```sh
-yarn add fusion-plugin-styletron-react styletron
-```
-
-This package contains the plugin for Styletron, which, in addition to providing an easy-to-use styled-component-like interface, provides [powerful server-side CSS optimizations](https://ryantsao.com/blog/virtual-css-with-styletron), yielding less CSS code down the wire.
-
-To register the plugin, let's modify `src/main.js` to register the Styletron plugin:
+The basic Fusion.js boilerplate comes with [Styletron](https://github.com/rtsao/styletron) support installed. This is done via a plugin registration, which looks like this in `src/main.js`:
 
 ```js
 // src/main.js
@@ -130,44 +122,6 @@ The application in your browser should automatically reload to display the silve
 
 ---
 
-### Font loading
-
-Fonts can be loaded via the `fusion-plugin-font-loader-react` plugin:
-
-```js
-// src/main.js
-import App from 'fusion-react';
-import Fonts, {
-  FontLoaderReactConfigToken,
-} from 'fusion-plugin-font-loader-react';
-import {assetUrl} from 'fusion-core';
-import root from './components/root';
-
-export default () => {
-  const app = new App(root);
-
-  app.register(Fonts);
-  app.register(FontLoaderReactConfigToken, {
-    preloadDepth: 1,
-    fonts: {
-      'Lato-Regular': {
-        urls: {
-          woff: assetUrl('../static/Lato-Regular.woff'),
-          woff2: assetUrl('../static/Lato-Regular.woff2'),
-        },
-        fallback: {
-          name: 'Helvetica',
-        },
-      },
-    },
-  });
-
-  return app;
-};
-```
-
----
-
 ### Assets
 
 Use the virtual module `assetUrl` for other asset types, such as images.
@@ -182,7 +136,7 @@ const Panel = styled('div', {background: 'silver'});
 
 export default (
   <Panel>
-    <img src={assetUrl('../../static/image.gif')} />
+    <img src={assetUrl('./my-image.gif')} />
   </Panel>
 );
 ```
@@ -199,11 +153,8 @@ We have a list of Fusion.js example applications at on the [getting started page
 
 When you're ready to start on a new web project, run through these steps:
 
-- [Why Fusion.js](/docs/getting-started/why-fusion)
-- [Required knowledge](/docs/getting-started/required-knowledge)
-- [Create a project](/docs/getting-started/create-a-project)
-- [Project structure](/docs/getting-started/project-structure)
-- [Run your project](/docs/getting-started/run-your-project)
+* [Create a project](/docs/getting-started/create-a-project)
+* [Run your project](/docs/getting-started/run-your-project)
 
 ---
 
@@ -213,22 +164,20 @@ Here are some more in-depth sections covering various aspects of Fusion.js:
 
 #### Core concepts
 
-- [Universal rendering](/docs/guides/universal-rendering)
-- [Creating a plugin](/docs/guides/creating-a-plugin)
-  - [Tokens](/docs/guides/creating-a-plugin/tokens)
-  - [Dependencies](/docs/guides/creating-a-plugin/dependencies)
-  - [Creating endpoints](/docs/guides/creating-a-plugin/creating-endpoints)
-  - [Creating providers](/docs/guides/creating-a-plugin/creating-providers)
-  - [Modifying the HTML template](/docs/guides/creating-a-plugin/modifying-html-template)
-- [Working with secrets](/docs/guides/working-with-secrets)
+* [Universal code](universal-code.md)
+* [Creating a plugin](creating-a-plugin.md)
+  * [Dependencies](dependencies.md)
+  * [Creating endpoints](creating-endpoints.md)
+  * [Creating providers](creating-providers.md)
+  * [Modifying the HTML template](modifying-html-template.md)
 
 #### Plugins
 
 Check out the links below to help you get familiar with other useful plugins that are provided by the Fusion.js team:
 
-- [Styletron](https://github.com/fusionjs/fusion-plugin-styletron-react)
-- [React Router](https://github.com/fusionjs/fusion-plugin-react-router)
-- [RPC/Redux](https://github.com/fusionjs/fusion-plugin-rpc-redux-react)
-- [I18n](https://github.com/fusionjs/fusion-plugin-i18n-react)
-- [Error handling](https://github.com/fusionjs/fusion-plugin-error-handling)
-- [Logging](https://github.com/fusionjs/fusion-plugin-universal-logger)
+* [Styletron](https://github.com/fusionjs/fusion-plugin-styletron-react)
+* [React Router](https://github.com/fusionjs/fusion-plugin-react-router)
+* [RPC/Redux](https://github.com/fusionjs/fusion-plugin-rpc-redux-react)
+* [I18n](https://github.com/fusionjs/fusion-plugin-i18n-react)
+* [Error handling](https://github.com/fusionjs/fusion-plugin-error-handling)
+* [Logging](https://github.com/fusionjs/fusion-plugin-universal-logger)

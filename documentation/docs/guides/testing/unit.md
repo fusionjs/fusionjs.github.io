@@ -10,7 +10,7 @@ To unit test a service exposed by a Fusion plugin with dependencies, simply call
 // src/my-plugin.js
 export default createPlugin({
   deps: {logger: LoggerToken},
-  provides() {
+  provides({logger}) {
     return {
       greet() {
         logger.log('hello');

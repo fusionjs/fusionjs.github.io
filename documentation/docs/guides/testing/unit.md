@@ -2,6 +2,39 @@
 
 Use unit testing to ensure that your methods behave as expected within the browser and Node environments.
 
+### Testing a Fusion plugin
+
+To unit test a service exposed by a Fusion.js plugin with dependencies, simply call the methods you're interested in and pass in the required dependencies as arguments:
+
+```js
+// src/my-plugin.js
+export default createPlugin({
+  deps: {logger: LoggerToken},
+  provides({logger}) {
+    return {
+      greet() {
+        logger.log('hello');
+      },
+    };
+  },
+});
+
+// src/__tests__/my-plugin.js
+import plugin from '../my-plugin.js';
+
+test('logs hello', () => {
+  const logger = {
+    log: jest.fn(),
+  };
+  const greeter = plugin.provides({logger});
+  greeter.greet();
+
+  expect(logger.log.mock.calls[0][0]).toEqual('hello');
+});
+```
+
+---
+
 ### Testing a Redux reducer
 
 #### Simple reducer

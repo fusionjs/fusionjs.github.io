@@ -4,7 +4,7 @@ Use unit testing to ensure that your methods behave as expected within the brows
 
 ### Testing a Fusion plugin
 
-To unit test a service exposed by a Fusion plugin with dependencies, simply call the methods you're interested in and pass in the required dependencies as arguments:
+To unit test a service exposed by a Fusion.js plugin with dependencies, simply call the methods you're interested in and pass in the required dependencies as arguments:
 
 ```js
 // src/my-plugin.js

@@ -2,7 +2,7 @@
 
 The Fusion.js plugin architecture allows plugins to explicitly depend on other service plugins. This allows us to swap implementations of various subsystems, for example for testing, or to provide extended functionality.
 
-A [service plugin](creating-a-plugin.md#services) is a plugin that contains a service that exposes a programmatic API. The benefit of encapsulating a service into a plugin is that a plugin allows the service instance to be memoized on a per-request basis without polluting the middleware context, and the plugin can also encapsulate the colocation of all code needed to implement related [endpoints](creating-endpoints.md), [providers](creating-providers.md) and [HTML template modifications](modifying-html-template.md).
+A [service plugin](creating-a-plugin#services) is a plugin that contains a service that exposes a programmatic API. The benefit of encapsulating a service into a plugin is that a plugin allows the service instance to be memoized on a per-request basis without polluting the middleware context, and the plugin can also encapsulate the colocation of all code needed to implement related [endpoints](creating-endpoints), [providers](creating-providers) and [HTML template modifications](modifying-html-template).
 
 Let's see how we can depend on a service that gets instantiated per request:
 
@@ -41,7 +41,7 @@ export default createPlugin({
 
 The `Name` plugin simply saves the value in `?name=[value]` to a cookie session if that querystring value is defined.
 
-Notice that the `middleware` method of the `Name` plugin receives `{Session}` as an argument. This is the same `{Session}` that we passed to `app.register(SessionToken, JWTSession)` and it's [how Fusion.js plugins do dependency injection](creatinga-plugin.md#configuration).
+Notice that the `middleware` method of the `Name` plugin receives `{Session}` as an argument. This is the same `{Session}` that we passed to `app.register(SessionToken, JWTSession)` and it's [how Fusion.js plugins do dependency injection](creating-a-plugin#configuration).
 
 We then called `Session.from(ctx)`, which is how that plugin creates a memoized instance per request.
 

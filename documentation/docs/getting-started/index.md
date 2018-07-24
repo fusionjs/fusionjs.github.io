@@ -20,7 +20,7 @@ Here are the features you'll find in Fusion.js:
 - plugins for error logging, security, etc.
 - bundle analysis tooling
 
-If you want to know how Fusion.js compares to similar projects, see the [framework comparison page](framework-comparison.md).
+If you want to know how Fusion.js compares to similar projects, see the [framework comparison page](/docs/getting-started/framework-comparison).
 
 ---
 
@@ -165,12 +165,12 @@ Here are some more in-depth sections covering various aspects of Fusion.js:
 #### Core concepts
 
 - [Universal rendering](/docs/guides/universal-rendering)
-- [Creating a plugin](/docs/guides/creating-a-plugin.md)
-  - [Tokens](/docs/guides/creating-a-plugin/tokens.md)
-  - [Dependencies](/docs/guides/creating-a-plugin/dependencies.md)
-  - [Creating endpoints](/docs/guides/creating-a-plugin/creating-endpoints.md)
-  - [Creating providers](/docs/guides/creating-a-plugin/creating-providers.md)
-  - [Modifying the HTML template](/docs/guides/creating-a-plugin/modifying-html-template.md)
+- [Creating a plugin](/docs/guides/creating-a-plugin)
+  - [Tokens](/docs/guides/creating-a-plugin/tokens)
+  - [Dependencies](/docs/guides/creating-a-plugin/dependencies)
+  - [Creating endpoints](/docs/guides/creating-a-plugin/creating-endpoints)
+  - [Creating providers](/docs/guides/creating-a-plugin/creating-providers)
+  - [Modifying the HTML template](/docs/guides/creating-a-plugin/modifying-html-template)
 
 #### Plugins
 

@@ -29,4 +29,4 @@ Here is a curated list of example Fusion.js open source applications. You might 
 
 ### Next steps
 
-- [Project structure](/docs/getting-started/project-structure)
+- [Run your project](/docs/getting-started/run-your-project)

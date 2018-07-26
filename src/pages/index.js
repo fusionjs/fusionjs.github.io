@@ -108,7 +108,7 @@ const Home = () => {
         <Description>
           <p>
             Fusion.js gives you the developer experience you expect from a
-            React/Redux setup, and provides tools to take project quality to the
+            React/Redux setup and provides tools to take project quality to the
             next level.<br />
             <Link to="/docs/getting-started">
               Let's get started &gt;
@@ -160,7 +160,7 @@ export default () => {
         <Advantage>
           <SectionHeader>Manage complexity like a boss</SectionHeader>
           <p>
-            Testable, statically typed primitives that don't get in your way.
+            Testable, statically typed primitives that don't get in your way
           </p>
           <Snippet>
             <pre
@@ -191,7 +191,7 @@ export const TeamService = createPlugin({
       </FlexContainer>
       <AltContainer>
         <FocusBlock>
-          <SectionHeader>Core Features</SectionHeader>
+          <SectionHeader>Core features</SectionHeader>
           <ul>
             <li>Plugin-based architecture and DI system for maintainability</li>
             <li>
@@ -263,7 +263,7 @@ export const TeamService = createPlugin({
               loading
             </li>
             <li>
-              and <Link to="/api/plugins">more</Link>
+              And <Link to="/api/plugins">more</Link>
             </li>
           </ul>
         </FocusBlock>
@@ -271,7 +271,7 @@ export const TeamService = createPlugin({
       <FlexContainer>
         <FocusBlock>
           <LinkImg to="/team">
-            <img src={peopleImg} alt="Fusion.js Core Team" height="120px" />
+            <img src={peopleImg} alt="Fusion.js core team" height="120px" />
           </LinkImg>
           <h4>Fusion.js Core Team</h4>
           <p>
@@ -284,7 +284,7 @@ export const TeamService = createPlugin({
           <LinkImg to="/support">
             <img src={help} alt="Fusion.js support" height="120px" />
           </LinkImg>
-          <h4>Need Help?</h4>
+          <h4>Need help?</h4>
           <p>
             Find out how to get help from the Fusion.js community on the{' '}
             <Link to="/support">support</Link> page.
@@ -292,12 +292,12 @@ export const TeamService = createPlugin({
         </FocusBlock>
         <FocusBlock>
           <LinkImg href="https://github.com/fusionjs" target="_blank">
-            <img src={github} alt="Fusion.js Github" height="120px" />
+            <img src={github} alt="Fusion.js GitHub" height="120px" />
           </LinkImg>
-          <h4>Github</h4>
+          <h4>GitHub</h4>
           <p>
             Have a question about Fusion or want to contribute? Check it out on{' '}
-            <a href="https://github.com/fusionjs">Github</a>.
+            <a href="https://github.com/fusionjs">GitHub</a>.
           </p>
         </FocusBlock>
       </FlexContainer>

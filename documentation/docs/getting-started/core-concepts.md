@@ -45,7 +45,7 @@ A bundle is a Javascript file that is compiled from one or more source files and
 
 ### CDN
 
-CDN stands for Content Delivery Network. It's a collection of servers around the world that are used to serve [assets](#assets) from closer physical proximity to the clients requesting them, in order to reduce network latency.
+CDN stands for Content Delivery Network. It's a collection of servers around the world that are used to serve [assets](#asset) from closer physical proximity to the clients requesting them, in order to reduce network latency.
 
 ### Chunk
 

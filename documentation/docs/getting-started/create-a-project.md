@@ -23,7 +23,6 @@ Here is a curated list of example Fusion.js open source applications. You might 
 
 - [simple-boilerplate](https://github.com/KevinGrandon/fusion-boilerplate/tree/master/simple-boilerplate) - A minimal example of a Fusion.js application
 - [redux-boilerplate](https://github.com/KevinGrandon/fusion-boilerplate/tree/master/redux-boilerplate) - Using redux with Fusion.js
-- [redux-reactors-boilerplate](https://github.com/KevinGrandon/fusion-boilerplate/tree/master/redux-reactors-boilerplate) - Using redux and reactors with Fusion.js
 - [apollo-graphcool-boilerplate](https://github.com/KevinGrandon/fusion-boilerplate/tree/master/apollo-graphcool-boilerplate) - Using Apollo, GraphQL and Graph.cool with Fusion.js
 - [fusion-todo-boilerplate](https://github.com/austin94/fusion-todo-boilerplate) - Todo application with dynamic localization using Redux and Fusion.js
 

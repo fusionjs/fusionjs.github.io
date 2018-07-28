@@ -239,7 +239,7 @@ export default createPlugin({
 
 ### Middlewares with dependencies
 
-Just like the `provides` method, the `middleware` method can receive dependencis as arguments.
+Just like the `provides` method, the `middleware` method can receive dependencies as arguments.
 
 For example, let's say we want to inject a logger:
 
@@ -349,7 +349,7 @@ export default createPlugin({
 
       await next();
 
-      // this happens after virtual rendeing, but before the response is sent to the browser
+      // this happens after virtual rendering, but before the response is sent to the browser
       console.log('timing: ', new Date() - start);
     }
   }
@@ -360,7 +360,7 @@ export default createPlugin({
 
 ### Token aliasing
 
-Token aliasing allows for overriding the canonical token dependency of a service with another token. This is useful when you want to register a token for use in most places, but special case a few.
+Token aliasing allows for overriding the canonical token dependency of a service with another token. This is useful when you want to register a token for special use cases.
 
 An example of using token aliasing:
 
@@ -382,8 +382,8 @@ app.register(PluginA).alias(FetchToken, FetchTokenPolyfill);
 
 ##### Troubleshooting hang-ups
 
-**Note**: The `next` function should normally be called once - and only once - per middleware call. We recommend avoiding complex conditional trees to prevent unexpected bugs that could occur when the function inadvertedly gets called multiple times (resulting in an error), or cases where it doesn't get called at all.
+**Note**: The `next` function should normally be called once - and only once - per middleware call. We recommend avoiding complex conditional trees to prevent unexpected bugs that could occur when the function inadvertently gets called multiple times (resulting in an error), or cases where it doesn't get called at all.
 
-It's important to keep in mind that the middleware stack will remain in a pending status if you forget to call `return next()` or will potentially behave erratically if you break the promise chain (for example, by forgetting to use `async/await` or by forgetting to `return` in a non-async function). Breaking the promise chain is useful in a few select obscure cases, for example, short-circuiting the stack when dealing with static assets, but can lead to surprising behavior if done inadvertedly.
+It's important to keep in mind that the middleware stack will remain in a pending status if you forget to call `return next()` or will potentially behave erratically if you break the promise chain (for example, by forgetting to use `async/await` or by forgetting to `return` in a non-async function). Breaking the promise chain is useful in a few select obscure cases, for example, short-circuiting the stack when dealing with static assets, but can lead to surprising behavior if done inadvertently.
 
 If things appear to hang or give you a blank screen, make sure you called `return next()` in your middleware.

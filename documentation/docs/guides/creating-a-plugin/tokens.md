@@ -1,10 +1,10 @@
 # Tokens
 
-Tokens are used by the Fusion.js [dependency injection](creating-a-plugin#dependency-injection) system to define the dependency tree of an application. Tokens are designed to bridge the gap between the type checking and runtime information. Your app may register your own Fusion.js plugin to a token to control behavior of your application or test.
+Tokens are used by the Fusion.js [dependency injection](../creating-a-plugin#dependency-injection) system to define the dependency tree of an application. Tokens are designed to bridge the gap between the type checking and runtime information. Your app may register your own Fusion.js plugin to a token to control behavior of your application or test.
 
 ## Type safety
 
-Tokens provide type safety for applications by allowing for plugins to define the shape of their requirements. For example, anything registered with a type of Token<Logger>, must implement the Logger interface to pass type checking.
+Tokens provide type safety for applications by allowing for plugins to define the shape of their requirements. For example, anything registered with a type of `Token<Logger>` must implement the Logger interface to pass type checking.
 
 ```js
 // src/plugins/loggerPlugin.js
@@ -24,7 +24,7 @@ app.register(LoggerToken, console);
 
 ## Preventing collisions
 
-Tokens allow Fusion.js developers to avoid collisions by using a reference to the token. In addition, tokens provide more value over pure type information This allows for multiple dependencies with the same types that are semantically different.
+Tokens allow Fusion.js developers to avoid collisions by using a reference to the token. In addition, tokens provide more value over pure type information by allowing for multiple dependencies with the same types that are semantically different.
 
 **Use case:**
 

@@ -38,4 +38,4 @@ Both Next.js and Fusion.js can be used with a variety of 3rd party libraries, bu
 
 [Electrode](http://www.electrode.io/) is a framework developed by Walmart Labs designed for building server-rendered React applications. It's very similar in scope to Fusion.js.
 
-Instead of providing a single monolythic scaffold, Fusion.js architecture encapsulates complex integrations on a per-library basis, allowing scaffolds to be as simple or as complex as you need. For example, installing support for atomic CSS takes a single line of code, and different styling strategies can be packaged and shared across projects easily.
+Instead of providing a single monolithic scaffold, Fusion.js architecture encapsulates complex integrations on a per-library basis, allowing scaffolds to be as simple or as complex as you need. For example, installing support for atomic CSS takes a single line of code, and different styling strategies can be packaged and shared across projects easily.

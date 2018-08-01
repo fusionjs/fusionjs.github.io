@@ -19,7 +19,7 @@ In the future we will be adding additional questions during the creation process
 
 ## Example Fusion.js projects
 
-Here is a curated list of example Fusion.js open source applications. You might use these as a starting point to see what Fusion.js application development looks like. [File an issue](https://github.com/fusionjs/fusionjs.github.io/issues/new) to have your Fusion.js application added.
+Here is a curated list of example Fusion.js open source applications. You might use these as a starting point to see what Fusion.js application development looks like. [File an issue](https://www.github.com/fusionjs/fusionjs.github.io/issues/new) to have your Fusion.js application added.
 
 - [simple-boilerplate](https://github.com/KevinGrandon/fusion-boilerplate/tree/master/simple-boilerplate) - A minimal example of a Fusion.js application
 - [redux-boilerplate](https://github.com/KevinGrandon/fusion-boilerplate/tree/master/redux-boilerplate) - Using redux with Fusion.js

@@ -57,7 +57,7 @@ A conditional statement whose body only runs server-only code or browser-only co
 
 ### Code splitting
 
-Code splitting (aka bundle splitting) is a technique that lazily loads of parts of an application to reduce the initial download time of an application. Fusion.js supports code splitting via `fusion-react-async`.
+Code splitting (aka bundle splitting) is a technique that lazily loads parts of an application to reduce the initial download time of an application. Fusion.js supports code splitting via `fusion-react-async`.
 
 ### Context
 
@@ -69,7 +69,7 @@ CSRF stands for Cross-Site Request Forgery. It's a type of security attack that 
 
 ### Dependency graph resolution
 
-A mechanism that sorts dependencies and runs then in order, so that plugins that depend on other plugins always run after the ones they depend on.
+A mechanism that sorts dependencies and runs them in order, so that plugins that depend on other plugins always run after the ones they depend on.
 
 ### DI
 

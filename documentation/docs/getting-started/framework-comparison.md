@@ -28,7 +28,7 @@ Both Express and Fusion.js can be used as a Node.js server and both can be compo
 
 ### Next.js
 
-[Next.js](https://github.com/zeit/next.js/) is a framework developer by Zeit.co designed for building server-rendered React applications.
+[Next.js](https://github.com/zeit/next.js/) is a framework developed by Zeit.co designed for building server-rendered React applications.
 
 The main difference is that Next.js focuses on React development and doesn't provide facilities for developing full-on backends, whereas Fusion.js is a full stack framework, which supports backend development through [Koa](http://koajs.com/) middleware, and plugins for tools like GraphQL. In addition, Fusion.js provides facilities such as dependency injection and static typing to improve maintainability of complex projects.
 

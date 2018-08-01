@@ -13,7 +13,7 @@ To create a new Fusion.js application we recommend using [yarn create](https://y
 yarn create fusion-app my-fusion-app
 ```
 
-The last argument provided will be used as the application name and for a generating a project within your current working directory.
+The last argument provided will be used as the application name and for generating a project within your current working directory.
 
 In the future we will be adding additional questions during the creation process to enable additional features. Those questions will be documented here.
 

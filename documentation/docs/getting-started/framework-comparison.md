@@ -16,7 +16,7 @@ Through plugins, Fusion.js provides various extra features on top of vanilla Rea
 
 [create-react-app](https://github.com/facebookincubator/create-react-app) is a CLI that scaffolds a React project, as well as configure Webpack, Babel, Eslint, Jest, etc. There are some things it doesn't support out of the box (most notably, server rendering and hot reloading of components), but it provides the ability to "eject", so you can use it as a boilerplate generator and customize the build workflow from there.
 
-Fusion.js is similar to create-react-app in the sense that it provides a Webpack/Babel setup, but in addition to that, it provides higher level tools like server-side rendering, more powerful code splitting and fully integrated hot reloading. Fusion.js also provides a modern HTTP server API (through [Koa](http://koajs.com/)) and an universal code environment.
+Fusion.js is similar to create-react-app in the sense that it provides a Webpack/Babel setup, but in addition to that, it provides higher level tools like server-side rendering, more powerful code splitting and fully integrated hot reloading. Fusion.js also provides a modern HTTP server API (through [Koa](http://koajs.com/)) and a universal code environment.
 
 Because Fusion.js provides the compilation pipeline, as well as both the server and browser environments, it has the potential to automatically apply several optimizations that would otherwise need to be done manually for every application.
 

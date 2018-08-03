@@ -111,7 +111,7 @@ export default (
 
 ### Variants
 
-A variant is pattern for implementing slightly different variations of a base style. Variants are a useful pattern to help codify the purposes of different style variations, and reduce the amount of inconsistencies in a style guide.
+A variant is a pattern for implementing slightly different variations of a base style. Variants are a useful pattern to help codify the purposes of different style variations, and reduce the amount of inconsistencies in a style guide.
 
 Here's an example `Button` with a `danger` and `warning` variants:
 

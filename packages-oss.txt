@@ -4,6 +4,7 @@ fusion-apollo-universal-client
 fusion-core
 fusion-cli
 fusion-plugin-browser-performance-emitter
+fusion-plugin-connected-react-router
 fusion-plugin-csrf-protection
 fusion-plugin-csrf-protection-react
 fusion-plugin-error-handling

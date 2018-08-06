@@ -6,6 +6,7 @@ path: /plugins/
 # Plugins
 
 - [Browser performance emitter](/api/fusion-plugin-browser-performance-emitter)
+- [Connected React router](/api/fusion-plugin-connected-react-router)
 - [CSRF protection](/api/fusion-plugin-csrf-protection)
 - [CSRF protection for React](/api/fusion-plugin-csrf-protection-react)
 - [Error handling](/api/fusion-plugin-error-handling)

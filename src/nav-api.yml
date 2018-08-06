@@ -26,6 +26,8 @@ children:
         path: '/fusion-apollo-universal-client'
       - title: 'Browser performance emitter'
         path: '/fusion-plugin-browser-performance-emitter'
+      - title: 'Connected React router'
+        path: '/fusion-plugin-connected-react-router'
       - title: 'CSRF protection'
         path: '/fusion-plugin-csrf-protection'
       - title: 'CSRF protection for React'

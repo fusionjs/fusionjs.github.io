@@ -257,15 +257,15 @@ You may have noticed that we're only reading from the Redux state at this point,
 
 In order to call that method, we first need to access the `:id` parameter that is provided by the URL. This can be found in `props.match.params.id`.
 
-In addition, there are actually two separate scenarios where we need to make a new `getVehicle` call: when a component is created and when it's updated with a different id. These are handled by the `componentDidMount` and `componentWillReceiveProps` lifecycle methods, respectively. Here's what those two methods end up looking like:
+In addition, there are actually two separate scenarios where we need to make a new `getVehicle` call: when a component is created and when it's updated with a different id. These are handled by the `componentDidMount` and `componentDidUpdate` lifecycle methods, respectively. Here's what those two methods end up looking like:
 
 ```js
 class Vehicle extends React.Component {
   componentDidMount() {
     this.props.getVehicle({id: this.props.match.params.id});
   }
-  componentWillReceiveProps(newProps) {
-    const oldProps = this.props;
+  componentDidUpdate(oldProps) {
+    const newProps = this.props;
     const oldId = oldProps.match && oldProps.match.params.id;
     const newId = newProps.match && newProps.match.params.id;
     if (oldId !== newId) {
@@ -286,8 +286,8 @@ import {connect} from 'react-redux';
 import {withRPCRedux} from 'fusion-plugin-rpc-redux-react';
 
 class Vehicle extends React.Component {
-  componentWillReceiveProps(newProps) {
-    const oldProps = this.props;
+  componentDidUpdate(oldProps) {
+    const newProps = this.props;
     const oldId = oldProps.match && oldProps.match.params.id;
     const newId = newProps.match && newProps.match.params.id;
     if (oldId !== newId) {

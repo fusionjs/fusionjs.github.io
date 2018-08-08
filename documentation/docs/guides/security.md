@@ -17,7 +17,7 @@ Most of these require no configuration from you.
 
 ### Configuring CSRF protection rules
 
-By default, any [non-idepotent HTTP method](http://restcookbook.com/HTTP%20Methods/idempotency/) is protected by this plugin.
+By default, any [non-idempotent HTTP method](http://restcookbook.com/HTTP%20Methods/idempotency/) is protected by this plugin.
 
 A CSRF (cross-site request forgery) attack happens if a victim visits a malicious website, and that website triggers a spoofed request via Javascript to execute an unwanted actions on a web application in which the victim is currently authenticated. CSRF protection ensures that a malicious site cannot trigger such requests by requiring a token to be associated with state-changing requests. This token cannot be spoofed thanks to security restrictions built into how browsers deal with cross-site javascript-based requests.
 

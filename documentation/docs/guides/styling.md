@@ -5,7 +5,7 @@ path: /styling/
 
 # Styling components
 
-It's possible to use any CSS framework or library with Fusion.js. Below we provide a guide for using styletron, a high performance atomic CSS library that is maintained by the Fusion.js team.
+It's possible to use any CSS framework or library with Fusion.js. Below we provide a guide for using Styletron, a high-performance atomic CSS library maintained by the Fusion.js team.
 
 * [Custom styling](#custom-styling)
 * [3rd party stylesheets](#3rd-party-stylesheets)
@@ -14,7 +14,7 @@ It's possible to use any CSS framework or library with Fusion.js. Below we provi
 
 ### Custom styling
 
-For custom styling, we recommend using Styletron (via [`fusion-plugin-styletron-react`](https://github.com/fusionjs/fusion-plugin-styletron-react)). Styletron allows you to write styled components that get compiled to atomic CSS for maximum performance.
+For custom styling, we recommend using Styletron (via [`fusion-plugin-styletron-react`](https://github.com/fusionjs/fusion-plugin-styletron-react)). Use Styletron to write styled components that get compiled to atomic CSS for maximum performance.
 
 This plugin automatically sets up SSR, hydration, and context provider boilerplate and re-exports the styling functions from `styletron-react` so you can just focus on styling.
 

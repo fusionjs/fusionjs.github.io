@@ -34,7 +34,7 @@ const Form = () => (
 export default Form;
 ```
 
-In order to see this component, reference it in `src/components/root.js`.
+To see this component, reference it in `src/components/root.js`:
 
 ```js
 // src/components/root.js
@@ -119,7 +119,7 @@ Now we can decorate the `Form` component:
 export default hoc(Form);
 ```
 
-`Form` now receives the following props: `input`, `output` (via the mapStateToProps argument in `connect`), `setInput` (via `mapDispatchToProps`), and `submit` (via `withRPCRedux('submit', ...)`.
+`Form` now receives the following props: `input`, `output` (via the `mapStateToProps` argument in `connect`), `setInput` (via `mapDispatchToProps`), and `submit` (via `withRPCRedux('submit', ...)`.
 
 We can then wire up the React elements:
 

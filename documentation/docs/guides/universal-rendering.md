@@ -7,7 +7,7 @@ path: /universal-rendering/
 
 Fusion.js supports universal rendering. Universal rendering means that large parts of the codebase can run on the server (for performing server-side rendering) and on the browser.
 
-In some frameworks, this is only limited to React code. In Fusion.js, the entire application runs in an universal context by default, from React components to middlewares in Fusion.js plugins. This means that plugin registration code only needs to be written once even if it requires server-only or browser-only code (e.g. custom hydration code), and that plugins can activate behavior across the entire lifecycle of an application without the need to configure things in many different parts of the app.
+In some frameworks, this is only limited to React code. In Fusion.js, the entire application runs in a universal context by default, from React components to middlewares in Fusion.js plugins. This means that plugin registration code only needs to be written once even if it requires server-only or browser-only code (e.g. custom hydration code), and that plugins can activate behavior across the entire lifecycle of an application without the need to configure things in many different parts of the app.
 
 Naturally, you can also write React code once and have that code be automatically server-side rendered as you would expect.
 

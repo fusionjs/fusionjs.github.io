@@ -5,7 +5,7 @@ path: /routing/
 
 # Component-based routing
 
-Fusion apps can use the [fusion-plugin-react-router](/api/fusion-plugin-react-router) to integrate routing features into the component tree. The plugin uses react-router under the hood, and exposes a similar API which allows you to add routing behavior anywhere in your component tree.
+Fusion apps can use the [fusion-plugin-react-router](/api/fusion-plugin-react-router) to integrate routing features into the component tree. The plugin uses `react-router` under the hood, and exposes a similar API that you can use to add routing behavior anywhere in your component tree.
 
 ### Example
 

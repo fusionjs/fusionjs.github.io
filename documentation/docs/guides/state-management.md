@@ -37,9 +37,9 @@ export default {
 
 **Note**: Unlike the example above, you should typically refactor a root reducer so that each key in the state object is handled by its own reducer. See [`combineReducers`](https://redux.js.org/docs/api/combineReducers.html).
 
-The Fusion.js [fusion-plugin-react-redux plugin](/api/fusion-plugin-react-redux) will setup a provider for you, so you don't need to manually wrap your React tree with a provider.
+The Fusion.js [fusion-plugin-react-redux plugin](/api/fusion-plugin-react-redux) will set up a provider for you so you don't need to manually wrap your React tree with a provider.
 
-Use `connect` from `react-redux` to expose redux state to React props:
+Use `connect` from `react-redux` to expose the Redux state to React props:
 
 ```js
 // src/components/root.js

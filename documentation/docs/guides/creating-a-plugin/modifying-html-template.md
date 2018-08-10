@@ -1,6 +1,6 @@
 # Modifying the HTML template
 
-The HTML template consists of the HTML tag that get served from the server which contains metadata such as the `<title>` and `<meta>` tags.
+The HTML template consists of the HTML tag that gets served from the server which contains metadata such as the `<title>` and `<meta>` tags.
 
 The easiest way to edit those tags is via [`fusion-plugin-react-helmet-async`](https://github.com/fusionjs/fusion-plugin-react-helmet-async).
 

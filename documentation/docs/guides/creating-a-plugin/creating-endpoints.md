@@ -19,7 +19,7 @@ export default createPlugin({
 };
 ```
 
-To write a middleware plugin, we export a _factory_ function that return a _middleware_ function. The middleware receives a `ctx` argument that has various properties, and a `next` function that it must call. It works the same way as a [Koa](http://koajs.com) middleware.
+To write a middleware plugin, we export a _factory_ function that returns a _middleware_ function. The middleware receives a `ctx` argument that has various properties, and a `next` function that it must call. It works the same way as a [Koa](http://koajs.com) middleware.
 
 Let's say we want to implement a `GET /api/ping` endpoint. This endpoint simply responds with `{ok: 1}`. To do that, we check that the `method` and `path` are correct and we set `body` to the data we want to return:
 

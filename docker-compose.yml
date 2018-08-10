@@ -1,0 +1,7 @@
+version: '2'
+services:
+  fusionjs-github-io:
+    build: .
+    volumes:
+      - .:/fusionjs-github-io
+      - /fusionjs-github-io/node_modules/

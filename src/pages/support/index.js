@@ -96,7 +96,7 @@ const Component = () => {
         </FocusBlock>
         <FocusBlock>
           <LinkImg
-            href="https://join.slack.com/t/fusionjs/shared_invite/enQtMzk3NjM0MTg0MTI4LWJhNzVjYjk5ZDVlYWIxZWViMjA3YzE5OTc4YWZkNzBkZmNkYmJkMDYyOGEzODEwMzRmMWExMzc1NDIzMmY2NDQ"
+            href="https://join.slack.com/t/fusionjs/shared_invite/enQtNDE1NjY2Mjk0OTMxLTg0NmZhY2FiZjQzZjU3ZTA4ODQ0NTNjNjhhYjVlNTk3NDQzMWJkOGFhNmU0Yzc1NjE0YmMxYjEwMTFlYjE2OWI"
             target="_blank"
           >
             <img src={chat} alt="slack" height="120px" />
@@ -105,7 +105,7 @@ const Component = () => {
           <p>
             Join our{' '}
             <a
-              href="https://join.slack.com/t/fusionjs/shared_invite/enQtMzk3NjM0MTg0MTI4LWJhNzVjYjk5ZDVlYWIxZWViMjA3YzE5OTc4YWZkNzBkZmNkYmJkMDYyOGEzODEwMzRmMWExMzc1NDIzMmY2NDQ"
+              href="https://join.slack.com/t/fusionjs/shared_invite/enQtNDE1NjY2Mjk0OTMxLTg0NmZhY2FiZjQzZjU3ZTA4ODQ0NTNjNjhhYjVlNTk3NDQzMWJkOGFhNmU0Yzc1NjE0YmMxYjEwMTFlYjE2OWI"
               target="_blank"
             >
               Slack

@@ -1,17 +1,17 @@
 # Component testing
 
-Component testing allows you to make assertions and validate your React component logic. We recommend using [enzyme](https://github.com/airbnb/enzyme/blob/master/README.md) to test React components.
+Use component testing to make assertions and validate your React component logic. We recommend using [Enzyme](https://github.com/airbnb/enzyme/blob/master/README.md) to test React components.
 
 ### Testing a functional React component
 
-Test a functional React component with enzyme's `shallow`
+Test a functional React component with Enzyme's `shallow`
 function. The subsections below show examples of different types of tests for React
 components.
 
 #### Testing props
 
 This example defines a functional component that takes some props, renders them
-via enzyme's `shallow`, and makes assertions on the output props.
+via Enzyme's `shallow` function, and makes assertions on the output props.
 
 ```js
 // src/components/tag-title.js
@@ -126,7 +126,7 @@ test('With an error', assert => {
 
 ### Testing a React component with lifecycle methods
 
-To test a React component's lifecycle methods, use enzyme's
+To test a React component's lifecycle methods, use Enzyme's
 `mount` function. The `mount` function requires tests to be run in a browser
 environment.
 

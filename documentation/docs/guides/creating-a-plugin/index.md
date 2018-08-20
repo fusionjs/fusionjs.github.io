@@ -218,7 +218,7 @@ export default () => {
 
 ## Middlewares
 
-One of the most common use case for creating a plugin for an application is to implement HTTP endpoints.
+One of the most common use cases for creating a plugin for an application is to implement HTTP endpoints.
 
 To do so, a plugin would look like this:
 

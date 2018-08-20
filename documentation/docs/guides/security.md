@@ -5,7 +5,7 @@ path: /security/
 
 # Security
 
-Fusion.js plugins can allow for secure application development, plugins are provided to:
+Fusion.js plugins enable secure application development, including:
 
 * CSRF protection
 * Frameguard
@@ -19,9 +19,9 @@ Most of these require no configuration from you.
 
 By default, any [non-idempotent HTTP method](http://restcookbook.com/HTTP%20Methods/idempotency/) is protected by this plugin.
 
-A CSRF (cross-site request forgery) attack happens if a victim visits a malicious website, and that website triggers a spoofed request via Javascript to execute an unwanted actions on a web application in which the victim is currently authenticated. CSRF protection ensures that a malicious site cannot trigger such requests by requiring a token to be associated with state-changing requests. This token cannot be spoofed thanks to security restrictions built into how browsers deal with cross-site javascript-based requests.
+A CSRF (cross-site request forgery) attack happens if a victim visits a malicious website and that website triggers a spoofed request via Javascript to execute unwanted actions on a web application in which the victim is currently authenticated. CSRF protection ensures that a malicious site cannot trigger such requests by requiring a token to be associated with state-changing requests. This token cannot be spoofed thanks to security restrictions built into how browsers deal with cross-site Javascript-based requests.
 
-Some examples of CSRF attacks include a maliciously crafted facebook link that triggers expensive operations on a user's behalf, or one that forges a request to your backend. You should never disable CSRF protection.
+Some examples of CSRF attacks include a maliciously crafted Facebook link that triggers expensive operations on a user's behalf, or one that forges a request to your backend. You should never disable CSRF protection.
 
 It's possible to create a whitelist of URLs where CSRF protection is disabled if rare exceptions need to be made. For example, it is critical for error logging requests to be accepted by the server, rather than being blocked if they're missing a CSRF token, and error logging requests from Fusion.js are done with POST requests, which are subject to CSRF protection.
 

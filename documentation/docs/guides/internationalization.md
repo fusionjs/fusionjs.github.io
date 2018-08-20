@@ -7,7 +7,7 @@ path: /Internationalization/
 
 ### Translations
 
-The Fusion.js applications can use the [fusion-plugin-i18n-react](https://github.com/fusionjs/fusion-plugin-i18n-react) plugin for translations.
+Fusion.js applications can use the [fusion-plugin-i18n-react](https://github.com/fusionjs/fusion-plugin-i18n-react) plugin for translations.
 
 The easiest way to add translations to an app is to use the `Translate` React component:
 

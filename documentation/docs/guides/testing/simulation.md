@@ -40,9 +40,9 @@ import React from 'react';
 import App from 'fusion-react';
 import Redux from 'fusion-plugin-react-redux';
 import {mock as MockRPC, RPCHandlersToken, RPCToken} from 'fusion-plugin-rpc-redux-react';
-import {test, getSimulator} from 'fusion-test-utils';
+import {getSimulator} from 'fusion-test-utils';
 
-test('getUser works', async assert => {
+test('getUser works', async () => {
   const app = await loadApp();
   app.register(RPCToken, MockRPC);
   app.register(RPCHandlersToken, {
@@ -52,7 +52,7 @@ test('getUser works', async assert => {
   });
   const simulator = getSimulator(app);
   const ctx = await render(app, '/');
-  assert.ok(ctx.rendered.includes('Bob'), 'returns data');
+  expect(ctx.rendered.includes('Bob').toEqual(true);
 });
 
 // src/components/__tests__/hello.browser.js
@@ -61,9 +61,9 @@ import React from 'react';
 import App from 'fusion-react';
 import Redux from 'fusion-plugin-react-redux';
 import {mock as MockRPC, RPCHandlersToken, RPCToken} from 'fusion-plugin-rpc-redux-react';
-import {test, getSimulator} from 'fusion-test-utils';
+import {getSimulator} from 'fusion-test-utils';
 
-test('getUser works', async assert => {
+test('getUser works', async () => {
   const app = await loadApp();
   app.register(RPCToken, MockRPC);
   app.register(RPCHandlersToken, {
@@ -73,6 +73,6 @@ test('getUser works', async assert => {
   });
   const simulator = getSimulator(app);
   const ctx = await simulator.render('/');
-  assert.equal(ctx.rendered.find(Hello).text(), 'Hello Bob', 'renders');
+  expect(ctx.rendered.find(Hello).text()).toEqual('Hello Bob');
 });
 ```

@@ -52,11 +52,11 @@ export default {
 // src/__tests__/redux.node.js
 import reduxOptions from '../redux';
 
-test('Empty action', assert => {
+test('Empty action', () => {
   const state = reduxOptions.reducer(undefined, {});
   const expectedState = {myDefaultState: 'foo'};
 
-  assert.deepEqual(state, expectedState, 'returns default state');
+  expect(state).toEqual(expectedState);
 });
 ```
 
@@ -90,31 +90,31 @@ export default createRPCReducer('getUser', {
 // src/reducers/__tests__/user.node.js
 import userReducer from '../user';
 
-test('Empty action', assert => {
+test('Empty action', () => {
   const state = userReducer(undefined, {});
   const expectedState = {data: {}};
 
-  assert.deepEqual(state, expectedState, 'returns default state');
+  expect(state).toEqual(expectedState);
 });
 
-test('getUser start', assert => {
+test('getUser start', () => {
   const action = {type: 'GET_USER_START', payload: {}};
   const state = userReducer(undefined, action);
   const expectedState = {user: null, error: null, loading: true};
 
-  assert.deepEqual(state, expectedState, 'enables isLoading');
+  expect(state).toEqual(expectedState);
 });
 
-test('getUser success', assert => {
+test('getUser success', () => {
   const initialState = {user: null, error: null, loading: true};
   const action = {type: 'GET_USER_SUCCESS', payload: {user: {name: 'My Name'}}};
   const state = userReducer(initialState, action);
   const expectedState = {user: {name: 'My Name'}, error: null, loading: false};
 
-  assert.deepEqual(state, expectedState, 'adds user and disables isLoading');
+  expect(state).toEqual(expectedState);
 });
 
-test('getUser failure', assert => {
+test('getUser failure', () => {
   const initialState = {user: null, error: null, loading: true};
   const action = {
     type: 'GET_USER_FAILURE',
@@ -127,7 +127,7 @@ test('getUser failure', assert => {
     loading: false,
   };
 
-  assert.deepEqual(state, expectedState, 'adds error and disables isLoading');
+  expect(state).toEqual(expectedState);
 });
 ```
 

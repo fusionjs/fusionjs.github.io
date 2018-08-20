@@ -21,12 +21,11 @@ Snapshot testing a serializable object:
 
 ```js
 import React from 'react';
-import {test} from 'fusion-test-utils';
 
 import someLogic from '../logic';
 
 test('test that should match snapshot', () => {
   const fixture = ['some', 'data', 'here'];
-  assert.matchSnapshot(someLogic(fixture));
+  expect(someLogic(fixture)).toMatchSnapshot();
 });
 ```

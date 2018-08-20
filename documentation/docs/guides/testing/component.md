@@ -26,10 +26,9 @@ export default ({name, isLoading}) => (
 // src/components/__tests__/tag-title.node.js
 import React from 'react';
 import {shallow} from 'enzyme';
-import {test} from 'fusion-test-utils';
 import TagTitle from '../tag-title';
 
-test('Normal title', assert => {
+test('Normal title', () => {
   const mockData = {
     name: 'myTag',
     isLoading: false,
@@ -38,11 +37,11 @@ test('Normal title', assert => {
   const output = shallow(<TagTitle {...mockData} />);
   const outputProps = output.props();
 
-  assert.equal(outputProps.style.borderRightWidth, '0px', 'no border');
-  assert.equal(outputProps.children, 'myTag', 'correct title');
+  expect(outputProps.style.borderRightWidth).toEqual('0px');
+  expect(outputProps.children).toEqual('myTag');
 });
 
-test('Loading title', assert => {
+test('Loading title', () => {
   const loadingMockData = {
     name: 'myTag',
     isLoading: true,
@@ -52,15 +51,15 @@ test('Loading title', assert => {
   const output = shallow(<TagTitle {...loadingMockData} />);
   const outputProps = output.props();
 
-  assert.equal(outputProps.style.borderRightWidth, '1px', 'no border');
-  assert.equal(outputProps.children, 'Deleting...', 'correct title');
+  expect(outputProps.style.borderRightWidth).toEqual('1px');
+  expect(outputProps.children).toEqual('Deleting...');
 });
 ```
 
 #### Simulate click
 
-This example defines a component with an `onClick` handler and uses fusion-test-utils'
-`mockFunction` to check that the handler is called a click event is triggered.
+This example defines a component with an `onClick` handler and uses
+`jest.fn()` to check that the handler is called a click event is triggered.
 
 ```js
 // src/components/delete-icon.js
@@ -71,28 +70,19 @@ export default ({id, deleteFn}) => <a onClick={() => deleteFn(id)}>Delete</a>;
 // src/components/__tests__/delete-icon.node.js
 import React from 'react';
 import {shallow} from 'enzyme';
-import {test, mockFunction} from 'fusion-test-utils';
 import DeleteIcon from '../delete-icon';
 
-test('Delete button', assert => {
+test('Delete button', () => {
   const mockData = {
     id: 'myTag',
   };
 
-  const deleteFn = mockFunction();
+  const deleteFn = jest.fn();
   const wrapper = shallow(<DeleteIcon {...mockData} deleteFn={deleteFn} />);
 
   wrapper.find('a').simulate('click');
-  assert.equal(
-    deleteFn.mock.calls.length,
-    1,
-    'delete function only called once'
-  );
-  assert.equal(
-    deleteFn.mock.calls[0][0],
-    mockData.id,
-    'delete function called with correct id'
-  );
+  expect(deleteFn.mock.calls.length).toEqual(1);
+  expect(deleteFn.mock.calls[0][0]).toEqual(mockData.id);
 });
 ```
 
@@ -119,19 +109,18 @@ export default class ExampleError extends Component {
 // src/components/__tests__/example-error.node.js
 import React from 'react';
 import {shallow} from 'enzyme';
-import {test} from 'fusion-test-utils';
 import ExampleError from '../example-error';
 
 test('Without an error', assert => {
   const wrapper = shallow(<ExampleError />);
 
-  assert.equal(wrapper.find('div').length, 1, 'renders a div');
+  expect(wrapper.find('div').length).toEqual(1);
 });
 
 test('With an error', assert => {
   const wrapper = shallow(<ExampleError error={{stack: 'some stack'}} />);
 
-  assert.equal(wrapper.find('span').length, 1, 'renders error');
+  expect(wrapper.find('span').length).toEqual(1);
 });
 ```
 
@@ -169,33 +158,32 @@ export default class TagsEditor extends Component {
 // src/components/__tests__/tags-editor.browser.js
 import React from 'react';
 import {mount} from 'enzyme';
-import {test, mockFunction} from 'fusion-test-utils';
 import TagsEditor from '../tags-editor';
 
-test('Hydrated render of tags editor', assert => {
+test('Hydrated render of tags editor', () => {
   const mockHydratedData = {user: {name: 'Test Name'}};
 
-  const getUser = mockFunction();
+  const getUser = jest.fn();
   const wrapper = mount(<TagsEditor {...mockHydratedData} getUser={getUser} />);
 
-  assert.equal(getUser.mock.calls.length, 0, 'getUser not called');
+  expect(getUser.mock.calls.length).toEqual(0);
 });
 
-test('Requests data if not in props', assert => {
+test('Requests data if not in props', () => {
   const mockUnhydratedData = {user: {}};
 
-  const getUser = mockFunction();
+  const getUser = jest.fn();
   mount(<TagsEditor {...mockUnhydratedData} getUser={getUser} />);
 
-  assert.equal(getUser.mock.calls.length, 1, 'getUser called');
+  expect(getUser.mock.calls.length).toEqual(1);
 });
 
-test('Dont request data if errored', assert => {
+test('Dont request data if errored', () => {
   const mockErredData = {user: {error: new Error()}};
 
-  const getUser = mockFunction();
+  const getUser = jest.fn();
   mount(<TagsEditor {...mockErredData} getUser={getUser} />);
 
-  assert.equal(getUser.mock.calls.length, 0, 'getUser not called');
+  expect(getUser.mock.calls.length).toEqual(0);
 });
 ```

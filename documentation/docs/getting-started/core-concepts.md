@@ -57,7 +57,7 @@ A conditional statement whose body only runs server-only code or browser-only co
 
 ### Code splitting
 
-Code splitting (aka bundle splitting) is a technique that lazily loads parts of an application to reduce the initial download time of an application. Fusion.js supports code splitting via `fusion-react-async`.
+Code splitting (aka bundle splitting) is a technique that lazily loads parts of an application to reduce the initial download time of an application. Fusion.js supports code splitting via `fusion-react`.
 
 ### Context
 
@@ -165,4 +165,4 @@ A compression algorithm, compatible with gzip. Provides better compression rates
 
 ### Next steps
 
-- [Guides](/docs/guides)
+* [Guides](/docs/guides)

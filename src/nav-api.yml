@@ -11,8 +11,6 @@ children:
         path: '/fusion-cli/docs/fusionrc'
   - title: 'React integration'
     path: '/fusion-react'
-  - title: 'React with asynchronous dependencies'
-    path: '/fusion-react-async'
   - title: 'Test utils'
     path: '/fusion-test-utils'
   - title: 'Plugins'

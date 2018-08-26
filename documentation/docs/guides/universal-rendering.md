@@ -158,14 +158,14 @@ if (__NODE__) {
 ## Client-rendered components
 
 ```js
-import {split} from 'fusion-react-async';
+import {split} from 'fusion-react';
 
 const ClientRenderedOnly = split({
   defer: true,
-  load: () => import("./browser-only-component.js"),
+  load: () => import('./browser-only-component.js'),
   LoadingComponent: () => <div>SSR placeholder...</div>,
-  ErrorComponent: () => <div>Error</div>
+  ErrorComponent: () => <div>Error</div>,
 });
 
-<ClientRenderedOnly/>
+<ClientRenderedOnly />;
 ```

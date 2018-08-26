@@ -51,14 +51,14 @@ const root = (
 
 ## Async loading routes
 
-The [fusion-plugin-react-router](/api/fusion-plugin-react-router) integrates nicely with the [fusion-react-async](/api/fusion-react-async) library to support async loading routes. This means that you will only load the code for the route that the user is currently visiting, and can make significant performance improvements to your application.
+The [fusion-plugin-react-router](/api/fusion-plugin-react-router) integrates nicely with the [fusion-react](/api/fusion-react) library to support async loading routes. This means that you will only load the code for the route that the user is currently visiting, and can make significant performance improvements to your application.
 
 ### Example
 
 ```js
 // src/components/root.js
 import React from 'react';
-import {split} from 'fusion-react-async';
+import {split} from 'fusion-react';
 import {Route} from 'fusion-plugin-react-router';
 
 const LoadingComponent = () => <div>Loading...</div>;

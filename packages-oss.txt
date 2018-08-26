@@ -24,6 +24,5 @@ fusion-plugin-universal-events
 fusion-plugin-universal-events-react
 fusion-plugin-universal-logger
 fusion-react
-fusion-react-async
 fusion-rpc-redux
 fusion-test-utils

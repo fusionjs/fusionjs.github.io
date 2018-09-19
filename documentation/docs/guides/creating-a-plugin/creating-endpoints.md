@@ -93,7 +93,7 @@ export default __NODE__ &&
       const parseBody = bodyParser();
       return async (ctx, next) => {
         if (ctx.method === 'POST' && ctx.path === '/api/echo') {
-          await parseBody(ctx, Promise.resolve);
+          await parseBody(ctx, () => Promise.resolve());
           ctx.body = ctx.request.body;
         }
         return next();

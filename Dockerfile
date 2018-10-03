@@ -1,4 +1,4 @@
-FROM uber/web-base-image:1.0.4@sha256:54882a63e6d989100f351c6fbc3585922d3659c09384a74039f586d60f9635f8
+FROM uber/web-base-image:1.0.9@sha256:98ad970fd8dadc43ecec9909e27dc543a88d096f722d00e07e0b25047e9388bc
 
 WORKDIR /fusionjs-github-io
 

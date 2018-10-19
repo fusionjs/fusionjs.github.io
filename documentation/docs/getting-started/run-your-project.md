@@ -107,11 +107,12 @@ Runs a bundle that was built via `yarn build`
 * `yarn start --dir=dir` - Specify the root directory for the application,
   relative to cwd. Defaults to `.`
 
+
+<!--
 #### `yarn lint`
 
 Runs eslint
 
-<!--
 #### `yarn profile`
 
 Opens source-map-explorer

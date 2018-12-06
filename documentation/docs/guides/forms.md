@@ -69,14 +69,14 @@ For submitting, we'll create an RPC reducer:
 
 ```js
 // src/reducers/form.js (continued)
-import {withRPCRedux} from 'fusion-plugin-rpc-redux-react';
+import {createRPCReducer} from 'fusion-plugin-rpc-redux-react';
 
 const reducers = {
   start: state => state,
   success: (state, {value}) => value,
   failure: state => state,
 };
-export const output = withRPCRedux('submit', reducers, '');
+export const output = createRPCReducer('submit', reducers, '');
 ```
 
 Finally, let's compose the reducers into a root reducer:

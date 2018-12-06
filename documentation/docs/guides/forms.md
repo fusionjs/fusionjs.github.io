@@ -126,7 +126,7 @@ We can then wire up the React elements:
 ```js
 const Form = ({input, output, setInput, submit}) => (
   <form>
-    <input onInput={e => setInput({value: e.target.value})} value={input} />
+    <input onChange={e => setInput({value: e.target.value})} value={input} />
     <button type="button" onClick={() => submit({value: input})}>
       Click me
     </button>
@@ -205,7 +205,7 @@ const hoc = compose(
 
 const Form = ({input, output, setInput, submit}) => (
   <form>
-    <input onInput={e => setInput({value: e.target.value})} value={input} />
+    <input onChange={e => setInput({value: e.target.value})} value={input} />
     <button type="button" onClick={() => submit({value: input})}>
       Click me
     </button>

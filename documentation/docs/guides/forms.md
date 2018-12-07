@@ -69,14 +69,14 @@ For submitting, we'll create an RPC reducer:
 
 ```js
 // src/reducers/form.js (continued)
-import {withRPCRedux} from 'fusion-plugin-rpc-redux-react';
+import {createRPCReducer} from 'fusion-plugin-rpc-redux-react';
 
 const reducers = {
   start: state => state,
   success: (state, {value}) => value,
   failure: state => state,
 };
-export const output = withRPCRedux('submit', reducers, '');
+export const output = createRPCReducer('submit', reducers, '');
 ```
 
 Finally, let's compose the reducers into a root reducer:
@@ -126,7 +126,7 @@ We can then wire up the React elements:
 ```js
 const Form = ({input, output, setInput, submit}) => (
   <form>
-    <input onInput={e => setInput({value: e.target.value})} value={input} />
+    <input onChange={e => setInput({value: e.target.value})} value={input} />
     <button type="button" onClick={() => submit({value: input})}>
       Click me
     </button>
@@ -205,7 +205,7 @@ const hoc = compose(
 
 const Form = ({input, output, setInput, submit}) => (
   <form>
-    <input onInput={e => setInput({value: e.target.value})} value={input} />
+    <input onChange={e => setInput({value: e.target.value})} value={input} />
     <button type="button" onClick={() => submit({value: input})}>
       Click me
     </button>

@@ -12,6 +12,7 @@ import derekj from './images/derekj.jpeg';
 import olegg from './images/olegg.jpeg';
 import gergelyn from './images/gergelyn.png';
 import swojitm from './images/swojitm.png';
+import albertywu from './images/albertywu.png';
 
 export default [
   {
@@ -83,5 +84,10 @@ export default [
     face: swojitm,
     name: 'Swojit Mohapatra',
     username: 'swojit',
+  },
+  {
+    face: albertywu,
+    name: 'Albert Wu',
+    username: 'albertywu',
   },
 ];

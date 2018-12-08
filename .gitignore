@@ -3,4 +3,5 @@ fusion/
 node_modules
 public
 docs/_build
-
+.DS_Store
+src/.DS_Store

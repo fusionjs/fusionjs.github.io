@@ -9,9 +9,9 @@ import dennisLin from './images/dennis.lin.jpg';
 import amsmith from './images/amsmith.jpg';
 import keving from './images/keving.jpeg';
 import derekj from './images/derekj.jpeg';
-import olegg from './images/olegg.jpeg';
 import gergelyn from './images/gergelyn.png';
-import swojitm from './images/swojitm.png';
+import albertywu from './images/albertywu.png';
+import deacy from './images/deacy.jpeg';
 
 export default [
   {
@@ -70,18 +70,18 @@ export default [
     username: 'derekjuber',
   },
   {
-    face: olegg,
-    name: 'Oleg Gomozov',
-    username: 'blackswanny',
-  },
-  {
     face: gergelyn,
     name: 'Gergely Nemeth',
     username: 'gergelyke',
   },
   {
-    face: swojitm,
-    name: 'Swojit Mohapatra',
-    username: 'swojit',
+    face: deacy,
+    name: 'Chris Deacy',
+    username: 'chrisdothtml',
+  },
+  {
+    face: albertywu,
+    name: 'Albert Wu',
+    username: 'albertywu',
   },
 ];

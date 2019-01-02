@@ -77,4 +77,8 @@ children:
         path: '/working-with-secrets'
       - title: 'Virtual modules'
         path: '/virtual-modules'
+      - title: 'SVG React components'
+        path: '/svg-react-components'
+      - title: 'CSS Modules'
+        path: '/css-modules'
 

@@ -11,7 +11,7 @@ children:
         path: '/fusion-cli/docs/fusionrc'
       - title: 'Progressively enhanced bundles'
         path: '/fusion-cli/docs/progressively-enhanced-bundles'
-      - title: 'Progressively enhanced bundles'
+      - title: 'Service workers'
         path: '/fusion-cli/docs/service-workers'
   - title: 'React integration'
     path: '/fusion-react'

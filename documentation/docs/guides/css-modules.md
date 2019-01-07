@@ -9,7 +9,9 @@ yarn add --dev gulp gulp-postcss autoprefixer cssnano postcss-modules gulp-conca
 ```js
 // gulpfile.js
 
-const { src, dest, task, lastRun, watch } = require("gulp");
+const fs = require("fs");
+const path = require("path");
+const { src, dest, task, watch, lastRun, parallel } = require("gulp");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
@@ -26,15 +28,55 @@ function css() {
     .pipe(dest("src/static", { sourcemaps: true }));
 }
 
-const watcher = watch("**.css", css);
-watcher.on("change", event => {
-  if (event.type === "deleted") {
-    remember.forget("css", event.path);
-  }
-});
+function watchCss() {
+  const watcher = watch("**.css", css);
+  watcher.on("change", file => {
+    remember.forget("css", path.join(process.cwd(), file));
+  });
+  watcher.on("unlink", file => {
+    fs.unlink(`${file}.json`, err => {});
+  });
+}
 
-exports.css = css;
-exports.default = css;
+exports.build = css;
+exports.default = parallel(css, watchCss);
+
+```
+
+Gulp usage:
+
+```
+# To build and watch rebuild CSS
+gulp
+
+# To just build CSS
+gulp build
+```
+
+
+### npm scripts
+
+**Update your build command**
+
+```json
+{
+  "scripts": {
+    "build-production": "gulp build && fusion build --production"
+  }
+}
+```
+
+**Updating your dev command**
+```
+yarn add concurrently --dev
+```
+
+```json
+{
+  "scripts": {
+    "dev": "concurrently gulp 'fusion dev'"
+  }
+}
 ```
 
 ## Usage

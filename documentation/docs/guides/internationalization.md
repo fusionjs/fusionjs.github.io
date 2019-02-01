@@ -39,16 +39,21 @@ export default () => {
 
 ### Dates and time
 
-There are many libraries that offer i18n support for dates/time: [moment.js](https://momentjs.com/), [date-fns](https://date-fns.org/) and [globalize.js](https://github.com/globalizejs/globalize) are popular ones.
+It is recommended to use the [date-fns library](https://date-fns.org/) or the native JS [`Intl.DateTimeFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) API to format dates.
 
-Supporting a large number of locales can have a significant impact on bundle size if formatting for a large number of locales happens client-side. We recommend formatting dates server-side when fetching data and avoid formatting data when rendering date/times in the React layer.
-
-Avoid parsing formatted dates. Date parsing is extremely bug-prone in native Javascript and libraries alike because they all fall back to undocumented browser-specific semantics when strings don't conform to the [ISO 8601 standard](https://en.wikipedia.org/wiki/ISO_8601). It's also often unreliable due to lack of timezone information. Instead of parsing dates that have been formatted, use timestamps to get fast and reliable serialization/deserialization and robust `Date` object reconstruction.
+This API is natively supported in most browsers, but for especially old browsers [a polyfill](https://github.com/andyearnshaw/Intl.js/) may be required.
 
 ---
 
 ### Numbers and currency
 
-The [globalize.js](https://github.com/globalizejs/globalize) library is commonly used to format numbers and currency.
+It is recommended to use the native JS [`Intl.NumberFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat) API to format numbers and currency.
 
-Supporting a large number of locales can have a significant impact on bundle size if formatting for a large number of locales happens client-side. We recommend formatting numbers and currency when fetching data and avoid formatting data when rendering date/times in the React layer.
+For example:
+
+```js
+const formatted = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'JPY' }).format(123456.789);
+// => "123.457 ¥"
+```
+
+This API is natively supported in most browsers, but for especially old browsers [a polyfill](https://github.com/andyearnshaw/Intl.js/) may be required.

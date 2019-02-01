@@ -65,8 +65,16 @@ children:
         path: '/universal-rendering'
       - title: 'Server code'
         path: '/server-code'
-      - title: 'Performance'
-        path: '/performance'
+      - title: "Performance"
+        path: "/performance"
+        pathPrefix: "/performance"
+        children:
+        - title: 'Quick Wins'
+          path: '/quick-wins'
+        - title: 'Measuring Browser Performance'
+          path: '/measuring-browser-performance'
+        - title: 'Service Workers'
+          path: '/service-workers'
       - title: 'Debugging'
         path: '/debugging'
       - title: 'Static assets'

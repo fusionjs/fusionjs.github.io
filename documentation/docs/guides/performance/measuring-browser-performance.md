@@ -170,7 +170,7 @@ CSS links that include [media types and/or media queries](https://developer.mozi
 
 **Referencing an external font file (via @fontface)**
 
-Fonts defined in external files are never render blocking **(**TODO: test non-Chrome). This is the case whether the style rule was defined via a CSS file, inline \<style\> header or inline style.
+Fonts defined in external files are never render blocking. This is the case whether the style rule was defined via a CSS file, inline \<style\> header or inline style.
 
 When a DOM element is assigned a style rule that references an externally defined font file, the browser will fetch that font. If such elements are present in the initial load, they will delay the **load** event but not the **DomContentLoaded** event.
 

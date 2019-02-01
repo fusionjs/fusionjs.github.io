@@ -320,19 +320,3 @@ Each strategy was tested loading a) 1 image b) 10 images. All images are identic
 
 
 ![drawing](https://docs.google.com/drawings/d/1Y80w1hUHuGnNdV6kudtPLR99VB_dPvr8SCPQlgSxZXY/export/png)
-
-
-
----
-
-
-**TODO:**
-
-Other resource types
-
-Detect blocking resource with Lighthouse
-
-Our pending Perf Dashboard
-
-
-<!-- Docs to Markdown version 1.0β14 -->

@@ -56,7 +56,10 @@ const Title = styled('h1', {
   textTransform: 'uppercase',
   fontSize: '80px',
   lineHeight: '1.25',
-  margin: '20px 0'
+  margin: '20px 0',
+  '@media (max-width: 890px)': {
+    fontSize: '50px'
+  }
 });
 
 const SubTitle = styled('h2', {

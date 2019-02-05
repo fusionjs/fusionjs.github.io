@@ -1,6 +1,6 @@
 # SVG React Components
 
-React components can be generated from SVG files using [https://github.com/smooth-code/svgr](svgr).
+React components can be generated from SVG files using [https://github.com/smooth-code/svgr](https://github.com/smooth-code/svgr).
 
 Suppose you have the following icons:
 

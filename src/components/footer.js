@@ -7,7 +7,7 @@ const Footer = styled('footer', ({styleProps = {}}) => ({
   width: '100%',
   height: '90px',
   backgroundColor: styleProps.hasSideNav ? '#f8f8f9' : '#041725',
-  color: '#999',
+  color: styleProps.hasSideNav ? '#999' : '#FFF',
   fontSize: '12px',
   ...styleProps.overrides,
 }));
@@ -22,13 +22,13 @@ const InternalLink = props => {
   return <Link style={{backgroundColor: 'transparent'}} {...props} />;
 };
 
-const LinkText = styled('span', {
-  color: '#999',
+const LinkText = styled('span', ({styleProps = {}}) => ({
+  color: styleProps.hasSideNav ? '#999' : '#FFF',
   textTransform: 'uppercase',
   ':hover': {
     textDecoration: 'underline',
   },
-});
+}));
 
 export default ({styleProps = {}}) => {
   return (
@@ -47,15 +47,19 @@ export default ({styleProps = {}}) => {
           <FlexItem>
             <p>
               <ExternalLink href="https://github.com/fusionjs">
-                <LinkText>Github</LinkText>
+                <LinkText {...{styleProps}}>Github</LinkText>
               </ExternalLink>
               &nbsp;&nbsp; | &nbsp;&nbsp;
-              <InternalLink to="/">
-                <LinkText>Home</LinkText>
-              </InternalLink>
+              <ExternalLink href="https://stackoverflow.com/search?q=fusionjs">
+                <LinkText {...{styleProps}}>Stack Overflow</LinkText>
+              </ExternalLink>
+              &nbsp;&nbsp; | &nbsp;&nbsp;
+              <ExternalLink href="https://join.slack.com/t/fusionjs/shared_invite/enQtNDE1NjY2Mjk0OTMxLTg0NmZhY2FiZjQzZjU3ZTA4ODQ0NTNjNjhhYjVlNTk3NDQzMWJkOGFhNmU0Yzc1NjE0YmMxYjEwMTFlYjE2OWI">
+                <LinkText {...{styleProps}}>Slack Channel</LinkText>
+              </ExternalLink>
               &nbsp;&nbsp; | &nbsp;&nbsp;
               <InternalLink to="/join-us">
-                <LinkText>Join us!</LinkText>
+                <LinkText {...{styleProps}}>Join us!</LinkText>
               </InternalLink>
             </p>
           </FlexItem>

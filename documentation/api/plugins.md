@@ -29,8 +29,8 @@ path: /plugins/
 
 # Community Plugins
 
-* [HTTP Router](https://github.com/mrmuhammadali/fusion-plugin-http-router) - Register and handle HTTP routes in a fusion app.
-* [Material UI](https://github.com/IcculusC/fusion-plugin-material-ui) - Adds support for the Material UI component library.
-* [Passport](https://github.com/Morphexe/fusion-plugin-passport) - Provides a PassportJS authentication implementation.
-* [Redux Observable](https://github.com/IcculusC/fusion-plugin-redux-observable) - Installs the redux-observable middleware and runs the provided epic with minimal boilerplate.
-* [Redux Thunk](https://github.com/IcculusC/fusion-plugin-redux-thunk) - Installs the redux-thunk middleware for asynchronous dispatch.
+* <a target="_blank" href="https://github.com/mrmuhammadali/fusion-plugin-http-router">HTTP Router</a> - Register and handle HTTP routes in a fusion app.
+* <a target="_blank" href="https://github.com/IcculusC/fusion-plugin-material-ui">Material UI</a> - Adds support for the Material UI component library.
+* <a target="_blank" href="https://github.com/Morphexe/fusion-plugin-passport">Passport</a> - Provides a PassportJS authentication implementation.
+* <a target="_blank" href="https://github.com/IcculusC/fusion-plugin-redux-observable">Redux Observable</a> - Installs the redux-observable middleware and runs the provided epic with minimal boilerplate.
+* <a target="_blank" href="https://github.com/IcculusC/fusion-plugin-redux-thunk">Redux Thunk</a> - Installs the redux-thunk middleware for asynchronous dispatch.

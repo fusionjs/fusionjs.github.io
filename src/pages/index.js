@@ -180,7 +180,7 @@ const Home = () => {
               <CTATitle>Try it out!</CTATitle>
               <p>Get started building applications with Fusion.js in minutes.</p>
               <CTAPrimaryButton to="/docs/getting-started" onClick={trackQuickStart}>Quick Start</CTAPrimaryButton>
-              <CTASecondaryButton href="https://github.com/fusionjs" target="_blank">Github</CTASecondaryButton>
+              <CTASecondaryButton href="https://github.com/fusionjs/fusion-core" target="_blank">Github</CTASecondaryButton>
             </CTALeftBox>
             <CTARightBox>
               <pre

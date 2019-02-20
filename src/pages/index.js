@@ -115,7 +115,7 @@ const CTALeftBox = styled('div', {
 });
 
 const CTARightBox = styled('div', {
-  backgroundColor: '#000000',
+  backgroundColor: 'black',
   color: '#33FF00',
   width: '50%',
   textAlign: 'left',

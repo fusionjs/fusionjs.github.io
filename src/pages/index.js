@@ -6,7 +6,7 @@ import peopleImg from '../images/person.svg';
 import alarm from '../images/alarm-clock.svg';
 import help from '../images/help.svg';
 import github from '../images/github.svg';
-import {white10Color} from '../components/style-settings';
+import {blueColor, white10Color} from '../components/style-settings';
 import startup from '../images/startup.svg';
 import strategy from '../images/strategy.svg';
 
@@ -14,8 +14,8 @@ const highlight = code =>
   Prism.highlight(code, Prism.languages.javascript, 'javascript');
 
 const HeroContainer = styled('div', {
-  width: '75%',
-  margin: '100px auto'
+  width: '80%',
+  margin: '100px auto 75px'
 });
 
 const FlexContainer = styled('div', ({styleProps = {}}) => ({
@@ -102,6 +102,60 @@ const Image = styled('img', {
   height: '150px',
 });
 
+const CTAContainer = styled('div', {
+  display: 'flex',
+  flexDirection: 'row',
+  marginTop: '50px',
+});
+
+const CTALeftBox = styled('div', {
+  backgroundColor: white10Color,
+  padding: '30px 20px',
+  width: '50%',
+});
+
+const CTARightBox = styled('div', {
+  backgroundColor: '#000000',
+  color: '#33FF00',
+  width: '50%',
+  textAlign: 'left',
+});
+
+const CTATitle = styled('h3', {
+  margin: 0,
+});
+
+const CTAPrimaryButton = styled(Link, {
+  ':hover': {
+    backgroundColor: 'black',
+    borderColor: 'black',
+    textDecoration: 'none',
+  },
+  backgroundColor: blueColor,
+  border: `1px solid ${blueColor}`,
+  color: 'white',
+  cursor: 'pointer',
+  display: 'inline-block',
+  marginRight: '20px',
+  minWidth: '140px',
+  padding: '10px 0px',
+});
+
+const CTASecondaryButton = styled('a', {
+  ':hover': {
+    borderColor: 'black',
+    color: 'black',
+    textDecoration: 'none',
+  },
+  backgroundColor: 'white',
+  border: `1px solid ${blueColor}`,
+  color: blueColor,
+  cursor: 'pointer',
+  display: 'inline-block',
+  minWidth: '140px',
+  padding: '10px 0px',
+});
+
 const Home = () => {
   return (
     <div>
@@ -112,11 +166,28 @@ const Home = () => {
           <p>
             Fusion.js gives you the developer experience you expect from a
             React/Redux setup and provides tools to take project quality to the
-            next level.<br />
-            <Link to="/docs/getting-started">
-              Let's get started &gt;
-            </Link>
+            next level.
           </p>
+          <CTAContainer>
+            <CTALeftBox>
+              <CTATitle>Try it out!</CTATitle>
+              <p>Get started building applications with Fusion.js in minutes.</p>
+              <CTAPrimaryButton to="/docs/getting-started">Quick Start</CTAPrimaryButton>
+              <CTASecondaryButton href="https://github.com/fusionjs" target="_blank">Github</CTASecondaryButton>
+            </CTALeftBox>
+            <CTARightBox>
+              <pre
+                // eslint-disable-next-line react/no-danger
+                dangerouslySetInnerHTML={{
+                  __html: `
+$ yarn create fusion-app my-fusion-app
+$ cd my-fusion-app
+$ yarn dev
+                `
+                }}
+              />
+            </CTARightBox>
+          </CTAContainer>
         </Description>
       </HeroContainer>
       <AltContainer>

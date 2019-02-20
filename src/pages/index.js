@@ -1,6 +1,7 @@
 import React from 'react';
 import {styled} from 'styletron-react';
 import Link from 'gatsby-link';
+import {OutboundLink} from 'gatsby-plugin-google-analytics';
 import Prism from 'prismjs';
 import peopleImg from '../images/person.svg';
 import alarm from '../images/alarm-clock.svg';
@@ -141,7 +142,7 @@ const CTAPrimaryButton = styled(Link, {
   padding: '10px 0px',
 });
 
-const CTASecondaryButton = styled('a', {
+const CTASecondaryButton = styled(OutboundLink, {
   ':hover': {
     borderColor: 'black',
     color: 'black',
@@ -155,6 +156,12 @@ const CTASecondaryButton = styled('a', {
   minWidth: '140px',
   padding: '10px 0px',
 });
+
+const trackQuickStart = () => {
+  if (window.ga) {
+    window.ga('send', 'event', 'click', 'home', 'quick_start');
+  }
+};
 
 const Home = () => {
   return (
@@ -172,7 +179,7 @@ const Home = () => {
             <CTALeftBox>
               <CTATitle>Try it out!</CTATitle>
               <p>Get started building applications with Fusion.js in minutes.</p>
-              <CTAPrimaryButton to="/docs/getting-started">Quick Start</CTAPrimaryButton>
+              <CTAPrimaryButton to="/docs/getting-started" onClick={trackQuickStart}>Quick Start</CTAPrimaryButton>
               <CTASecondaryButton href="https://github.com/fusionjs" target="_blank">Github</CTASecondaryButton>
             </CTALeftBox>
             <CTARightBox>

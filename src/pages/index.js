@@ -16,7 +16,7 @@ const highlight = code =>
 
 const HeroContainer = styled('div', {
   width: '80%',
-  margin: '100px auto 75px'
+  margin: '100px auto 75px',
 });
 
 const FlexContainer = styled('div', ({styleProps = {}}) => ({
@@ -59,16 +59,16 @@ const Title = styled('h1', {
   lineHeight: '1.25',
   margin: '20px 0',
   '@media (max-width: 890px)': {
-    fontSize: '50px'
-  }
+    fontSize: '50px',
+  },
 });
 
 const SubTitle = styled('h2', {
-  textAlign: 'center'
+  textAlign: 'center',
 });
 
 const Description = styled('div', {
-  textAlign: 'center'
+  textAlign: 'center',
 });
 
 const SectionHeader = styled('h3', {});
@@ -178,9 +178,21 @@ const Home = () => {
           <CTAContainer>
             <CTALeftBox>
               <CTATitle>Try it out!</CTATitle>
-              <p>Get started building applications with Fusion.js in minutes.</p>
-              <CTAPrimaryButton to="/docs/getting-started" onClick={trackQuickStart}>Quick Start</CTAPrimaryButton>
-              <CTASecondaryButton href="https://github.com/fusionjs/fusion-core" target="_blank">Github</CTASecondaryButton>
+              <p>
+                Get started building applications with Fusion.js in minutes.
+              </p>
+              <CTAPrimaryButton
+                to="/docs/getting-started"
+                onClick={trackQuickStart}
+              >
+                Quick Start
+              </CTAPrimaryButton>
+              <CTASecondaryButton
+                href="https://github.com/fusionjs/fusion-react"
+                target="_blank"
+              >
+                Github
+              </CTASecondaryButton>
             </CTALeftBox>
             <CTARightBox>
               <pre
@@ -190,7 +202,7 @@ const Home = () => {
 $ yarn create fusion-app my-fusion-app
 $ cd my-fusion-app
 $ yarn dev
-                `
+                `,
                 }}
               />
             </CTARightBox>

@@ -4,9 +4,6 @@ path: /measuring-browser-performance
 ---
 # Measuring Browser Performance
 
-See also: [Measuring Network Performance](https://docs.google.com/document/d/1Zg31H1frJQClKudZ9c9s59b1gCQDPK9qAvyf8D_fppE/edit?ts=5a7df728#)
-
-
 ## Chrome DevTools timings versus Performance API data
 
 The W3C Standard [defines](http://w3c.github.io/perf-timing-primer/) the Web Performance Timing API which is at least partially supported by all major browsers. Inspecting `window.performance.timing` after a page has load returns timing data for each critical step during that page load.
@@ -15,7 +12,7 @@ The network tab in Chrome DevTools also shows page and resource load timings but
 
 The following diagram maps Performance API data to Chrome DevTools timings:
 
-<img src="https://docs.google.com/drawings/d/1kZQfXblGevGN0MLY17XH4eyNxKnhwheEzArcRk5rWWQ/export/png">
+<img src="https://docs.google.com/a/uber.com/drawings/d/e/2PACX-1vSthB2lJ7lVO3bMz3kTdCyCI64kY6oDDUrWXPCA3lYsFdYNflUqEIJ9sLlZbp_iARtQzVXsmbqbDzkl/pub?w=961&h=483">
 
 **Notes**
 
@@ -100,7 +97,7 @@ As soon as the HTML has been parsed (DOMContentLoaded), the browser can begin th
 
 #### 1. JavaScript
 
-![drawing](https://docs.google.com/drawings/d/1jru5IN-o4VtzGscoShZBWdL_nneo2i-eCpnH-J46efw/export/png)
+<img src="https://docs.google.com/a/uber.com/drawings/d/e/2PACX-1vSqO3ePXAtClQ62bKN5X04mgHzuWxZHBcS8amwaRN2Y1mFIvdrYKCOAfbd6JfG9e9sacsGAq3EEr5wM/pub?w=736&h=395">
 
 **Default \<script\> tags**
 
@@ -256,7 +253,7 @@ Lato-Bold font (1 font / 10 fonts). Chrome 64 over "Slow 3G" connection.
   </tr>
 </table>
 
-![drawing](https://docs.google.com/drawings/d/1Y80w1hUHuGnNdV6kudtPLR99VB_dPvr8SCPQlgSxZXY/export/png)
+![drawing](https://docs.google.com/a/uber.com/drawings/d/e/2PACX-1vRZDZKPhG01wPNOKE1EC96LZ-I0lJOrsBJrMRWDEJaCgj-0wsHTB78Q7uUj7V99p6rr7jX-RxHrXb4A/pub?w=728&h=353)
 
 #### 4. Images
 
@@ -314,9 +311,8 @@ Each strategy was tested loading a) 1 image b) 10 images. All images are identic
   </tr>
 </table>
 
-
-* double loads img
-
+&ast; double loads img
 
 
-![drawing](https://docs.google.com/drawings/d/1Y80w1hUHuGnNdV6kudtPLR99VB_dPvr8SCPQlgSxZXY/export/png)
+
+

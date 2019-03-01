@@ -73,7 +73,7 @@ c)if the resouce is not yet in the Service Worker cache, fetch the response from
 
 In Chrome developer tools go to Application tab > Cache Storage and open the drop down. If you're using the Service Worker plugin default handlers, your cache key should always be '0.0.0'. Sometimes you'll need to click refresh from the context menu to show the current cache. To delete a cache entry, click delete on the cache entry's context menu
 
-<img src="https://docs.google.com/drawings/d/1cX_ztaMYC7xaoP_KMSm1VjgOlmXM-nDvVGQren71hCI/export/png
+<img src="https://docs.google.com/a/uber.com/drawings/d/e/2PACX-1vTbl992DPTrxH27rfj1I7q5CCJtCkEayRMa63LCX-HAmEbpSFrt_oDl47u_Kohaq-ogSuauj48HQJfg/pub?w=960&h=720
 ">
 
 #### Disabling Service Worker
@@ -83,7 +83,7 @@ Sometimes, particularly in development, you'll want to disable the Service Worke
 In Chrome you can do this via developer tools: Application tab > Service Workers > Check "Bypass for Network". Other browsers have similar opt-outs.
 
 <img src="
-https://docs.google.com/drawings/d/1pr771urNtzum3mFR4wKYtkFygGN21Ribztq73QWP5v8/export/png
+https://docs.google.com/a/uber.com/drawings/d/e/2PACX-1vQN6fHiebIe2IeOTpi_0hACVtXkzJ7wZRKCXzlIpX6mbOiaXt-8w3us3tBRNbZBv36Ut1R9APparNaW/pub?w=960&h=720
 ">
 
 #### Cross-app caching in development

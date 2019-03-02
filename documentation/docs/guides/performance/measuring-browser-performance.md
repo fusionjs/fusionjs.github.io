@@ -12,7 +12,7 @@ The network tab in Chrome DevTools also shows page and resource load timings but
 
 The following diagram maps Performance API data to Chrome DevTools timings:
 
-<img src="https://docs.google.com/a/uber.com/drawings/d/e/2PACX-1vSthB2lJ7lVO3bMz3kTdCyCI64kY6oDDUrWXPCA3lYsFdYNflUqEIJ9sLlZbp_iARtQzVXsmbqbDzkl/pub?w=961&h=483">
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQM3V3bIFBVk7qtT_LU-TdhBKUCGh597bzq42inGQwaKeprW3c3hlsYtPCIGu_mcnE7hHWcgIYhkW-4/pub?w=961&h=483">
 
 **Notes**
 
@@ -97,7 +97,7 @@ As soon as the HTML has been parsed (DOMContentLoaded), the browser can begin th
 
 #### 1. JavaScript
 
-<img src="https://docs.google.com/a/uber.com/drawings/d/e/2PACX-1vSqO3ePXAtClQ62bKN5X04mgHzuWxZHBcS8amwaRN2Y1mFIvdrYKCOAfbd6JfG9e9sacsGAq3EEr5wM/pub?w=736&h=395">
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQD8Qv07H52OGo-DaY5csUi068GsfZBtOAi6nPmW5z2HJTIXu-Z9AqfVOBeTvseEgBQANsN-8C2WQMO/pub?w=736&h=395">
 
 **Default \<script\> tags**
 
@@ -253,7 +253,7 @@ Lato-Bold font (1 font / 10 fonts). Chrome 64 over "Slow 3G" connection.
   </tr>
 </table>
 
-![drawing](https://docs.google.com/a/uber.com/drawings/d/e/2PACX-1vRZDZKPhG01wPNOKE1EC96LZ-I0lJOrsBJrMRWDEJaCgj-0wsHTB78Q7uUj7V99p6rr7jX-RxHrXb4A/pub?w=728&h=353)
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSfvizYfZkiNRVVFhm79zrpO6sUyd53XatJ7iSZbjozcNHCAGGRqw4I-XsCi8NRcOs0SdgdZKAjuIMv/pub?w=728&h=353">
 
 #### 4. Images
 

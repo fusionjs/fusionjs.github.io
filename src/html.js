@@ -75,12 +75,34 @@ module.exports = class HTML extends React.Component {
             dangerouslySetInnerHTML={{
               __html: `
               window.onload = () => {
-                window.docsearch({ 
-                  apiKey: '380d5368678eb99d4faa6ce5077c4827', 
-                  indexName: 'fusionjs', 
-                  inputSelector: '#search-field', 
-                  debug: false // Set debug to true if you want to inspect the dropdown 
+                window.docsearch({
+                  apiKey: '380d5368678eb99d4faa6ce5077c4827',
+                  indexName: 'fusionjs',
+                  inputSelector: '#search-field',
+                  debug: false // Set debug to true if you want to inspect the dropdown
                 });
+              };
+            `,
+            }}
+          />
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.trackOutboundLink = (aTag) => {
+                if (window.ga && aTag.href) {
+                  window.ga('send', 'event', {
+                    eventCategory: 'Outbound Link',
+                    eventAction: 'click',
+                    eventLabel: aTag.href,
+                    transport: 'beacon',
+                    hitCallback: () => {
+                      document.location = aTag.href;
+                    }
+                  });
+                  return false;
+                }
+                return true;
               };
             `,
             }}

@@ -1,6 +1,7 @@
 import React from 'react';
 import {styled} from 'styletron-react';
 import Link from 'gatsby-link';
+import {OutboundLink} from 'gatsby-plugin-google-analytics';
 import {PageWidth, FlexContainer, FlexItem} from '../layouts/styled-elements';
 
 const Footer = styled('footer', ({styleProps = {}}) => ({
@@ -12,7 +13,7 @@ const Footer = styled('footer', ({styleProps = {}}) => ({
   ...styleProps.overrides,
 }));
 
-const ExternalLink = styled('a', {
+const ExternalLink = styled(OutboundLink, {
   backgroundColor: 'transparent',
   color: 'inherit',
   textDecoration: 'none',

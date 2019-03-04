@@ -390,7 +390,7 @@ export const TeamService = createPlugin({
           <h4>GitHub</h4>
           <p>
             Have a question about Fusion or want to contribute? Check it out on{' '}
-            <a href="https://github.com/fusionjs">GitHub</a>.
+            <OutboundLink href="https://github.com/fusionjs">GitHub</OutboundLink>.
           </p>
         </FocusBlock>
       </FlexContainer>

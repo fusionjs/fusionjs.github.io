@@ -14,6 +14,15 @@ module.exports = ({markdownAST}) => {
     if (!reAbsoluteLink.test(node.url)) {
       node.url = node.url.replace(/\.md$/i, '');
     }
+    // If absolute link track outbound links
+    else {
+      if (!node.data) {
+        node.data = {};
+      }
+      node.data.hProperties = {
+        onclick: "return window.trackOutboundLink(this);",
+      };
+    }
     // update github's fusionjs links to docs to links to docs website
     if (node.url.indexOf(fusionjsLink) === 0) {
       const linkUrl = new URL(node.url);

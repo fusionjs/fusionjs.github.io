@@ -6,6 +6,7 @@ import webDevGroup from '../../images/web-dev-group.svg';
 import stack from '../../images/stack.svg';
 import bug from '../../images/bug.svg';
 import {white10Color} from '../../components/style-settings';
+import {OutboundLink} from 'gatsby-plugin-google-analytics';
 
 const FlexContainer = styled('div', ({styleProps = {}}) => ({
   display: 'flex',
@@ -89,9 +90,9 @@ const Component = () => {
           <h4>Stack Overflow</h4>
           <p>
             Ask your question and share knowledge on{' '}
-            <a href="https://stackoverflow.com" target="_blank">
+            <OutboundLink href="https://stackoverflow.com/search?q=fusionjs" target="_blank">
               Stack Overflow
-            </a>. We are working on getting a "fusion.js" tag created for this.
+            </OutboundLink>. We are working on getting a "fusion.js" tag created for this.
           </p>
         </FocusBlock>
         <FocusBlock>
@@ -104,12 +105,12 @@ const Component = () => {
           <h4>Slack</h4>
           <p>
             Join our{' '}
-            <a
+            <OutboundLink
               href="https://join.slack.com/t/fusionjs/shared_invite/enQtNDE1NjY2Mjk0OTMxLTg0NmZhY2FiZjQzZjU3ZTA4ODQ0NTNjNjhhYjVlNTk3NDQzMWJkOGFhNmU0Yzc1NjE0YmMxYjEwMTFlYjE2OWI"
               target="_blank"
             >
               Slack
-            </a>{' '}
+            </OutboundLink>{' '}
             to chat with Fusion.js core developers and the community.
           </p>
         </FocusBlock>
@@ -121,9 +122,9 @@ const Component = () => {
           <p>
             If you have found an bug or other issue in Fusion.js please file a
             bug report in one of our repos{' '}
-            <a href="https://github.com/fusionjs" target="_blank">
+            <OutboundLink href="https://github.com/fusionjs" target="_blank">
               https://github.com/fusionjs
-            </a>.
+            </OutboundLink>.
           </p>
         </FocusBlock>
       </FlexContainer>

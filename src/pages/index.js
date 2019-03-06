@@ -8,8 +8,8 @@ import alarm from '../images/alarm-clock.svg';
 import help from '../images/help.svg';
 import github from '../images/github.svg';
 import {blueColor, white10Color} from '../components/style-settings';
-import startup from '../images/startup.svg';
 import strategy from '../images/strategy.svg';
+import jigsaw from '../images/jigsaw.svg';
 
 const highlight = code =>
   Prism.highlight(code, Prism.languages.javascript, 'javascript');
@@ -22,8 +22,8 @@ const HeroContainer = styled('div', {
 const FlexContainer = styled('div', ({styleProps = {}}) => ({
   display: 'flex',
   justifyContent: 'space-between',
-  paddingTop: '52px',
-  paddingBottom: '52px',
+  paddingTop: '42px',
+  paddingBottom: '42px',
   alignItems: 'start',
   flexFlow: 'wrap',
   '@media (max-width: 890px)': {
@@ -37,8 +37,8 @@ const FlexContainer = styled('div', ({styleProps = {}}) => ({
 const AltContainer = styled('div', ({styleProps = {}}) => ({
   display: 'flex',
   justifyContent: 'space-between',
-  paddingTop: '52px',
-  paddingBottom: '52px',
+  paddingTop: '42px',
+  paddingBottom: '42px',
   marginLeft: '-27px',
   paddingLeft: '27px',
   backgroundColor: white10Color,
@@ -74,7 +74,7 @@ const Description = styled('div', {
 const SectionHeader = styled('h3', {});
 
 const Advantage = styled('div', {
-  padding: '0 40px',
+  padding: '0 20px',
   flexGrow: '1',
   flexBasis: '400px',
 });
@@ -117,7 +117,7 @@ const CTALeftBox = styled('div', {
 
 const CTARightBox = styled('div', {
   backgroundColor: 'black',
-  color: '#33FF00',
+  color: white10Color,
   width: '50%',
   textAlign: 'left',
 });
@@ -210,12 +210,11 @@ $ yarn dev
         </Description>
       </HeroContainer>
       <AltContainer>
-        <Image src={startup} />
+        <Image src={jigsaw} />
         <Advantage>
-          <SectionHeader>Build more, configure less</SectionHeader>
+          <SectionHeader>Plugin architecture</SectionHeader>
           <p>
-            Universal plugins enable one-liner library integrations with even
-            the most complex requirements
+            Encapsulate complex logic into a single plugin and register it in one line.
           </p>
           <Snippet>
             <pre
@@ -225,18 +224,15 @@ $ yarn dev
 import App from 'fusion-react';
 import Router from 'fusion-plugin-react-router';
 
-const root = <div>...</div>;
-
 export default () => {
-  const app = new App(root);
+  const app = new App(<div>...</div>);
 
   /*
   One line of code sets up everything you need for routing:
   - Server rendering
   - React Providers on both server and browser
   - Bundle splitting integration
-  - HMR integration
-  - Metadata hydration
+  - Hot module reloading support
   */
   app.register(Router);
 
@@ -251,31 +247,28 @@ export default () => {
       <FlexContainer>
         <Image src={strategy} />
         <Advantage>
-          <SectionHeader>Manage complexity like a boss</SectionHeader>
+          <SectionHeader>Universal code</SectionHeader>
           <p>
-            Testable, statically typed primitives that don't get in your way
+            Write your server and client code together and Fusion will take care of the rest.
           </p>
           <Snippet>
             <pre
               // eslint-disable-next-line react/no-danger
               dangerouslySetInnerHTML={{
                 __html: highlight(`
-/* @flow */
+import App from 'fusion-react';
+import SecureHeadersPlugin from './plugins/secure-headers-plugin';
 
-import {createPlugin, createToken} from 'fusion/core';
-import {UserServiceToken as User} from './user';
-import {ProjectServiceToken as Project} from './project';
+export default () => {
+  const app = new App(<div>...</div>);
 
-export const TeamServiceToken = createToken('TeamServiceToken');
-export const TeamService = createPlugin({
-  deps: {User, Project},
-  provides: ({User, Project}) => ({
-    async findByProjectId(projectId) {
-      const {users} = await Project.findById(projectId);
-      return Promise.all(users.map(id => User.findById(id)));
-    },
-  }),
-});
+  // Register this plugin only on the server
+  if (__NODE__) {
+    app.register(SecureHeadersPlugin);
+  }
+
+  return app;
+}
               `),
               }}
             />
@@ -286,16 +279,15 @@ export const TeamService = createPlugin({
         <FocusBlock>
           <SectionHeader>Core features</SectionHeader>
           <ul>
-            <li>Plugin-based architecture and DI system for maintainability</li>
+            <li>
+              <Link to="/docs/guides/testing">Ready-to-use testing environment</Link>{' '}
+              with Jest, Enzyme, Puppeteer and integration test utilities
+            </li>
             <li>
               Out-of-the-box support for server-rendering of React components,
               bundle splitting and hot module reloading
             </li>
-            <li>Tree-shaking support on universal code</li>
-            <li>
-              Ready-to-use testing environment with Jest, Enzyme, Puppeteer and
-              integration test utilities
-            </li>
+            <li>Automatic tree-shaking support on universal code to remove unused lines</li>
           </ul>
         </FocusBlock>
         <FocusBlock>
@@ -307,39 +299,11 @@ export const TeamService = createPlugin({
               client-side store hydration
             </li>
             <li>
-              <Link to="/api/fusion-plugin-react-router/">React Router</Link>:
-              automatically integrate with the core SSR, HMR and bundle
-              splitting systems
-            </li>
-            <li>
               Data fetching: supports{' '}
               <Link to="/api/fusion-plugin-rpc-redux-react/">
-                RPC-driven composable data fetching
+                RPC-driven data fetching
               </Link>{' '}
               and <Link to="/api/fusion-apollo">GraphQL/Apollo</Link>
-            </li>
-            <li>
-              Security: automatically setup{' '}
-              <Link to="/api/fusion-plugin-csrf-protection">
-                CSRF protection
-              </Link>{' '}
-              on endpoints
-            </li>
-            <li>
-              Quality metrics: easily consume{' '}
-              <Link to="/api/fusion-plugin-node-performance-emitter">
-                server performance
-              </Link>{' '}
-              and{' '}
-              <Link to="/api/fusion-plugin-browser-performance-emitter">
-                browser performance
-              </Link>{' '}
-              logging,{' '}
-              <Link to="/api/fusion-plugin-error-handling">error logging</Link>{' '}
-              and{' '}
-              <Link to="/api/fusion-plugin-universal-events">
-                generic event streams
-              </Link>
             </li>
             <li>
               Performance: easily opt into performance-oriented paradigms such
@@ -351,12 +315,7 @@ export const TeamService = createPlugin({
               </Link>
             </li>
             <li>
-              <Link to="/api/fusion-plugin-i18n-react">I18N</Link>:
-              Automatically set up efficient bundle-splitting-aware translation
-              loading
-            </li>
-            <li>
-              And <Link to="/api/plugins">more</Link>
+              And <Link to="/api/plugins">more</Link>!
             </li>
           </ul>
         </FocusBlock>

@@ -12,6 +12,7 @@ import derekj from './images/derekj.jpeg';
 import gergelyn from './images/gergelyn.png';
 import albertywu from './images/albertywu.png';
 import deacy from './images/deacy.jpeg';
+import mickey from './images/mickey.jpg';
 
 export default [
   {
@@ -83,5 +84,10 @@ export default [
     face: albertywu,
     name: 'Albert Wu',
     username: 'albertywu',
+  },
+  {
+    face: mickey,
+    name: 'Mickey Burks',
+    username: 'micburks'
   },
 ];

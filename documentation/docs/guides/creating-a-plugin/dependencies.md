@@ -39,7 +39,7 @@ export default createPlugin({
 });
 ```
 
-The `Name` plugin simply saves the value in `?name=[value]` to a cookie session if that querystring value is defined.
+The `Name` plugin simply saves the value in `?name=[value]` to a session cookie if that querystring value is defined.
 
 Notice that the `middleware` method of the `Name` plugin receives `{Session}` as an argument. This is the same `{Session}` that we passed to `app.register(SessionToken, JWTSession)` and it's [how Fusion.js plugins do dependency injection](creating-a-plugin#configuration).
 

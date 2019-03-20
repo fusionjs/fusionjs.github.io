@@ -129,4 +129,4 @@ Opens source-map-explorer
 
 ### Next steps
 
-* [Core Concepts](/docs/getting-started/core-concepts)
+* [Core Concepts](/docs/learn-fusion/core-concepts)

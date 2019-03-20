@@ -26,7 +26,7 @@ The following diagram maps Performance API data to Chrome DevTools timings:
 
 #### 1. DOMContentLoaded
 
-The HTML document has been loaded and parsed. This is the earliest possible time that the page is renderable. This event (and thus rendering) can be delayed if the page includes [blocking resources](/docs/guides/performance/measuring-browser-performance#render-blocking-resources).
+The HTML document has been loaded and parsed. This is the earliest possible time that the page is renderable. This event (and thus rendering) can be delayed if the page includes [blocking resources](/docs/references/performance/measuring-browser-performance#render-blocking-resources).
 
 #### 2. load
 

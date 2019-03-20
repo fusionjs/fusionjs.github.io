@@ -2,7 +2,7 @@
 title: State management
 date:  2017-10-31
 path: /state-management/
-category: Guides
+category: References
 ---
 
 # State management
@@ -62,7 +62,7 @@ const Component = ({count, increment}) => (
 export default hoc(Component);
 ```
 
-To see how to integrate Redux with RPC calls, refer to the [fetching data](/docs/guides/fetching-data) section.
+To see how to integrate Redux with RPC calls, refer to the [fetching data](/docs/references/fetching-data) section.
 
 ---
 

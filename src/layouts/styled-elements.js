@@ -19,11 +19,9 @@ exports.Page = styled('div', {
 });
 
 exports.PageWidth = styled('div', {
-  width: '970px',
+  width: '96%',
+  maxWidth: '1420px',
   margin: '0 auto',
-  '@media (max-width: 800px)': {
-    width: '100%',
-  },
 });
 
 exports.H1 = styled('h1', {

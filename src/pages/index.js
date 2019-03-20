@@ -157,6 +157,14 @@ const CTASecondaryButton = styled(OutboundLink, {
   padding: '10px 0px',
 });
 
+const HomeLayout = styled('div', {
+  '@media (max-width: 800px)': {
+    width: '100%',
+  },
+  margin: '0 auto',
+  width: '970px',
+});
+
 const trackQuickStart = () => {
   if (window.ga) {
     window.ga('send', 'event', 'click', 'home', 'quick_start');
@@ -165,7 +173,7 @@ const trackQuickStart = () => {
 
 const Home = () => {
   return (
-    <div>
+    <HomeLayout>
       <HeroContainer>
         <Title>Fusion.js</Title>
         <SubTitle>A plugin-based universal web framework</SubTitle>
@@ -280,7 +288,7 @@ export default () => {
           <SectionHeader>Core features</SectionHeader>
           <ul>
             <li>
-              <Link to="/docs/guides/testing">Ready-to-use testing environment</Link>{' '}
+              <Link to="/docs/references/testing">Ready-to-use testing environment</Link>{' '}
               with Jest, Enzyme, Puppeteer and integration test utilities
             </li>
             <li>
@@ -353,7 +361,7 @@ export default () => {
           </p>
         </FocusBlock>
       </FlexContainer>
-    </div>
+    </HomeLayout>
   );
 };
 

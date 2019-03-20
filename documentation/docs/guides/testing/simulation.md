@@ -51,7 +51,7 @@ test('getUser works', async () => {
     }
   });
   const simulator = getSimulator(app);
-  const ctx = await render(app, '/');
+  const ctx = await simulator.render('/');
   expect(ctx.rendered.includes('Bob').toEqual(true);
 });
 

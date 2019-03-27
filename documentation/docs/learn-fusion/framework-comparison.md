@@ -1,3 +1,8 @@
+---
+title: Framework Comparison
+path: /framework-comparison/
+---
+
 # Framework comparison
 
 Fusion.js is an open source web framework, originally created by Uber. It's comprised of a CLI, a webpack/babel transpilation pipeline, a Koa server, and a plugin-based isomorphic runtime architecture.

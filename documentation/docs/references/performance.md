@@ -7,6 +7,6 @@ category: Documentation
 
 # Performance
 
-- [Quick Wins](/docs/guides/performance/quick-wins)
+- [Quick Wins](/docs/references/performance/quick-wins)
 - [Measuring Browser Performance](/measuring-browser-performance)
-- [Service Worker](/docs/guides/performance/service-worker)
+- [Service Worker](/docs/references/performance/service-worker)

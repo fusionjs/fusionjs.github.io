@@ -89,7 +89,13 @@ function getCatFact(): string {
   return FACTS[Math.floor(Math.random() * FACTS.length)];
 }
 
-export default createPlugin({
+type CatFactsDeps = {
+  logger: typeof LoggerToken,
+};
+
+type CatFactsService = void;
+
+export default createPlugin<CatFactsDeps, CatFactsService>({
   deps: {logger: LoggerToken},
   middleware: deps => (ctx: Context, next: () => Promise<*>) => {
     if(ctx.url === '/log-cat-fact') {
@@ -100,7 +106,11 @@ export default createPlugin({
 });
 ```
 
-Let's break this down.  We import a `type {Context}` from `fusion-core` which is used in our middleware signature.  This let's us ensure safe accessibility of the `ctx` object.  We are also using the dependency injected logger which is registered with `LoggerToken`.  If we look at the type of `logger`, we would expect to see:
+Let's break this down.
+
+The `createPlugin` function takes two generics `CatFactsDeps` and `CatFactsService`. The type `CatFactsDeps` specifies what should be the type of the `deps` property. The type `CatFactsService` specifies what should be the type of the service returned by `provides`. Since this example only sets up a middleware and doesn't provide a service API, we simply alias `CatFactsService` with `void`.
+
+We import a `type {Context}` from `fusion-core` which is used in our middleware signature.  This let's us ensure safe accessibility of the `ctx` object.  We are also using the dependency injected logger which is registered with `LoggerToken`.  If we look at the type of `logger`, we would expect to see:
 
 ```js
 // defined in https://github.com/fusionjs/fusion-tokens/blob/master/src/index.js#L24
@@ -116,3 +126,77 @@ export type Logger = {
 ```
 
 If we tried to do `deps.logger.notALogMethod(...)` we would expect a type error.  Fusion.js will automatically hook up these injected types when they are available, ensuring more seamless type safety across the Fusion.js ecosystem.
+
+#### Universal plugin types
+
+It's possible for plugins to be non-trivial enough that they have similar but not identical type signatures on server and browser.
+
+The recommended way to type those types of plugins is to create separate plugins and tokens for each environment:
+
+```js
+// src/plugins/foo/server.js
+import type {FusionPlugin} from 'fusion-core';
+
+export type ServerFooDeps = {
+  bar: typeof BarToken,
+}
+
+export class ServerFoo {
+  greet() {
+    console.log('hello');
+  }
+}
+
+export const ServerFooToken = createToken<ServerFoo>('Foo');
+export const ServerFooPlugin = ((__NODE__ && createPlugin<ServerFooDeps, ServerFoo>({
+  deps: {bar: BarToken},
+  provides({bar}) {
+    return new ServerFoo();
+  }
+}): any): FusionPlugin<ServerFooDeps, ServerFoo>);
+
+// src/plugins/foo/browser.js
+import type {FusionPlugin} from 'fusion-core';
+
+export type BrowserFooDeps = {
+  baz: typeof BazToken,
+}
+
+export class BrowserFoo {
+  dontGreet() {
+    console.log('no hi for you');
+  }
+}
+
+export const BrowserFooToken = createToken<BrowserFoo>('Foo');
+export const BrowserFooPlugin = ((__BROWSER__ && createPlugin<BrowserFooDeps, BrowserFoo>({
+  deps: {baz: BazToken},
+  provides({baz}) {
+    return new BrowserFoo();
+  }
+}): any): FusionPlugin<BrowserFooDeps, BrowserFoo>);
+
+// src/plugins/foo/index.js
+export * from './plugins/foo/server.js';
+export * from './plugins/foo/browser.js';
+
+// src/main.js
+import App from 'fusion-react';
+import {ServerFooToken, ServerFooPlugin, BrowserFooToken, BrowserFooPlugin} from './plugins/foo/index.js';
+
+export default () => {
+  const app = new App();
+
+  if (__NODE__) {
+    app.register(ServerFooToken, ServerFooPlugin);
+  else {
+    app.register(BrowserFooToken, BrowserFooPlugin);
+  }
+
+  return app;
+}
+```
+
+Note that we use `__NODE__ && ...` and `__BROWSER__ && ...` code fences to treeshake the plugins (and their dependencies) out of the appropriate bundles. The cast to `any` and back to `FusionPlugin` is required to prevent Flow from nagging about the environment selection boolean.
+
+Warning: You should not move the `createPlugin` call outside of the `__NODE__ && ...` fence, as doing so can prevent treeshaking.

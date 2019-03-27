@@ -1,17 +1,17 @@
-import React from 'react';
-import {styled} from 'styletron-react';
-import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
-import {MainNavContainer, MainNavItem, SearchField} from './styled-elements';
-import {getPath} from '../utils';
+import React from "react";
+import { styled } from "styletron-react";
+import Helmet from "react-helmet";
+import Link from "gatsby-link";
+import { MainNavContainer, MainNavItem, SearchField } from "./styled-elements";
+import { getPath } from "../utils";
 
 const InternalLink = props => {
-  return <Link style={{backgroundColor: 'transparent'}} {...props} />;
+  return <Link style={{ backgroundColor: "transparent" }} {...props} />;
 };
 
-const ExternalLink = styled('a', ({styleProps = {}}) => ({
-  backgroundColor: 'transparent',
-  ...styleProps.overrides,
+const ExternalLink = styled("a", ({ styleProps = {} }) => ({
+  backgroundColor: "transparent",
+  ...styleProps.overrides
 }));
 
 class DocsSearch extends React.Component {
@@ -20,10 +20,10 @@ class DocsSearch extends React.Component {
       <SearchField
         styleProps={{
           overrides: {
-            '@media (max-width: 355px)': {
-              display: 'none',
-            },
-          },
+            "@media (max-width: 355px)": {
+              display: "none"
+            }
+          }
         }}
         placeholder="Search"
         id="search-field"
@@ -33,7 +33,7 @@ class DocsSearch extends React.Component {
 }
 
 const Nav = props => {
-  const {data, location, pathPrefix} = props;
+  const { data, location, pathPrefix } = props;
 
   function matchPath(regexp) {
     return location.pathname.match(regexp);
@@ -61,19 +61,14 @@ const Nav = props => {
                 title={item.title}
               />
             ) : null}
-            <MainNavItem styleProps={{isActive}}>{item.title}</MainNavItem>
+            <MainNavItem styleProps={{ isActive }}>{item.title}</MainNavItem>
           </InternalLink>
         );
       })}
       <InternalLink to="/support">
         <MainNavItem
           styleProps={{
-            isActive: isActive('/support'),
-            overrides: {
-              '@media (max-width: 474px)': {
-                display: 'none',
-              },
-            },
+            isActive: isActive("/support")
           }}
         >
           Support

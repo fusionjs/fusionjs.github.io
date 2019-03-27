@@ -168,7 +168,7 @@ const Home = () => {
     <div>
       <HeroContainer>
         <Title>Fusion.js</Title>
-        <SubTitle>A plugin-based universal web framework</SubTitle>
+        <SubTitle>Modern framework for fast, powerful React apps</SubTitle>
         <Description>
           <p>
             Fusion.js gives you the developer experience you expect from a

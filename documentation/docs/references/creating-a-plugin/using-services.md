@@ -19,7 +19,9 @@ export const ExampleToken = createToken('example');
 export default createPlugin({
   provides: () => 'Hello React!',
 });
+```
 
+```js
 // src/app.js
 import ExamplePlugin, {ExampleToken} from './plugins/Example.js';
 
@@ -27,7 +29,9 @@ export default (app: FusionApp) => {
   app.register(ExampleToken, ExamplePlugin);
   // ...
 }
+```
 
+```js
 // src/components/Example.js
 import React from 'react';
 import {useService} from 'fusion-react';

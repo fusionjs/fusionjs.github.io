@@ -1,6 +1,6 @@
 # Creating providers
 
-**Note: The preferred method for providing and consuming a service in React is with the hooks API. SEE [Using services]('/docs/getting-started/create-a-project/create-a-plugin/using-services').**
+**Note: The preferred method for providing and consuming a service in React is with the hooks API. SEE [using services]('/docs/getting-started/create-a-project/create-a-plugin/using-services').**
 
 When using services in React/Preact, it's good practice to use providers and HOCs that communicate via `context` because having global service instances floating around makes testing harder.
 

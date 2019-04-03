@@ -1,5 +1,7 @@
 # Creating providers
 
+**Note: The preferred method for providing and consuming a service in React is with the hooks API. SEE [Using services]('/docs/getting-started/create-a-project/create-a-plugin/using-services').**
+
 When using services in React/Preact, it's good practice to use providers and HOCs that communicate via `context` because having global service instances floating around makes testing harder.
 
 The Fusion.js plugin architecture makes it possible to automatically install providers when a plugin is registered. This, in turn, means all logic related to a service - including integration with React/Preact - can be colocated into a single plugin.

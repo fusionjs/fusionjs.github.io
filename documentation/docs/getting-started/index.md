@@ -103,7 +103,7 @@ If you don't see them, you have probably stopped the server. Re-run `yarn dev` t
 
 ### Example applications
 
-We have a list of Fusion.js example applications at on the [getting started page](/docs/getting-started/create-a-project/#example-fusionjs-projects). There you can also find CLI tools to generate new Fusion.js applications and plugins.
+We have a list of Fusion.js example applications on the [Create a project](/docs/getting-started/create-a-project/#example-fusionjs-projects) page.
 
 ### Create a new web application
 

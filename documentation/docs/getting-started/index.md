@@ -5,23 +5,15 @@ path: /getting-started/
 
 # Getting started
 
-Fusion.js, Uber’s open source universal web framework, is designed to make web development easier and produce lightweight,
-high-performing apps. We initially [built Fusion.js](https://eng.uber.com/fusionjs/) to revamp our own websites, and have
-since offered it to the community as an open source project.
+Fusion.js, Uber’s open source universal web framework, is designed to make web development easier and produce lightweight, high-performing apps. We initially [built Fusion.js](https://eng.uber.com/fusionjs/) to revamp our own websites, and have since offered it to the community as an open source project.
 
-In this tutorial, we walkthrough how to get started with Fusion.js and have a 'Hello World!' application up and running
-in 5 minutes. The tutorial walks through three easy steps, from creating the application to displaying 'Hello World!' in
-the browser. The 'Hello World!' application is a good starting point for those seeking to get deeper into the Fusion.js
-framework.
+In this tutorial, we walkthrough how to get started with Fusion.js and have a 'Hello World!' application up and running in 5 minutes. The tutorial walks through three easy steps, from creating the application to displaying 'Hello World!' in the browser. The 'Hello World!' application is a good starting point for those seeking to get deeper into the Fusion.js framework.
 
 ---
 
 ### Step 1: Create a boilerplate app
 
-Creating a Fusion.js application is easy. In this tutorial, we will use [Yarn](https://code.fb.com/web/yarn-a-new-package-manager-for-javascript/),
-an open source package manager created at Facebook, to set up the Fusion.js scaffold for our application. Yarn replaces
-the existing workflow with the npm client or another package manager while remaining compatible with the npm registry.
-It has the same feature set as existing workflows while operating faster, more securely, and more reliably.
+Creating a Fusion.js application is easy. In this tutorial, we will use [Yarn](https://code.fb.com/web/yarn-a-new-package-manager-for-javascript/), an open source package manager created at Facebook, to set up the Fusion.js scaffold for our application. Yarn replaces the existing workflow with the npm client or another package manager while remaining compatible with the npm registry. It has the same feature set as existing workflows while operating faster, more securely, and more reliably.
 
 **Note**: If you have already completed this step, please skip to *Step 2: Run your app*.
 
@@ -31,9 +23,7 @@ In your terminal, run the following `yarn` command to create a boilerplate app, 
 yarn create fusion-app hello-world-app
 ```
 
-The command will create a new directory, `hello-world-app`, that contains all the files needed to set up and run Fusion.js.
-When Yarn finishes successfully, the terminal will display the message "Success! You have created a Fusion.js project".
-Now go to the newly-created source directory of `hello-world-app`.
+The command will create a new directory, `hello-world-app`, that contains all the files needed to set up and run Fusion.js. When Yarn finishes successfully, the terminal will display the message "Success! You have created a Fusion.js project". Now go to the newly-created source directory of `hello-world-app`.
 
 ```sh
 cd hello-world-app/src
@@ -50,15 +40,13 @@ Run `ls` to view the file structure of `hello-world-app`.
 └── root.js
 ```
 
-The directory pages contains the [React](https://reactjs.org/) code for rendering the demo page and the "Page not found"
-page. The file `main.js` is the application's entrypoint, and `root.js` contains routes.
+The directory pages contains the [React](https://reactjs.org/) code for rendering the demo page and the "Page not found" page. The file `main.js` is the application's entrypoint, and `root.js` contains routes.
 
 ---
 
 ### Step 2: Run your app
 
-You are now ready to start the application you created in Step 1. In your terminal, run the following `yarn` command in
-the project’s root directory:
+You are now ready to start the application you created in Step 1. In your terminal, run the following `yarn` command in the project’s root directory:
 
 ```sh
 yarn dev
@@ -72,13 +60,10 @@ This serves up the Fusion.js demo page, as shown below, on http://localhost:3000
 
 ### Step 3: Say 'Hello World!'
 
-In the final step of this tutorial, you will rewrite the default Fusion.js demo page to make it say 'Hello World!'. To
-simplify this step, you must replace the demo code in the existing `home.js` file with new code that can render the
-'Hello World!' text in your browser. This means the routes will remain the same and no other code changes are required.
+In the final step of this tutorial, you will rewrite the default Fusion.js demo page to make it say 'Hello World!'. To simplify this step, you must replace the demo code in the existing `home.js` file with new code that can render the 'Hello World!' text in your browser. This means the routes will remain the same and no other code changes are required.
 
 1. Open `home.js` and remove the existing code so the file is completely empty.
-2. Copy and paste the code snippet below to `home.js`. This snippet imports the React libraries used to render the
-'Hello World!' text in your browser.
+2. Copy and paste the code snippet below to `home.js`. This snippet imports the React libraries used to render the 'Hello World!' text in your browser.
 
 ```js
 // src/pages/home.js
@@ -106,9 +91,9 @@ const Home = () => (
 export default Home;
 ```
 
-4. Finally, re-run `yarn dev` to rerun your application. As soon the server starts again, access your file by visiting
-http://localhost:3000. The message `Build completed in x.xxxs` will be shown in the terminal when the server has restarted.
-In your browser, you should now see your app's home page displaying 'Hello World!'
+4. Hot module reloading ensures your changes will be reflected in real time if your server is still running. In your browser, you should now see your app's home page displaying 'Hello World!'
+
+If you don't see them, you have probably stopped the server. Re-run `yarn dev` to rerun your application. As soon the server starts again, access your file by visiting http://localhost:3000. The message `Build completed in x.xxxs` will be shown in the terminal when the server has restarted.
 
 ![Hello World](getting_started_2.png)
 
@@ -118,8 +103,7 @@ In your browser, you should now see your app's home page displaying 'Hello World
 
 ### Example applications
 
-We have a list of Fusion.js example applications at on the [getting started page](/docs/getting-started/create-a-project/#example-fusionjs-projects).
-There you can also find CLI tools to generate new Fusion.js applications and plugins.
+We have a list of Fusion.js example applications at on the [getting started page](/docs/getting-started/create-a-project/#example-fusionjs-projects). There you can also find CLI tools to generate new Fusion.js applications and plugins.
 
 ### Create a new web application
 

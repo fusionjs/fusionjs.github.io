@@ -1,4 +1,4 @@
-title: 'Getting Started'
+title: 'Docs'
 pathPrefix: '/docs'
 children:
   - title: 'Getting started'

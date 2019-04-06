@@ -93,7 +93,7 @@ export default Home;
 
 4. Hot module reloading ensures your changes will be reflected in real time if your server is still running. In your browser, you should now see your app's home page displaying 'Hello World!'
 
-If you don't see them, you have probably stopped the server. Re-run `yarn dev` to rerun your application. As soon the server starts again, access your file by visiting http://localhost:3000. The message `Build completed in x.xxxs` will be shown in the terminal when the server has restarted.
+<ol style="list-style-type: none">If you don't see them, you have probably stopped the server. Re-run `yarn dev` to rerun your application. As soon the server starts again, access your file by visiting http://localhost:3000. The message `Build completed in x.xxxs` will be shown in the terminal when the server has restarted.</ol>
 
 ![Hello World](getting_started_2.png)
 

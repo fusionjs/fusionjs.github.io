@@ -5,149 +5,105 @@ path: /getting-started/
 
 # Getting started
 
-Fusion.js is a web application framework for building high quality universal applications. It provides a modular architecture with a strong focus on testability and maintainability.
+Fusion.js, Uber’s open source universal web framework, is designed to make web development easier and produce lightweight, high-performing apps. We initially [built Fusion.js](https://eng.uber.com/fusionjs/) to revamp our own websites, and have since offered it to the community as an open source project.
 
-Here are the features you'll find in Fusion.js:
-
-- server side rendering and async rendering
-- ES2017 and JSX support out of the box
-- hot module reloading in development mode
-- bundle splitting
-- universal rendering (run the same code in the server and the browser)
-- server-side development via Koa.js
-- plugin-based architecture (so you only include what you need in your browser bundles)
-- a curated set of plugins for data fetching, styling, etc. maintained by the Fusion.js team
-- plugins for error logging, security, etc.
-- bundle analysis tooling
-
-If you want to know how Fusion.js compares to similar projects, see the [framework comparison page](/docs/learn-fusion/framework-comparison).
+In this tutorial, we walkthrough how to get started with Fusion.js and have a 'Hello World!' application up and running in 5 minutes. The tutorial walks through three easy steps, from creating the application to displaying 'Hello World!' in the browser. The 'Hello World!' application is a good starting point for those seeking to get deeper into the Fusion.js framework.
 
 ---
 
-### Hello world
+### Step 1: Create a boilerplate app
 
-To create a new Fusion.js application we recommend using [yarn create](https://yarnpkg.com/lang/en/docs/cli/create/). In a terminal, run the following:
+Creating a Fusion.js application is easy. In this tutorial, we will use [Yarn](https://code.fb.com/web/yarn-a-new-package-manager-for-javascript/), an open source package manager created at Facebook, to set up the Fusion.js scaffold for our application. Yarn replaces the existing workflow with the npm client or another package manager while remaining compatible with the npm registry. It has the same feature set as existing workflows while operating faster, more securely, and more reliably.
 
-```
-yarn create fusion-app my-fusion-app
-```
+**Note**: If you have already completed this step, please skip to *Step 2: Run your app*.
 
-Fusion expects the entry file to be at `src/main.js`. There we can specify what rendering library we want to use. For convenience, the `fusion-react` package provides an entry-point application class that is already configured to work with React. Let's use that:
-
-```js
-// src/main.js
-import App from 'fusion-react';
-```
-
-The `App` class constructor takes a React element. This is the root element of the application:
-
-```js
-new App(<div>Hello world</div>);
-```
-
-Now that we've configured our application, we just need to export a function that returns it:
-
-```js
-// src/main.js
-import App from 'fusion-react';
-import React from 'react';
-
-export default () => {
-  return new App(<div>Hello world</div>);
-};
-```
-
-To run the application, run this command from your CLI:
+In your terminal, run the following `yarn` command to create a boilerplate app, `hello-world-app`:
 
 ```sh
-yarn run dev
+yarn create fusion-app hello-world-app
 ```
 
-The application will be available at `http://localhost:3000` and will render `Hello world`.
+The command will create a new directory, `hello-world-app`, that contains all the files needed to set up and run Fusion.js. When Yarn finishes successfully, the terminal will display the message "Success! You have created a Fusion.js project". Now go to the newly-created source directory of `hello-world-app`.
 
-Try changing the text to see hot reloading in action.
+```sh
+cd hello-world-app/src
+```
 
-While the Fusion.js CLI takes care of developer productivity concerns such as Babel configuration, build-time orchestration and hot module reloading, the Fusion.js runtime does very little. This ensures that the baseline build of a Fusion.js app is lean and flexible.
+Run `ls` to view the file structure of `hello-world-app`.
 
-However, apps can gain more functionality via plugins. In the next section, we'll look at how to use a plugin.
+```sh
+.
+├── pages
+│   ├── home.js
+│   └── pageNotFound.js
+├── main.js
+└── root.js
+```
+
+The directory pages contains the [React](https://reactjs.org/) code for rendering the demo page and the "Page not found" page. The file `main.js` is the application's entrypoint, and `root.js` contains routes.
 
 ---
 
-### Styling
+### Step 2: Run your app
 
-The basic Fusion.js boilerplate comes with [Styletron](https://github.com/rtsao/styletron) support installed. This is done via a plugin registration, which looks like this in `src/main.js`:
+You are now ready to start the application you created in Step 1. In your terminal, run the following `yarn` command in the project’s root directory:
 
-```js
-// src/main.js
-import App from 'fusion-react';
-import Styletron from 'fusion-plugin-styletron-react';
-import React from 'react';
-
-export default () => {
-  const app = new App(<div>Hello world</div>);
-
-  app.register(Styletron);
-
-  return app;
-};
+```sh
+yarn dev
 ```
 
-Now, let's move our `<div>` element to a separate file called `src/components/root.js` and replace the div with a styled one:
+This serves up the Fusion.js demo page, as shown below, on http://localhost:3000.
 
-```js
-// src/components/root.js
-import React from 'react';
-import {styled} from 'fusion-plugin-styletron-react';
-
-const Panel = styled('div', {background: 'silver'});
-
-export default <Panel>Hello</Panel>;
-
-// src/main.js
-import App from 'fusion-react';
-import Styletron from 'fusion-plugin-styletron-react';
-
-import root from './components/root';
-
-export default () => {
-  const app = new App(root);
-
-  app.register(Styletron);
-
-  return app;
-}
-```
-
-The application in your browser should automatically reload to display the silver background.
+![Featured Image](getting_started_1.png)
 
 ---
 
-### Assets
+### Step 3: Say 'Hello World!'
 
-Use the virtual module `assetUrl` for other asset types, such as images.
+In the final step of this tutorial, you will rewrite the default Fusion.js demo page to make it say 'Hello World!'. To simplify this step, you must replace the demo code in the existing `home.js` file with new code that can render the 'Hello World!' text in your browser. This means the routes will remain the same and no other code changes are required.
+
+1. Open `home.js` and remove the existing code so the file is completely empty.
+2. Copy and paste the code snippet below to `home.js`. This snippet imports the React libraries used to render the 'Hello World!' text in your browser.
 
 ```js
-// src/components/root.js
-import React from 'react';
-import {styled} from 'fusion-plugin-styletron-react';
-import {assetUrl} from 'fusion-core';
+// src/pages/home.js
 
-const Panel = styled('div', {background: 'silver'});
+import React from ‘react’;
 
-export default (
-  <Panel>
-    <img src={assetUrl('./my-image.gif')} />
-  </Panel>
+const Home = () => (
+
 );
+
+export default Home;
 ```
 
-Note that the argument to `assetUrl` needs to be a compile-time static string literal.
+3. Add 'Hello World!' text between `<div>` tags.
+
+```js
+// src/pages/home.js
+
+import React from ‘react’;
+
+const Home = () => (
+ <div>Hello World!</div>
+);
+
+export default Home;
+```
+
+4. Hot module reloading ensures your changes will be reflected in real time if your server is still running. In your browser, you should now see your app's home page displaying 'Hello World!'
+
+<ol style="list-style-type: none">If you don't see them, you have probably stopped the server. Re-run `yarn dev` to rerun your application. As soon the server starts again, access your file by visiting http://localhost:3000. The message `Build completed in x.xxxs` will be shown in the terminal when the server has restarted.</ol>
+
+![Hello World](getting_started_2.png)
+
+**Great job!** You've just learned how to create a simple application with Fusion.js!
 
 ---
 
 ### Example applications
 
-We have a list of Fusion.js example applications at on the [getting started page](/docs/getting-started/create-a-project/#example-fusionjs-projects). There you can also find CLI tools to generate new Fusion.js applications and plugins.
+We have a list of Fusion.js example applications on the [Create a project](/docs/getting-started/create-a-project/#example-fusionjs-projects) page.
 
 ### Create a new web application
 

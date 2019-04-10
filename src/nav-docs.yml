@@ -45,6 +45,8 @@ children:
           path: '/creating-endpoints'
         - title: 'Creating providers'
           path: '/creating-providers'
+        - title: 'Using services'
+          path: '/using-services'
         - title: 'Modifying the HTML template'
           path: '/modifying-html-template'
       - title: 'Testing'

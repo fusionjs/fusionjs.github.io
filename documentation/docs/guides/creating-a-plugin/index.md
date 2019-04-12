@@ -184,7 +184,6 @@ Similarly, if we wanted to log `"hello world"`, we can create another plugin tha
 ```js
 // src/plugins/foo.js
 import {createToken} from 'fusion-core';
-import {ExampleToken} from '';
 
 export const ExampleToken = createToken('ExampleToken');
 

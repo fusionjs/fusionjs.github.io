@@ -33,10 +33,6 @@ module.exports = class HTML extends React.Component {
           />
           <link rel="shortcut icon" href={withPrefix('/favicon.ico')} />
           <link rel="icon" href={withPrefix('/favicon.ico')} />
-          <link
-            href="https://d1a3f4spazzrp4.cloudfront.net/uber-fonts/4.0.0/superfine.css"
-            rel="stylesheet"
-          />
           <style>
             {`
     html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}

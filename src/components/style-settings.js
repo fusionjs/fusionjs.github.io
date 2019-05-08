@@ -9,6 +9,6 @@ export default {
   blackColor: '#000000',
   black90Color: '#041725',
   blueColor: '#276EF1',
-  fontFamily: `ff-clan-web-pro, "-apple-system", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", "sans-serif"`,
+  fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif`,
 };

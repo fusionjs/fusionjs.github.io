@@ -1,3 +1,5 @@
 /docs/guides/* /docs/references/:splat
 /docs/getting-started/core-concepts /docs/learn-fusion/core-concepts
 /docs/getting-started/framework-comparison /docs/learn-fusion/framework-comparison
+/docs/references/working-with-secrets /docs/references/configuration
+/docs/references/forms /docs/references

@@ -1,18 +1,10 @@
-# Creating a Fusion.js Plugin
+# Plugins
 
 Fusion.js provides official plugins for a wide variety of tasks, and it's possible to write complex applications without ever writing a single custom plugin. With that said, it's possible you might find that there's no plugin available for a task you're trying to accomplish, or that you don't agree with the opinions of an existing plugin. This section explains the Fusion.js plugin architecture and how to implement various types of plugins.
 
-## Fusion.js plugin architecture
+### Plugin structure
 
-Plugins in Fusion.js exist to encapsulate all code required to address a logic area of concern, regardless of whether the code runs server-side, in the browser, on a per-request basis, on multiple HTTP endpoints, whether it affects React context, etc.
-
-At the same time, plugins are designed so that dependencies are injectable, and therefore modular and testable.
-
-Examples of areas of concern that a plugin can encapsulate include CSS-in-JS, RPC, CSRF protection, translations, etc.
-
-## Plugin structure
-
-Create a plugin with the `createPlugin`:
+Create a plugin with `createPlugin`:
 
 ```js
 import {createPlugin} from 'fusion-core';
@@ -34,9 +26,19 @@ The `createPlugin` function accepts three optional named parameters: `deps`, `pr
 * `provides: (deps: Object) => T` - receives resolved dependencies as named arguments and returns a service
 * `middleware: (deps: Object, service: T) => (ctx: FusionContext, next: () => Promise) => Promise` - receives dependencies and the provided service and returns a middleware
 
+## Plugin architecture
+
+Plugins in Fusion.js exist to encapsulate all code required to address a logical area of concern, regardless of whether the code runs server-side, in the browser, on a per-request basis, on multiple HTTP endpoints, or whether it affects React context.
+
+At the same time, plugins are designed so that dependencies are injectable, and therefore modular and testable.
+
+Examples of areas of concern that a plugin can encapsulate include CSS-in-JS, REST endpoints, RPC, CSRF protection, translations, etc.
+
+Let's review the three parts to a plugin.
+
 ---
 
-## Dependency injection
+## 1. Dependencies
 
 A dependency is anything that has a programmatic API that can be consumed by another part of your web application, and that you might reasonably want to mock in a test.
 
@@ -128,9 +130,7 @@ test('my test', t => {
 
 If we had hard-coded `console` everywhere, it would be difficult to mock it in an integration or e2e test.
 
----
-
-## Providing services
+## 2. Services
 
 Plugins can provide a programmatic interface and be registered as dependencies for other plugins via `provides`.
 
@@ -212,9 +212,7 @@ export default () => {
 };
 ```
 
----
-
-## Middlewares
+## 3. Middleware
 
 One of the most common use cases for creating a plugin for an application is to implement HTTP endpoints.
 
@@ -222,7 +220,6 @@ To do so, a plugin would look like this:
 
 ```js
 // src/api/hello.js
-
 export default createPlugin({
   middleware() {
     return (ctx, next) => {
@@ -288,40 +285,6 @@ export default createPlugin({
 });
 ```
 
-### Configuration
-
-Configuration values can be registered to tokens in the same way plugins can:
-
-```js
-// src/main.js
-import App from 'fusion-react';
-import SomePlugin, {ConfigToken} from './plugins/some-plugin.js';
-
-export default () => {
-  const app = new App();
-  app.register(SomePlugin);
-  app.register(ConfigToken, 'hello');
-  return app;
-};
-
-// src/plugins/some-plugin.js
-import {createPlugin, createToken} from 'fusion-core';
-
-export const ConfigToken = createToken('ConfigToken');
-export default createPlugin({
-  deps: {config: ConfigToken},
-  provides({config}) {
-    return {
-      greet() {
-        return config; // returns 'hello'
-      }
-    }
-  }
-})
-```
-
-Both dependencies and configuration need to be specified when the plugin is registered in `src/main.js`.
-
 ---
 
 ### Request lifecycle
@@ -332,9 +295,9 @@ On the browser, the middleware function represents the timeline of what happens 
 
 Koa middlewares are functions that receive a `ctx` object and a `next` function as arguments. The `next` function should be called once by the function, and the return value of the function should be a promise.
 
-In a nutshell, The Koa `ctx` object has properties for various HTTP values (`url`, `method`, `headers`, etc), and `next` is an async function that the middleware is responsible for calling.
+In a nutshell, the Koa `ctx` object has properties for various HTTP values (`url`, `method`, `headers`, etc), and `next` is an async function that the middleware is responsible for calling.
 
-In Fusion.js, the `next()` call represents the time when virtual dom rendering happens. Typically, you'll want to run all your logic before that, and simply have a `return next()` statement at the end of the function. Even in cases where virtual DOM rendering is not applicable, this pattern is still the simplest way to write a middleware.
+In Fusion.js, the `next()` call represents the time when virtual DOM rendering happens. Typically, you'll want to run all your logic before that, and simply have a `return next()` statement at the end of the function. Even in cases where virtual DOM rendering is not applicable, this pattern is still the simplest way to write a middleware.
 
 In a few more advanced cases, however, you might want to do things _after_ virtual dom rendering. In that case, you can call `await next()` instead:
 
@@ -356,31 +319,9 @@ export default createPlugin({
 
 ---
 
-### Token aliasing
+### Troubleshooting hang-ups
 
-Token aliasing allows for overriding the canonical token dependency of a service with another token. This is useful when you want to register a token for special use cases.
-
-An example of using token aliasing:
-
-```js
-import {createToken} from 'fusion-core';
-const FetchTokenPolyfill = createToken('FetchTokenPolyfill');
-
-// Register the canonical value for FetchToken.
-app.register(FetchToken, window.fetch);
-
-// Register a new token, with a different fetch implementation.
-app.register(FetchTokenPolyfill, unfetch);
-
-// Use the new fetch functionality for deps of PluginA.
-app.register(PluginA).alias(FetchToken, FetchTokenPolyfill);
-```
-
----
-
-##### Troubleshooting hang-ups
-
-**Note**: The `next` function should normally be called once - and only once - per middleware call. We recommend avoiding complex conditional trees to prevent unexpected bugs that could occur when the function inadvertently gets called multiple times (resulting in an error), or cases where it doesn't get called at all.
+The `next` function should normally be called once - and only once - per middleware call. We recommend avoiding complex conditional trees to prevent unexpected bugs that could occur when the function inadvertently gets called multiple times (resulting in an error), or cases where it doesn't get called at all.
 
 It's important to keep in mind that the middleware stack will remain in a pending status if you forget to call `return next()` or will potentially behave erratically if you break the promise chain (for example, by forgetting to use `async/await` or by forgetting to `return` in a non-async function). Breaking the promise chain is useful in a few select obscure cases, for example, short-circuiting the stack when dealing with static assets, but can lead to surprising behavior if done inadvertently.
 

@@ -1,23 +1,8 @@
 # Creating endpoints
 
-Fusion.js provides an [RPC plugin](https://github.com/fusionjs/fusion-plugin-rpc-redux-react) that integrates with Redux and React/Preact. We recommend using that RPC plugin rather than writing HTTP endpoints manually.
+> Fusion.js provides an [RPC plugin](https://github.com/fusionjs/fusion-plugin-rpc-redux-react) that integrates with Redux and React. We recommend using that RPC plugin rather than writing HTTP endpoints manually.
 
-Here we will implement an HTTP endpoint manually to better understand how Fusion.js middlewares work.
-
-The simplest way to write a Fusion.js plugin is a [middleware plugin](/docs/references/creating-a-plugin#middlewares):
-
-```js
-// src/plugins/example.js
-import {createPlugin} from 'fusion-core';
-
-export default createPlugin({
-  middleware() {
-    return (ctx, next) => {
-      return next();
-    }
-  },
-};
-```
+HTTP endpoints can be created by writing a Fusion.js plugin with an exposed [middleware](/docs/references/creating-a-plugin#middlewares):
 
 To write a middleware plugin, we export a _factory_ function that returns a _middleware_ function. The middleware receives a `ctx` argument that has various properties, and a `next` function that it must call. It works the same way as a [Koa](http://koajs.com) middleware.
 
@@ -39,7 +24,7 @@ export default createPlugin({
 });
 ```
 
-There's one issue left with the code above: Fusion.js code runs isomorphically by default, but we only want to run that code in the server. To do so, add a [code fence](/docs/references/universal-rendering):
+There's one issue left with the code above: Fusion.js code runs universally by default, but we only want to run that code in the server. To do so, add a [code fence](/docs/references/universal-rendering):
 
 ```js
 // src/plugins/example.js

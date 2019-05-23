@@ -8,7 +8,7 @@ path: /references/
 - [State management](/docs/references/state-management)
 - [Styling components](/docs/references/styling)
 - [Routing](/docs/references/routing)
-- [Fetching data](/docs/references/fetching-data)
+- [Data fetching](/docs/references/fetching-data)
 - [Internationalization](/docs/references/internationalization)
 - [Creating a plugin](/docs/references/creating-a-plugin)
 - [Testing](/docs/references/testing)

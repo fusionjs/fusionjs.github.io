@@ -35,15 +35,11 @@ export default () => {
 
 **Note**: If translations for a key are not available, the key will be displayed.
 
----
-
 ### Dates and time
 
 It is recommended to use the [date-fns library](https://date-fns.org/) or the native JS [`Intl.DateTimeFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) API to format dates.
 
 This API is natively supported in most browsers, but for especially old browsers [a polyfill](https://github.com/andyearnshaw/Intl.js/) may be required.
-
----
 
 ### Numbers and currency
 

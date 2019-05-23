@@ -78,6 +78,13 @@ const foo = __NODE__ && require('misbehaving-dependency');
 
 Now the code follows the basic dead code elimination rules and the browser bundle will be compiled as expected.
 
+### Aggressive tree shaking
+
+Fusion.js provides a compiler flag to enable aggressive tree shaking to your project that can further save on bundle sizes by pruning out dead code. More information can be found in the following links:
+
+* [`assumeNoImportSideEffects` flag](/api/fusion-cli/docs/fusionrc/#assumenoimportsideeffects)
+* [Github PR link](https://github.com/fusionjs/fusion-cli/pull/392)
+
 ---
 
 ## Linting
@@ -140,7 +147,7 @@ export default browserCodeGoesHere;
 
 ## Disabling server-side rendering
 
-Sometimes it is desirable to avoid server-side rendering. To do that, register a custom render function on the `RenderToken` on the server. However, instead of disabling SSR entirely, it is probably better to [create components that only render in the browser](#client-rendered-components).
+Sometimes it is desirable to avoid server-side rendering. To do that, register a custom render function on the `RenderToken` on the server.
 
 ```js
 // src/main.js
@@ -156,6 +163,8 @@ if (__NODE__) {
 ```
 
 ## Client-rendered components
+
+Instead of disabling SSR entirely, it is probably better to create components that only render in the browser.
 
 ```js
 import {split} from 'fusion-react';

@@ -7,9 +7,9 @@ path: /security/
 
 Fusion.js plugins enable secure application development, including:
 
-* CSRF protection
-* Frameguard
-* Content security policy
+- CSRF protection
+- Frameguard
+- Content security policy
 
 Most of these require no configuration from you.
 
@@ -29,7 +29,7 @@ To add this exception to the whitelist, use the `CsrfIgnoreRoutesToken` configur
 
 ```js
 // src/app.js
-import {CsrfIgnoreRoutesToken} from 'fusion-plugin-csrf-protection-react';
+import {CsrfIgnoreRoutesToken} from 'fusion-plugin-csrf-protection';
 
 app.register(CsrfIgnoreRoutesToken, ['/_errors']);
 ```
@@ -50,7 +50,12 @@ export default __NODE__ &&
     middleware() {
       return (ctx, next) => {
         ctx.template.head.push(
-          html`<meta name="viewport" content="width=device-width, initial-scale=1">`
+          html`
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1"
+            />
+          `
         );
       };
     },

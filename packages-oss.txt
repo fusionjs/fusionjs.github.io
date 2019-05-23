@@ -1,12 +1,9 @@
-fusion-apollo
-fusion-plugin-apollo-server
-fusion-apollo-universal-client
+fusion-plugin-apollo
 fusion-core
 fusion-cli
 fusion-plugin-browser-performance-emitter
 fusion-plugin-connected-react-router
 fusion-plugin-csrf-protection
-fusion-plugin-csrf-protection-react
 fusion-plugin-error-handling
 fusion-plugin-font-loader-react
 fusion-plugin-i18n

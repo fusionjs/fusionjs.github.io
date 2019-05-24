@@ -23,7 +23,7 @@ If you have to add a new plugin to `app.js`, you should still separate configura
 
 ---
 
-# Working with secrets
+## Working with secrets
 
 Handle secrets like any other plugin configuration. Just register them to provide them to the plugin you're using.
 
@@ -48,7 +48,7 @@ export default () => {
 
 Remember that typically we should only expose secrets in the server. In the example above, the `__NODE__ && process.env.SESSION_SECRET` expression [gets removed from the browser bundle](universal-rendering) via UglifyJS' dead code elimination.
 
-# Secret rotation
+## Secret rotation
 
 It's good security practice to rotate secrets regularly, but we might not want to restart the application every time rotation needs to happen.
 

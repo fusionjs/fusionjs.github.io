@@ -196,7 +196,7 @@ const Home = () => {
                 Quick Start
               </CTAPrimaryButton>
               <CTASecondaryButton
-                href="https://github.com/fusionjs/fusion-react"
+                href="https://github.com/fusionjs/fusionjs"
                 target="_blank"
               >
                 Github
@@ -222,7 +222,8 @@ $ yarn dev
         <Advantage>
           <SectionHeader>Plugin architecture</SectionHeader>
           <p>
-            Encapsulate complex logic into a single plugin and register it in one line.
+            Encapsulate complex logic into a single plugin and register it in
+            one line.
           </p>
           <Snippet>
             <pre
@@ -257,7 +258,8 @@ export default () => {
         <Advantage>
           <SectionHeader>Universal code</SectionHeader>
           <p>
-            Write your server and client code together and Fusion will take care of the rest.
+            Write your server and client code together and Fusion will take care
+            of the rest.
           </p>
           <Snippet>
             <pre
@@ -288,14 +290,19 @@ export default () => {
           <SectionHeader>Core features</SectionHeader>
           <ul>
             <li>
-              <Link to="/docs/references/testing">Ready-to-use testing environment</Link>{' '}
+              <Link to="/docs/references/testing">
+                Ready-to-use testing environment
+              </Link>{' '}
               with Jest, Enzyme, Puppeteer and integration test utilities
             </li>
             <li>
               Out-of-the-box support for server-rendering of React components,
               bundle splitting and hot module reloading
             </li>
-            <li>Automatic tree-shaking support on universal code to remove unused lines</li>
+            <li>
+              Automatic tree-shaking support on universal code to remove unused
+              lines
+            </li>
           </ul>
         </FocusBlock>
         <FocusBlock>
@@ -357,7 +364,10 @@ export default () => {
           <h4>GitHub</h4>
           <p>
             Have a question about Fusion or want to contribute? Check it out on{' '}
-            <OutboundLink href="https://github.com/fusionjs">GitHub</OutboundLink>.
+            <OutboundLink href="https://github.com/fusionjs">
+              GitHub
+            </OutboundLink>
+            .
           </p>
         </FocusBlock>
       </FlexContainer>

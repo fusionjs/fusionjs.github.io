@@ -9,6 +9,6 @@ If you need to implement server-side code to fetch data from a service, [conside
 
 ### Advanced usage
 
-If you need to modify the HTML template (e.g. the `<head>` or `<title>` tags), see [this section](/docs/references/creating-a-plugin/modifying-html-template)
+If you need to modify the HTML template (e.g. the `<head>` or `<title>` tags), see [this section](/docs/references/universal-rendering#modifying-the-html-template).
 
-If you need to augment a Fusion.js application via a custom plugin, see [this section](/docs/references/creating-a-plugin)
+If you need to augment a Fusion.js application via a custom plugin, see [this section](/docs/references/creating-a-plugin).

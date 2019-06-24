@@ -144,7 +144,7 @@ export default __NODE__ ? server : client;
 /* eslint-env node */
 export default serverCodeGoesHere;
 
-// server.js
+// client.js
 /* eslint-env browser */
 export default browserCodeGoesHere;
 ```

@@ -15,7 +15,6 @@ path: /references/
 - [Typing](/docs/references/typing)
 - [Security](/docs/references/security)
 - [Universal rendering](/docs/references/universal-rendering)
-- [Server code](/docs/references/server-code)
 - [Performance](/docs/references/performance)
 - [Debugging](/docs/references/debugging)
 - [Static assets](/docs/references/static-assets)

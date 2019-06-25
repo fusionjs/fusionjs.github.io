@@ -63,8 +63,6 @@ children:
         path: '/security'
       - title: 'Universal rendering'
         path: '/universal-rendering'
-      - title: 'Server code'
-        path: '/server-code'
       - title: 'Performance'
         path: '/performance'
         pathPrefix: '/performance'

@@ -8,7 +8,7 @@ Virtual modules are the means for userland consumption of Fusion-owned static an
 
 In practice, a virtual module is implemented via a coupled agglomeration of babel plugin(s), webpack loader(s), and webpack plugin(s).
 
-Framework currently provides two virtual modules:
+Fusion.js currently provides the following virtual modules:
 
 ## assetUrl
 

@@ -9,7 +9,7 @@ Integration tests verify that your modules work together as expected. They open 
   * [Screenshots](#screenshots)
 * [Common pitfalls](#common-pitfalls)
   * [Appropriate waiting](#appropriate-waiting)
-  * [Resiliant selectors](#resiliant-selectors)
+  * [Resilient selectors](#resilient-selectors)
 
 ## Overview
 
@@ -76,7 +76,7 @@ await page.waitFor(async () => {
 });
 ```
 
-### Resiliant selectors
+### Resilient selectors
 
 Building integration tests with unsuitable selectors can cause unexpected failures and lost productivity. It is often not a good idea to query for selectors which are only used for presentational cases, as these change and cause tests to break. We are currently investing adding deterministic querying capabilities using enzyme selectors alongside puppeteer. Here's a few examples of selectors to use, and some to avoid.
 

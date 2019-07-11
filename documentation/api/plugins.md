@@ -21,6 +21,7 @@ path: /plugins/
 - [RPC](/api/fusion-plugin-rpc)
 - [RPC/Redux](/api/fusion-rpc-redux)
 - [RPC/Redux/React](/api/fusion-plugin-rpc-redux-react)
+- [Service Worker](/api/fusion-plugin-service-worker)
 - [Styletron for React](/api/fusion-plugin-styletron-react)
 - [Universal events](/api/fusion-plugin-universal-events)
 - [Universal events for React](/api/fusion-plugin-universal-events-react)

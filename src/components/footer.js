@@ -43,7 +43,7 @@ export default ({styleProps = {}}) => {
           }}
         >
           <FlexItem>
-            <p>© 2018 Uber Technologies Inc.</p>
+            <p>© 2019 Uber Technologies Inc.</p>
           </FlexItem>
           <FlexItem>
             <p>

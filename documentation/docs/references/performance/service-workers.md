@@ -11,7 +11,7 @@ Note: The Service Worker cache is a distinct cache, unrelated to disk cache, mem
 
 ### **Fusion.js Service Worker Plugin**
 
-Fusion.js comes with an optional [Service Worker plugin](https://github.com/fusionjs/fusion-plugin-service-worker) which provides basic html and service worker caching out of the box. As a web app developer you are only responsible for registering the plugin and providing a Service Worker file at `src/sw.js`.
+Fusion.js comes with an optional [Service Worker plugin](https://github.com/fusionjs/fusion-plugin-service-worker) which provides basic html and JavaScript caching out of the box. As a web app developer you are only responsible for registering the plugin and providing a Service Worker file at `src/sw.js`.
 
 #### Providing the Service Worker file
 

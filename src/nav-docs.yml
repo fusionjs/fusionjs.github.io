@@ -79,6 +79,8 @@ children:
         path: '/static-assets'
       - title: 'Configuration'
         path: '/configuration'
+      - title: 'Web workers'
+        path: '/web-workers'
       - title: 'Virtual modules'
         path: '/virtual-modules'
       - title: 'SVG React components'

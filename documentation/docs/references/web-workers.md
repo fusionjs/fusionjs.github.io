@@ -5,9 +5,9 @@ path: /web-workers
 
 # Web workers
 
-A web worker is a mechanism for running background tasks outside of the browser context. Heavy and resource consuming tasks can instead be moved to a background task so as to not block any UI threads in the main window. Communication is done through `postMessage` and `onmessage` handlers on the worker instance.
+A web worker is a mechanism for running background tasks outside of the browser context. Heavy and resource consuming tasks can instead be moved to a background task so as to not block any UI threads in the main window. Communication is done through `postMessage` and `onmessage` handlers in both the worker instance and the browser.
 
-Fusion.js supports loading web workers using the [`workerUrl` virtual module](/api/fusion-core#virtual-modules) exposed by `fusion-core`. The virtual module allows Fusion.js to bundle your service worker with Babel.
+Fusion.js supports loading web workers using the [`workerUrl` virtual module](/api/fusion-core#virtual-modules) exposed by `fusion-core`. The virtual module allows Fusion.js to bundle your web worker with Babel.
 
 ### Usage
 
@@ -17,7 +17,7 @@ The method signature for `workerUrl` is:
 workerUrl(url: string): string
 ```
 
-It takes as input the path to your service worker file and will return the internal Babel-bundled URL. This URL can then be passed to the `Worker` constructor. For example, the following code creates a web worker within a Fusion.js client-side plugin.
+It takes as input the path to your web worker file and will return the internal Babel-bundled URL. This URL can then be passed to the `Worker` constructor. For example, the following code creates a web worker within a Fusion.js client-side plugin.
 
 ```js
 // web-worker-plugin.js

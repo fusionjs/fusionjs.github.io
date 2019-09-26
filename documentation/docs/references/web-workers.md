@@ -57,7 +57,7 @@ class SomeWorkerClass() {
 Since web workers are meant only run on the client, make sure to properly code fence your plugins and worker registration code with `__BROWSER__` guards so the code is not executed on the server.
 
 ```js
-// main.js
+// app.js
 
 if (__BROWSER__) {
   app.register(WebWorkerPlugin);

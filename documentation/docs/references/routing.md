@@ -5,7 +5,7 @@ path: /routing/
 
 # Routing
 
-[fusion-plugin-react-router](/api/fusion-plugin-react-router) is available to integrate routing features into the component tree. The plugin uses [React Router](https://reacttraining.com/react-router/) v4.x under the hood, and exposes a similar API that you can use to add routing behavior anywhere in your component tree.
+[fusion-plugin-react-router](/api/fusion-plugin-react-router) is available to integrate routing features into the component tree. The plugin uses [React Router](https://reacttraining.com/react-router/) under the hood, and exposes a similar API that you can use to add routing behavior anywhere in your component tree.
 
 For more details on how to use React Router, you can view their training guide [here](https://reacttraining.com/react-router/web/guides/quick-start).
 

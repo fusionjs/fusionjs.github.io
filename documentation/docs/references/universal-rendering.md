@@ -151,9 +151,26 @@ export default browserCodeGoesHere;
 
 ---
 
+## Client-rendered components
+
+Occassionally, you may want specific components to only render client-side. This can be accomplished using `split` with `defer: true`:
+
+```js
+import {split} from 'fusion-react';
+
+const ClientRenderedOnly = split({
+  defer: true,
+  load: () => import('./browser-only-component.js'),
+  LoadingComponent: () => <div>SSR placeholder...</div>,
+  ErrorComponent: () => <div>Error</div>,
+});
+
+<ClientRenderedOnly />;
+```
+
 ## Disabling server-side rendering
 
-Sometimes it is desirable to avoid server-side rendering. To do that, register a custom render function on the `RenderToken` on the server.
+To completely disable SSR, register a custom render function on the `RenderToken` on the server. However,  generally it is preferable to use the `split` HOC to defer rendering of specific components to the client rather than disable SSR completely.
 
 ```js
 // src/main.js
@@ -168,22 +185,7 @@ if (__NODE__) {
 }
 ```
 
-## Client-rendered components
 
-Instead of disabling SSR entirely, it is probably better to create components that only render in the browser.
-
-```js
-import {split} from 'fusion-react';
-
-const ClientRenderedOnly = split({
-  defer: true,
-  load: () => import('./browser-only-component.js'),
-  LoadingComponent: () => <div>SSR placeholder...</div>,
-  ErrorComponent: () => <div>Error</div>,
-});
-
-<ClientRenderedOnly />;
-```
 
 ---
 

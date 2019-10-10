@@ -318,7 +318,7 @@ export default () => {
               <Link to="/api/fusion-plugin-rpc-redux-react/">
                 RPC-driven data fetching
               </Link>{' '}
-              and <Link to="/api/fusion-apollo">GraphQL/Apollo</Link>
+              and <Link to="/api/fusion-plugin-apollo">GraphQL/Apollo</Link>
             </li>
             <li>
               Performance: easily opt into performance-oriented paradigms such

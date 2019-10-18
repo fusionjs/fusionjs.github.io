@@ -81,6 +81,8 @@ children:
         path: '/configuration'
       - title: 'Web workers'
         path: '/web-workers'
+      - title: 'WebSockets'
+        path: '/websockets'
       - title: 'Virtual modules'
         path: '/virtual-modules'
       - title: 'SVG React components'

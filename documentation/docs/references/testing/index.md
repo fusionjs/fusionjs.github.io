@@ -15,7 +15,7 @@ what kind of tests: files in a `__tests__` directory that end in `.node.js` will
 be run in Node.js and files ending in `.browser.js` will be run in a browser environment (currently jsdom).
 
 Fusion.js uses a small wrapper around [jest](https://github.com/facebook/jest) to run
-tests in Node.js and browser environments. We are currently exploring leveraging [unitest](https://github.com/rtsao/unitest) as a future test runner for Fusion.js applications.
+tests in Node.js and browser environments.
 
 ## Test coverage
 
@@ -37,7 +37,7 @@ You can also ignore individual code branches using a similar [comment pattern](h
 
 ## Testing strategies
 
-Learn about the various testing strategies that work with FusionJS applications:
+Learn about the various testing strategies that work with Fusion.js applications:
 
 * [Component testing](/docs/references/testing/component)
 * [Unit testing](/docs/references/testing/unit)

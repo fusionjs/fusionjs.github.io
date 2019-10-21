@@ -14,14 +14,14 @@ It is recommended to read the official docs to understand the [guiding principle
 react-testing-library provides the following utilities:
 
 1. Search for rendered DOM nodes of a React component using [query helpers](https://testing-library.com/docs/dom-testing-library/api-queries)
-2. Use [async helpers](https://testing-library.com/docs/dom-testing-library/api-async) to wait for DOM mutations and respond afterwards
+2. Use [async helpers](https://testing-library.com/docs/dom-testing-library/api-async) to assert on changes to your page after DOM mutations have occurred
 3. [Fire events](https://testing-library.com/docs/dom-testing-library/api-events) on the DOM and assert on the resultant behavior
 
 Standard assertions can be utilized using jest (`expect(query).toBe(...)`).
 
 Note that none of these APIs allow you to access any of the underlying implementation details of your React components e.g. `state` and `props` or manually triggering component lifecycle events. This is by design since the general philosophy is to test what the user sees, and not what your React component is doing under the hood.
 
-#### How do I do <X>?
+#### How do I do X?
 
 The [recipes section](https://testing-library.com/docs/recipes) provides great examples on handling specific test patterns, such as testing components that hide/show, testing React context, and testing React router.
 

@@ -1,17 +1,39 @@
 # Component testing
 
-Use component testing to make assertions and validate your React component logic. We recommend using [Enzyme](https://github.com/airbnb/enzyme/blob/master/README.md) to test React components.
+There are two strategies for testing individual components and the interactions between those components.
 
-### Testing a functional React component
+1. Use [react-testing-library](https://github.com/testing-library/react-testing-library) to assert that your components respond appropriately to user behavior.
+2. Use [Enzyme](https://github.com/airbnb/enzyme/blob/master/README.md) to assert and validate your React component logic.
 
-Test a functional React component with Enzyme's `shallow`
-function. The subsections below show examples of different types of tests for React
-components.
+For most cases, we recommend using **react-testing-library** for ease of use, out of the box compatibility with React hooks, and for following the general principle of testing what users actually see when they use your app versus testing component implementation details that may not have relevancy to an end user.
 
-#### Testing props
+### react-testing-library
 
-This example defines a functional component that takes some props, renders them
-via Enzyme's `shallow` function, and makes assertions on the output props.
+It is recommended to read the official docs to understand the [guiding principle](https://testing-library.com/docs/guiding-principles) on writing good tests.
+
+react-testing-library provides the following utilities:
+
+1. Search for rendered DOM nodes of a React component using [query helpers](https://testing-library.com/docs/dom-testing-library/api-queries)
+2. Use [async helpers](https://testing-library.com/docs/dom-testing-library/api-async) to assert on changes to your page after DOM mutations have occurred
+3. [Fire events](https://testing-library.com/docs/dom-testing-library/api-events) on the DOM and assert on the resultant behavior
+
+Standard assertions can be utilized using jest (`expect(query).toBe(...)`).
+
+Note that none of these APIs allow you to access any of the underlying implementation details of your React components e.g. `state` and `props` or manually triggering component lifecycle events. This is by design since the general philosophy is to test what the user sees, and not what your React component is doing under the hood.
+
+#### How do I do X?
+
+The [recipes section](https://testing-library.com/docs/recipes) provides great examples on handling specific test patterns, such as testing components that hide/show, testing React context, and testing React router.
+
+### Enzyme
+
+#### Testing a functional React component
+
+Test a functional React component with Enzyme's `shallow` function. The subsections below show examples of different types of tests for React components.
+
+**Testing props**
+
+This example defines a functional component that takes some props, renders them via Enzyme's `shallow` function, and makes assertions on the output props.
 
 ```js
 // src/components/tag-title.js
@@ -56,10 +78,9 @@ test('Loading title', () => {
 });
 ```
 
-#### Simulate click
+**Simulating a click**
 
-This example defines a component with an `onClick` handler and uses
-`jest.fn()` to check that the handler is called a click event is triggered.
+This example defines a component with an `onClick` handler and uses `jest.fn()` to check that the handler is called a click event is triggered.
 
 ```js
 // src/components/delete-icon.js
@@ -86,10 +107,9 @@ test('Delete button', () => {
 });
 ```
 
-#### Test for presence
+**Test for presence**
 
-This example tests success and error states for a component by asserting on the
-expected shape of the output.
+This example tests success and error states for a component by asserting on the expected shape of the output.
 
 ```js
 // src/components/example-error.js
@@ -124,14 +144,11 @@ test('With an error', assert => {
 });
 ```
 
-### Testing a React component with lifecycle methods
+**Testing a React component with lifecycle methods**
 
-To test a React component's lifecycle methods, use Enzyme's
-`mount` function. The `mount` function requires tests to be run in a browser
-environment.
+To test a React component's lifecycle methods, use Enzyme's `mount` function. The `mount` function requires tests to be run in a browser environment.
 
-In the example below, we're interested in testing that the `getUser` function
-gets called only if `user.name` and `user.error` are both falsy.
+In the example below, we're interested in testing that the `getUser` function gets called only if `user.name` and `user.error` are both falsy.
 
 ```js
 // src/components/tags-editor.js

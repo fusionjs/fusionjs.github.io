@@ -1,4 +1,5 @@
 const path = require('path');
+const get = require('just-safe-get');
 
 function getPath(prefix = '', childItem) {
   if (childItem.path) {
@@ -87,4 +88,12 @@ exports.buildPageName = node => {
   } else {
     return `${pkgName ? `${pkgName}-` : ''}${node.name}`;
   }
+};
+
+exports.extractChildMarkdownRemark = blob => {
+  const edges = get(blob, 'allFile.edges');
+  if (edges.length) {
+    return get(edges[0], 'node.childMarkdownRemark') || {};
+  }
+  return {};
 };

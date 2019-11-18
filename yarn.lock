@@ -5915,6 +5915,11 @@ jsx-ast-utils@^2.0.1:
   dependencies:
     array-includes "^3.0.3"
 
+just-safe-get@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/just-safe-get/-/just-safe-get-2.0.0.tgz#a028262a8f1896fac4de90227b2d192dfdc3f907"
+  integrity sha512-OBUeNXA7efFIGh0hSLW4nxrOtFWfmjoc3T8B5oixm3b+D7SZN10VKwORUEk4oDeBaR/sqkDMxXb0gE0DRYreEA==
+
 kebab-case@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/kebab-case/-/kebab-case-1.0.0.tgz#3f9e4990adcad0c686c0e701f7645868f75f91eb"

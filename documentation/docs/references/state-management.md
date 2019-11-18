@@ -1,8 +1,6 @@
 ---
 title: State management
-date:  2017-10-31
 path: /state-management/
-category: References
 ---
 
 # State management

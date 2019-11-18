@@ -1,3 +1,8 @@
+---
+title: Creating endpoints
+path: /creating-endpoints
+---
+
 # Creating endpoints
 
 > Fusion.js provides an [RPC plugin](https://github.com/fusionjs/fusion-plugin-rpc-redux-react) that integrates with Redux and React. We recommend using that RPC plugin rather than writing HTTP endpoints manually.

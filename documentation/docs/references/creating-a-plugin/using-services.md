@@ -1,3 +1,8 @@
+---
+title: Using services
+path: /using-services
+---
+
 # Using services
 
 React hooks are the preferred method for using services in React. In fact, many cases where we used class components can now be accomplished easier with hooks. Keep in mind that most plugins currently do not provide a service we would be able to use on the client-side. This feature is future-facing for how we want to consume services.

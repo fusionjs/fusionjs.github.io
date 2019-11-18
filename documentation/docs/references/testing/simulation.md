@@ -1,3 +1,8 @@
+---
+title: Simulation testing
+path: /simulation
+---
+
 # Simulation testing
 
 It is often useful to simulate a request/render of a Fusion application. The `fusion-test-utils` library exports some utilities to make this easy.

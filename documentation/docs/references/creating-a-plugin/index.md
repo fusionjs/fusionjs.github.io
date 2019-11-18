@@ -1,3 +1,8 @@
+---
+title: Creating a Plugin
+path: /creating-a-plugin
+---
+
 # Plugins
 
 Fusion.js provides official plugins for a wide variety of tasks, and it's possible to write complex applications without ever writing a single custom plugin. With that said, it's possible you might find that there's no plugin available for a task you're trying to accomplish, or that you don't agree with the opinions of an existing plugin. This section explains the Fusion.js plugin architecture and how to implement various types of plugins.

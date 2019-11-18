@@ -1,3 +1,8 @@
+---
+title: Virtual modules
+path: /virtual-modules/
+---
+
 # Framework virtual modules
 
 Virtual modules are the means for userland consumption of Fusion-owned static analysis and build artifacts in a way that:

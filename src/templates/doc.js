@@ -15,7 +15,7 @@ class DocTemplate extends React.Component {
   render() {
     const {data, pathContext} = this.props;
     let html = extractChildMarkdownRemark(data).html || '';
-console.log('pathContext', pathContext);
+
     return (
       <DocsWrapper className="docSearch-content">
         <DocsContainer

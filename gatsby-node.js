@@ -5,8 +5,10 @@ const {buildPagePath} = require('./src/utils');
 exports.createPages = ({graphql, boundActionCreators}) => {
   const {createPage} = boundActionCreators;
   return new Promise((resolve, reject) => {
+    const apiTemplate = path.resolve('./src/templates/api.js');
     const docTemplate = path.resolve('./src/templates/doc.js');
     const templates = {
+      api: apiTemplate,
       docs: docTemplate,
     };
 
@@ -41,8 +43,10 @@ exports.createPages = ({graphql, boundActionCreators}) => {
           const {localPath, remoteUrl} = buildPagePath(node);
           createPage({
             path: localPath,
-            component: templates[node.sourceInstanceName] || templates.docs,
+            component: templates[node.sourceInstanceName] || templates.api,
             context: {
+              // Needed for api doc query
+              absolutePath: node.absolutePath,
               // Needed for api doc query
               remoteUrl,
               // Used to query for HTML data on the actual page

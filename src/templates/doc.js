@@ -11,16 +11,6 @@ const DocsContainer = styled('div', {
   paddingBottom: '52px',
 });
 
-const EditLink = styled('a', {
-  paddingTop: '4px',
-  paddingBottom: '4px',
-  paddingLeft: '8px',
-  paddingRight: '8px',
-  position: 'absolute',
-  top: '16px',
-  right: 0,
-});
-
 class DocTemplate extends React.Component {
   render() {
     const {data, pathContext} = this.props;
@@ -28,9 +18,6 @@ class DocTemplate extends React.Component {
 
     return (
       <DocsWrapper className="docSearch-content">
-        {pathContext.remoteUrl ? (
-          <EditLink href={pathContext.remoteUrl}>Edit</EditLink>
-        ) : null}
         <DocsContainer
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{__html: html}}

@@ -2,6 +2,7 @@
 title: "Measuring Browser Performance"
 path: /measuring-browser-performance
 ---
+
 # Measuring Browser Performance
 
 ## Chrome DevTools timings versus Performance API data

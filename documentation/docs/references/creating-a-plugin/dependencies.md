@@ -1,3 +1,8 @@
+---
+title: Dependencies
+path: /dependencies
+---
+
 # Dependencies
 
 The Fusion.js plugin architecture allows plugins to explicitly depend on other service plugins. This allows us to swap implementations of various subsystems, for example for testing, or to provide extended functionality.

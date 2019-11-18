@@ -22,8 +22,6 @@ exports.createPages = ({graphql, boundActionCreators}) => {
                   frontmatter {
                     title
                     path
-                    date(formatString: "MMMM DD, YYYY")
-                    category
                   }
                 }
                 relativePath
@@ -38,7 +36,6 @@ exports.createPages = ({graphql, boundActionCreators}) => {
         if (result.errors) {
           reject(result.errors);
         }
-
         // Create docs pages
         result.data.allFile.edges.forEach(({node}) => {
           const {localPath, remoteUrl} = buildPagePath(node);
@@ -46,10 +43,10 @@ exports.createPages = ({graphql, boundActionCreators}) => {
             path: localPath,
             component: templates[node.sourceInstanceName] || templates.docs,
             context: {
-              localPath: localPath,
-              metadata: node.childMarkdownRemark.frontmatter,
-              html: node.childMarkdownRemark.html,
+              // Needed for api doc query
               remoteUrl,
+              // Used to query for HTML data on the actual page
+              relativePath: node.relativePath,
             },
           });
         });

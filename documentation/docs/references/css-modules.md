@@ -1,3 +1,8 @@
+---
+title: CSS Modules
+path: /css-modules/
+---
+
 # CSS Modules
 
 ## Setup

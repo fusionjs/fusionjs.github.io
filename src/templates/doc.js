@@ -1,5 +1,6 @@
 import React from 'react';
 import {styled} from 'styletron-react';
+import {extractChildMarkdownRemark} from '../utils';
 
 const DocsWrapper = styled('div', {
   position: 'relative',
@@ -22,7 +23,9 @@ const EditLink = styled('a', {
 
 class DocTemplate extends React.Component {
   render() {
-    const {pathContext, location} = this.props;
+    const {data, pathContext} = this.props;
+    let html = extractChildMarkdownRemark(data).html || '';
+
     return (
       <DocsWrapper className="docSearch-content">
         {pathContext.remoteUrl ? (
@@ -30,11 +33,25 @@ class DocTemplate extends React.Component {
         ) : null}
         <DocsContainer
           // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{__html: pathContext.html}}
+          dangerouslySetInnerHTML={{__html: html}}
         />
       </DocsWrapper>
     );
   }
 }
+
+export const query = graphql`
+  query DocQuery($relativePath: String!) {
+    allFile(filter: {relativePath: {eq: $relativePath}}) {
+      edges {
+        node {
+          childMarkdownRemark {
+            html
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default DocTemplate;

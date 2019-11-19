@@ -54,7 +54,7 @@ class Template extends React.Component {
             {
               name: 'description',
               content:
-                'A modular javascript framework for creating plugin-based React applications.',
+                'A modular Javascript framework for creating plugin-based React applications.',
             },
             {name: 'keywords', content: 'web, light, javascript, react, ssr'},
           ]}

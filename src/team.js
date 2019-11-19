@@ -26,11 +26,6 @@ export default [
     username: 'rtsao',
   },
   {
-    face: segu,
-    name: 'Rajesh Segu',
-    username: 'rajeshsegu',
-  },
-  {
     face: ganemone,
     name: 'Giancarlo Anemone',
     username: 'ganemone',
@@ -51,11 +46,6 @@ export default [
     username: 'lhorie',
   },
   {
-    face: dennisLin,
-    name: 'Dennis Lin',
-    username: 'dennisgl',
-  },
-  {
     face: amsmith,
     name: 'Alex Smith',
     username: 'AlexMSmithCA',
@@ -68,7 +58,7 @@ export default [
   {
     face: derekj,
     name: 'Derek Ju',
-    username: 'derekjuber',
+    username: 'derekju',
   },
   {
     face: gergelyn,

@@ -180,7 +180,7 @@ const Home = () => {
         <Description>
           <p>
             Fusion.js gives you the developer experience you expect from a
-            React/Redux setup and provides tools to take project quality to the
+            React setup and provides tools to take project quality to the
             next level.
           </p>
           <CTAContainer>
@@ -190,7 +190,7 @@ const Home = () => {
                 Get started building applications with Fusion.js in minutes.
               </p>
               <CTAPrimaryButton
-                to="/docs/getting-started"
+                to="/docs/overview"
                 onClick={trackQuickStart}
               >
                 Quick Start
@@ -290,10 +290,7 @@ export default () => {
           <SectionHeader>Core features</SectionHeader>
           <ul>
             <li>
-              <Link to="/docs/references/testing">
-                Ready-to-use testing environment
-              </Link>{' '}
-              with Jest, Enzyme, Puppeteer and integration test utilities
+              Ready-to-use testing environment with Jest, Enzyme, Puppeteer and integration test utilities
             </li>
             <li>
               Out-of-the-box support for server-rendering of React components,

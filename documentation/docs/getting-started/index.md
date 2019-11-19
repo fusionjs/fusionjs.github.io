@@ -5,7 +5,7 @@ path: /getting-started/
 
 # Getting started
 
-Fusion.js, Uber’s open source universal web framework, is designed to make web development easier and produce lightweight, high-performing apps. We initially [built Fusion.js](https://eng.uber.com/fusionjs/) to revamp our own websites, and have since offered it to the community as an open source project.
+Fusion.js is designed to make web development easier and produce lightweight, high-performing apps. It is used extensively within [Uber](https://eng.uber.com/fusionjs/) and powers many high trafficked websites.
 
 In this tutorial, we walkthrough how to get started with Fusion.js and have a 'Hello World!' application up and running in 5 minutes. The tutorial walks through three easy steps, from creating the application to displaying 'Hello World!' in the browser. The 'Hello World!' application is a good starting point for those seeking to get deeper into the Fusion.js framework.
 

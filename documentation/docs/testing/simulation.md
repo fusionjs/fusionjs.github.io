@@ -1,9 +1,9 @@
 ---
-title: Simulation testing
+title: Simulation Testing
 path: /simulation
 ---
 
-# Simulation testing
+# Simulation Testing
 
 It is often useful to simulate a request/render of a Fusion application. The `fusion-test-utils` library exports some utilities to make this easy.
 You can create a `test-app` file that will load your Fusion app from `src/main.js` and register some commonly used mocks. In the following example, we will use that test utility to test a server side render and browser side render of an application including the data fetching it does.

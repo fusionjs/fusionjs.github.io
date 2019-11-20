@@ -85,6 +85,6 @@ Whew, that was a lot to take in. The [Learning Fusion.js Tutorial](/docs/learnin
 
 A typical Fusion.js app will have any number of plugins registered at a time. For simple apps, maybe as few as five. For more complex apps, as many as 50. Due to the ability for plugins to depend on other plugins, complex workflows can be orchestrated to achieve common web app requirements.
 
-Fusion.js provides plugins for common React libraries like Redux, React Router, and Apollo. For the full list of plugins that currently exist in the Fusion.js ecosystem, see [here](/api/plugins). The [Recipes](/recipes) section also goes into detail on how to accomplish common tasks with Fusion.js and also goes over the associated plugins that are needed.
+Fusion.js provides plugins for common React libraries like Redux, React Router, and Apollo. For the full list of plugins that currently exist in the Fusion.js ecosystem, see [here](/api/plugins). The [Recipes](/docs/recipes) section also goes into detail on how to accomplish common tasks with Fusion.js and also details the associated plugins that are needed.
 
 In the [next section](/docs/core-concepts/anatomy-of-a-request), we'll dive into what happens when a request comes into a Fusion.js app.

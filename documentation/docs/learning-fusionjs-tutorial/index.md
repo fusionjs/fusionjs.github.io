@@ -5,11 +5,9 @@ path: /learning-fusionjs-tutorial/
 
 # Learning Fusion.js Tutorial
 
-This tutorial will cover building a Fusion.js app from scratch. We will be walking through step-by-step how to build a simple app that displays post data from Twitter.
+This tutorial will cover building a Fusion.js app from scratch. We will be walking through step-by-step how to build a simple app that fetches data from X and displays Y.
 
 It will be helpful to read through the [Core Concepts](/docs/core-concepts) of Fusion.js before running through this tutorial but it is not required as we will explain as we go along. Some basic understanding of making HTTP requests/responses and familiarity with React are also recommended.
-
-[Intro Image Here]
 
 ### Prerequisites
 
@@ -72,7 +70,7 @@ Then, run `yarn dev` to start the Fusion.js server. After the code compiles, you
 * `App` is an instance of the [`FusionApp`](/api/fusion-core#app) class exported from `fusion-react`. The `FusionApp` class is responsible for both client and server side rendering as well as handling requests. The functionality can also be extended via plugins that we will learn about later.
 * When `fusion dev` is invoked, it compiles your code, spins up a Node server, and proxies all requests to `FusionApp`. This explains why the entrypoint file at `src/main.js` only returns an instance of `FusionApp` and does nothing else related to creating an HTTP server. (Essentially, the actual Node server is obfuscated behind `fusion-cli`.)
 
-### Hot module reloading (HMR)
+### Hot Module Reloading (HMR)
 
 Try making changes to your source file, such as changing the text from "Hello World" to "Goodbye". You'll notice that the developer tooling provided by `fusion-cli` has been setup with hot module reloading out of the box.
 

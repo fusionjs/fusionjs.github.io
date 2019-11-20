@@ -46,28 +46,26 @@ if (__BROWSER__) {
 }
 ```
 
-With [universal rendering](/docs/references/universal-rendering), your applications will benefit from performance gains like faster initial page load and reduced bandwidth consumption. You also have the flexibility to define what renders on the server and browser with [code splitting](/docs/references/performance/js-bundle-splitting).
+With [universal rendering](/docs/references/universal-rendering), your applications will benefit from performance gains like faster initial page load and reduced bandwidth consumption. You also have the flexibility to define what renders on the server and browser with [code splitting](/docs/references/js-bundle-splitting).
 
 #### Lightweight
 
 We built Fusion.js to be a lightweight but high-performing system:
 
-- [JS bundle splitting](/docs/references/performance/js-bundle-splitting) allows you to break down large applications into smaller parts to be loaded as necessary; in addition, we split translations, asset URLs and experiments along with each new bundle, resulting in minimal HTML page size and fast page load speeds.
+- [JS bundle splitting](/docs/references/js-bundle-splitting) allows you to break down large applications into smaller parts to be loaded as necessary; in addition,  translations, asset URLs and experiments are split along with each new bundle, resulting in minimal HTML page size and fast page load speeds.
 - Brotli compression is turned on by default, resulting in 15-20% improvement in speed compared to a typical Webpack setup.
 - Fusion.js also supports separate JS bundles for modern vs. legacy browsers, so apps only compile to ES5 for old browsers. This keeps modern browser JS bundles significantly smaller.
 
 #### Testable
 
-To counteract the extensive mocking required to test applications in [Express](https://expressjs.com/), Fusion.js plugins leverage dependency injection, meaning they can expose well-defined APIs as services to other plugins, and a plugin’s dependencies can easily be mocked during tests. This also ensures that dependencies are type safe with support for [Flow](https://flow.org/). Built-in Fusion.js simulation, snapshot, and integration testing provide further support to help you write quality apps.
+To counteract the extensive mocking required to test applications in Express, Fusion.js plugins leverage dependency injection, meaning they can expose well-defined APIs as services to other plugins, and a plugin’s dependencies can easily be mocked during tests. This also ensures that dependencies are type safe with support for [Flow](https://flow.org/). Built-in Fusion.js simulation, snapshot, and integration testing provide further support to help you write quality apps.
 
 ```js
-import MockLogger from './mock-logger';
-import main from '../main';
-
 test('example test', async t => {
   const app = await main();
   app.register(LoggerToken, MockLogger);
-  // ... continue with test
+
+  // Continue with test
 });
 ```
 

@@ -39,8 +39,8 @@ You can also ignore individual code branches using a similar [comment pattern](h
 
 Learn about the various testing strategies that work with Fusion.js applications:
 
-* [Component testing](/docs/references/testing/component)
-* [Unit testing](/docs/references/testing/unit)
-* [Snapshot testing](/docs/references/testing/snapshot)
-* [Simulation testing](/docs/references/testing/simulation)
-* [Integration testing](/docs/references/testing/integration)
+* [Component Testing](/docs/testing/component)
+* [Unit Testing](/docs/testing/unit)
+* [Snapshot Testing](/docs/testing/snapshot)
+* [Simulation Testing](/docs/testing/simulation)
+* [Integration Testing](/docs/testing/integration)

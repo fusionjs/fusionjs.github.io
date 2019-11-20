@@ -1,9 +1,9 @@
 ---
-title: Component testing
+title: Component Testing
 path: /component
 ---
 
-# Component testing
+# Component Testing
 
 There are two strategies for testing individual components and the interactions between those components.
 

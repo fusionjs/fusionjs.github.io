@@ -26,8 +26,8 @@ These are explained in [Core Packages](/docs/core-concepts/core-packages).
 For now, let's just setup and install all of the packages in our new project. We'll need to install a few extra packages beyond the core libraries as peer dependencies (`fusion-tokens`, `react`, and `react-dom`).
 
 ```sh
-$ mkdir fusion-twitter
-$ cd fusion-twitter
+$ mkdir fusion-tutorial
+$ cd fusion-tutorial
 $ yarn init
 $ yarn add fusion-core fusion-react fusion-cli fusion-tokens react react-dom
 ```
@@ -63,12 +63,12 @@ That's all we need to get started. To run our code, we'll use helper scripts ins
 
 Then, run `yarn dev` to start the Fusion.js server. After the code compiles, you will see "Hello World" rendered on the page in plain text.
 
-[Insert image here]
+![Hello World](hello-world.png)
 
 7 lines of code was all it took to start rendering content onto our page! Let's take a closer look at the code that we just wrote. While it doesn't do much currently, it sets up the foundation that we will build on and also introduces some important points about Fusion.js:
 
 * `App` is an instance of the [`FusionApp`](/api/fusion-core#app) class exported from `fusion-react`. The `FusionApp` class is responsible for both client and server side rendering as well as handling requests. The functionality can also be extended via plugins that we will learn about later.
-* When `fusion dev` is invoked, it compiles your code, spins up a Node server, and proxies all requests to `FusionApp`. This explains why the entrypoint file at `src/main.js` only returns an instance of `FusionApp` and does nothing else related to creating an HTTP server. (Essentially, the actual Node server is obfuscated behind `fusion-cli`.)
+* When `fusion dev` is invoked, it compiles your code, spins up a Node server, and proxies all requests to `FusionApp`. This explains why the entrypoint file at `src/main.js` only returns an instance of `FusionApp` and does nothing else related to creating an HTTP server. (The actual Node server is obfuscated behind `fusion-cli`.)
 
 ### Hot Module Reloading (HMR)
 

@@ -23,6 +23,7 @@ class DocsSearch extends React.Component {
             '@media (max-width: 355px)': {
               display: 'none',
             },
+            verticalAlign: 'baseline !important',
           },
         }}
         placeholder="Search"

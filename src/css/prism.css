@@ -165,3 +165,12 @@ pre > code.highlight {
   background: -webkit-linear-gradient(left, rgba(45, 32, 6, 0.2) 70%, rgba(45, 32, 6, 0));
   background: linear-gradient(to right, rgba(45, 32, 6, 0.2) 70%, rgba(45, 32, 6, 0));
 }
+
+.gatsby-highlight-code-line {
+  background-color: #f2ebda;
+  display: block;
+}
+
+code.gatsby-remark-js {
+  font-variant-ligatures: none;
+}

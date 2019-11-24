@@ -73,6 +73,9 @@ module.exports = {
               // This is an uncommon use-case though;
               // If you're unsure, it's best to use the default value.
               classPrefix: 'gatsby-remark-',
+              aliases: {
+                sh: 'bash',
+              },
             },
           },
         ],

@@ -28,6 +28,13 @@ children:
   - title: 'Learning Fusion.js Tutorial'
     path: '/learning-fusionjs-tutorial'
     pathPrefix: '/learning-fusionjs-tutorial'
+    children:
+      - title: 'Building the UI'
+        path: /building-the-ui
+      - title: 'Loading Data'
+        path: /loading-data
+      - title: 'Adding Data'
+        path: /adding-data
   - title: 'Recipes'
     path: '/recipes'
     pathPrefix: '/recipes'

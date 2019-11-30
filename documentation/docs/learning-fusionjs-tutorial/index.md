@@ -5,13 +5,17 @@ path: /learning-fusionjs-tutorial/
 
 # Learning Fusion.js Tutorial
 
-This tutorial will cover building a Fusion.js app from scratch. We will be walking through step-by-step how to build a simple app that fetches data from X and displays Y.
+This tutorial will cover building a Fusion.js app from scratch. We will be walking through step-by-step how to build a simple app that fetches data from a public API. The goal is to walk through a few Fusion.js concepts as we build functionality into a simple to-do app.
 
-It will be helpful to read through the [Core Concepts](/docs/core-concepts) of Fusion.js before running through this tutorial but it is not required as we will explain as we go along. Some basic understanding of making HTTP requests/responses and familiarity with React are also recommended.
+![Styling applied](with-styling.png)
+
+We won't focus too much on the React/UI portion as any good React tutorial or the offical [React docs](https://reactjs.org) are better places to learn.
+
+It will be helpful to read through the [Core Concepts](/docs/core-concepts) of Fusion.js before running through this tutorial but it is not required as we will explain as we go along.
 
 ### Prerequisites
 
-[Insert Here]
+`yarn` and `node` are required to be installed for this tutorial.
 
 ## Installation
 
@@ -37,8 +41,6 @@ $ yarn add fusion-core fusion-react fusion-cli fusion-tokens react react-dom
 Let's add some code to instantiate our Fusion.js app. Create a new folder named `src` and a new file named `main.js` and add the following code to it.
 
 ```js
-// src/main.js
-
 import App from 'fusion-react';
 import React from 'react';
 
@@ -84,4 +86,4 @@ Behind the scenes, `fusion-cli` intelligently handles how to bundle split your a
 
 ## Next Steps
 
-In the [next section](/docs/learning-fusionjs-tutorial/plugins), we'll begin building our site by making basic API calls to display data. In doing so, we'll dig into the building blocks of Fusion.js sites - plugins.
+In the [next section](/docs/learning-fusionjs-tutorial/building-the-ui), we'll build the UI for our to-do app.

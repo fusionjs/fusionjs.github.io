@@ -16,6 +16,8 @@ app.register(SecondPlugin);
 app.register(StandalonePlugin);
 ```
 
+> **NOTE**: The actual ordering of registration here does not matter since Fusion.js will resolve all plugin dependencies when your app loads. This greatly simplifies configuration of your app since you don't need to manually re-order things around!
+
 Let's also assume that `SecondPlugin` depends on `FirstPlugin` but `StandalonePlugin` is stand-alone with no dependencies.
 
 ```js
@@ -73,7 +75,9 @@ Lastly, the client will "render" itself. Because the page has already been writt
 
 ### Declaring logic after render
 
-At this point, the request has almost completed. A plugin can define any actions to take _after_ the render by adding code to after the `next()` call in the `middleware` function. This is more of an advanced feature so for more information on how this works, see the complete [Plugins](/docs/references/creating-a-plugin) reference.
+At this point, the request has almost completed. A plugin can define any actions to take _after_ the render by adding code to after the `next()` call in the `middleware` function. For example, you could measure how long a particular render took or setup an expensive object and clean it up after render.
+
+This is more of an advanced feature so for more information on how this works, see the complete [Plugins](/docs/references/creating-a-plugin) reference.
 
 ## Learning curve
 

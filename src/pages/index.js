@@ -16,7 +16,13 @@ const highlight = code =>
 
 const HeroContainer = styled('div', {
   width: '80%',
-  margin: '100px auto 75px',
+  margin: '25px auto 75px',
+});
+
+const VideoContainer = styled('div', {
+  display: 'flex',
+  justifyContent: 'center',
+  margin: '0 auto 75px',
 });
 
 const FlexContainer = styled('div', ({styleProps = {}}) => ({
@@ -217,6 +223,9 @@ $ yarn dev
           </CTAContainer>
         </Description>
       </HeroContainer>
+      <VideoContainer>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/s-F1O5vnavk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </VideoContainer>
       <AltContainer>
         <Image src={jigsaw} />
         <Advantage>

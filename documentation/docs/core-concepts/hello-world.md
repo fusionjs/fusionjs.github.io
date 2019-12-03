@@ -18,7 +18,7 @@ export default async function start() {
 }
 ```
 
-Running this code in your browser would produce the string "Hello World" on a plain white background with no styling.
+Running this code (`fusion dev`) would produce the string "Hello World" on a plain white background with no styling.
 
 While at face value this code obviously isn't doing much, there is a lot happening behind the scenes. Simply running this code will:
 

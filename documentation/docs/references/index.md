@@ -5,22 +5,16 @@ path: /references/
 
 # References
 
-- [State management](/docs/references/state-management)
-- [Styling](/docs/references/styling)
-- [Routing](/docs/references/routing)
-- [Fetching data](/docs/references/fetching-data)
-- [Internationalization](/docs/references/internationalization)
-- [Plugins](/docs/references/creating-a-plugin)
-- [Testing](/docs/references/testing)
-- [Typing](/docs/references/typing)
-- [Security](/docs/references/security)
-- [Universal rendering](/docs/references/universal-rendering)
-- [Performance](/docs/references/performance)
-- [Debugging](/docs/references/debugging)
-- [Static assets](/docs/references/static-assets)
+This section contains articles that deep dive into specific parts of Fusion.js.
+
+### Table of Contents
+
 - [Configuration](/docs/references/configuration)
-- [Web workers](/docs/references/web-workers)
-- [WebSockets](/docs/references/websockets)
-- [Virtual modules](/docs/references/virtual-modules)
-- [SVG React components](/docs/references/svg-react-components)
-- [CSS Modules](/docs/references/css-modules)
+- [Debugging](/docs/references/debugging)
+- [Framework Comparison](/docs/references/framework-comparison)
+- [Glossary](/docs/references/glossary)
+- [JS Bundle Splitting](/docs/references/js-bundle-splitting)
+- [Plugins](/docs/references/creating-a-plugin)
+- [Security](/docs/references/security)
+- [Typing](/docs/references/typing)
+- [Universal Rendering](/docs/references/universal-rendering)

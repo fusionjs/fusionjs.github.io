@@ -1,9 +1,9 @@
 ---
-title: Static assets
+title: Static Assets
 path: /static-assets/
 ---
 
-# Static assets
+# Static Assets
 
 During the compilation process, Fusion.js places files in the `.fusion` directory. Any file there is a static asset.
 

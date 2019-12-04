@@ -1,28 +1,6 @@
 ---
-title: Core concepts
-path: /core-concepts/
----
-
-# Core Concepts
-
-### Middleware
-
-A middleware in Fusion.js is similar to middleware in HTTP servers like Express.js (in fact, they are built on top of Koa middleware). Fusion.js middleware are functions that run on the server when an HTTP request occurs. However, unlike Koa/Express middleware, Fusion.js middleware functions also run on the browser on page load.
-
-### Services
-
-A service is any library that exposes a programmatic API. The main difference between a Fusion.js service and a regular library is that services are dynamically injected via a dependency injection system, whereas libraries would typically be imported statically via ES6 import statements.
-
-### Plugin
-
-A [Fusion.js plugin](/docs/references/creating-a-plugin) is a container that encapsulates a service and a middleware. Plugins declare what dependencies they rely on (via the DI system) and may expose a service, a middleware, or both. Services and middleware that are exposed by a plugin can consume services from other plugins.
-
-Fusion.js plugins are suitable for encapsulating integrations with libraries, even when they require making changes to multiple areas of concern (e.g. server, browser, React providers).
-
-### Dependency injection
-
-Fusion.js has a [type-aware dependency injection system](/docs/references/creating-a-plugin/dependencies). Dependency injection is a way to modularize code, similar to how you would use ES6 import statements instead of putting your whole app in a single file. The main difference is that ES6 import statements are static (meaning they always import the same thing) and dependency injection is dynamic (meaning that what is imported can be changed through runtime configuration, for example for mocking in tests).
-
+title: Glossary
+path: /glossary/
 ---
 
 # Glossary
@@ -71,6 +49,10 @@ CSRF stands for Cross-Site Request Forgery. It's a type of security attack that 
 
 A mechanism that sorts dependencies and runs them in order, so that plugins that depend on other plugins always run after the ones they depend on.
 
+### Dependency injection
+
+Fusion.js has a [type-aware dependency injection system](/docs/references/creating-a-plugin/dependencies). Dependency injection is a way to modularize code, similar to how you would use ES6 import statements instead of putting your whole app in a single file. The main difference is that ES6 import statements are static (meaning they always import the same thing) and dependency injection is dynamic (meaning that what is imported can be changed through runtime configuration, for example for mocking in tests).
+
 ### DI
 
 DI stands for [dependency injection](#dependency-injection) system.
@@ -113,6 +95,16 @@ Jest is a testing framework with support for snapshot testing. Fusion.js provide
 
 A linter is a tool that statically analyzes code and reports certain patterns of code if they are error-prone or if they deviate from a code style standard.
 
+### Middleware
+
+A middleware in Fusion.js is similar to middleware in HTTP servers like Express.js (in fact, they are built on top of Koa middleware). Fusion.js middleware are functions that run on the server when an HTTP request occurs. However, unlike Koa/Express middleware, Fusion.js middleware functions also run on the browser on page load.
+
+### Plugin
+
+A [Fusion.js plugin](/docs/references/creating-a-plugin) is a container that encapsulates a service and a middleware. Plugins declare what dependencies they rely on (via the DI system) and may expose a service, a middleware, or both. Services and middleware that are exposed by a plugin can consume services from other plugins.
+
+Fusion.js plugins are suitable for encapsulating integrations with libraries, even when they require making changes to multiple areas of concern (e.g. server, browser, React providers).
+
 ### Prettier
 
 An opinionated code formatter that ensures code consistency. Similar to Go's gofmt.
@@ -128,6 +120,10 @@ REST stands for Representational State Transfer. In the context of web developme
 ### RPC
 
 RPC stands for Remote Procedure Call. In the context of web development, it refers specifically to HTTP endpoint architectures revolving around named method definitions (in contrast to REST architectures, which revolve around leveraging HTTP method names and noun-oriented endpoint naming).
+
+### Services
+
+A service is any library that exposes a programmatic API. The main difference between a Fusion.js service and a regular library is that services are dynamically injected via a dependency injection system, whereas libraries would typically be imported statically via ES6 import statements.
 
 ### SPA
 

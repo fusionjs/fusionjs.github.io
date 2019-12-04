@@ -1,9 +1,9 @@
 ---
-title: Unit testing
+title: Unit Testing
 path: /unit
 ---
 
-# Unit testing
+# Unit Testing
 
 Use unit testing to ensure that your methods behave as expected within the browser and Node environments.
 

@@ -1,9 +1,9 @@
 ---
-title: Snapshot testing
+title: Snapshot Testing
 path: /snapshot
 ---
 
-# Snapshot testing
+# Snapshot Testing
 
 Snapshot testing is one possible way of preventing regressions by surfacing differences in components and objects. These tests may be run in either Node or browser environments, and against components or data structures. When snapshots need to be updated, you can update them with: `yarn test --updateSnapshot`. For more information see the [Jest snapshot testing documentation](https://facebook.github.io/jest/docs/en/snapshot-testing.html).
 

@@ -16,7 +16,13 @@ const highlight = code =>
 
 const HeroContainer = styled('div', {
   width: '80%',
-  margin: '100px auto 75px',
+  margin: '25px auto 75px',
+});
+
+const VideoContainer = styled('div', {
+  display: 'flex',
+  justifyContent: 'center',
+  margin: '0 auto 75px',
 });
 
 const FlexContainer = styled('div', ({styleProps = {}}) => ({
@@ -180,7 +186,7 @@ const Home = () => {
         <Description>
           <p>
             Fusion.js gives you the developer experience you expect from a
-            React/Redux setup and provides tools to take project quality to the
+            React setup and provides tools to take project quality to the
             next level.
           </p>
           <CTAContainer>
@@ -190,7 +196,7 @@ const Home = () => {
                 Get started building applications with Fusion.js in minutes.
               </p>
               <CTAPrimaryButton
-                to="/docs/getting-started"
+                to="/docs/overview"
                 onClick={trackQuickStart}
               >
                 Quick Start
@@ -217,6 +223,9 @@ $ yarn dev
           </CTAContainer>
         </Description>
       </HeroContainer>
+      <VideoContainer>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/s-F1O5vnavk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </VideoContainer>
       <AltContainer>
         <Image src={jigsaw} />
         <Advantage>
@@ -290,10 +299,7 @@ export default () => {
           <SectionHeader>Core features</SectionHeader>
           <ul>
             <li>
-              <Link to="/docs/references/testing">
-                Ready-to-use testing environment
-              </Link>{' '}
-              with Jest, Enzyme, Puppeteer and integration test utilities
+              Ready-to-use testing environment with Jest, Enzyme, Puppeteer and integration test utilities
             </li>
             <li>
               Out-of-the-box support for server-rendering of React components,

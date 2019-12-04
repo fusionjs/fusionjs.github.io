@@ -3,7 +3,7 @@ title: Fetching data
 path: /fetching-data/
 ---
 
-# Fetching data
+# Fetching Data
 
 Out of the box, we support data fetching in web applications with the following components:
 

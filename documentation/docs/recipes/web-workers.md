@@ -3,7 +3,7 @@ title: "Web workers"
 path: /web-workers
 ---
 
-# Web workers
+# Web Workers
 
 A web worker is a mechanism for running background tasks outside of the browser context. Heavy and resource consuming tasks can instead be moved to a background task so as to not block any UI threads in the main window. Communication is done through `postMessage` and `onmessage` handlers in both the worker instance and the browser.
 

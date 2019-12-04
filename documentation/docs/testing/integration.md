@@ -1,9 +1,9 @@
 ---
-title: Integration testing
+title: Integration Testing
 path: /integration
 ---
 
-# Integration testing
+# Integration Testing
 
 Integration tests verify that your modules work together as expected. They open your application within a browser, and perform actions in the same way that an end user would.
 

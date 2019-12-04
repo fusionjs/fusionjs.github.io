@@ -3,7 +3,7 @@ title: State management
 path: /state-management/
 ---
 
-# State management
+# State Management
 
 State management can be accomplished in different ways:
 

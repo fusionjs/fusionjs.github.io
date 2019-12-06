@@ -121,6 +121,12 @@ export default async function start() {
 }
 ```
 
+Add the import to the top of `src/components/root.js`:
+
+```js
+import {Helmet} from 'fusion-plugin-react-helmet-async';
+```
+
 Then add the following styles in a `<Helmet>` tag to `src/components/root.js` (after the opening `<React.Fragment>` tag):
 
 ```js

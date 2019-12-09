@@ -93,6 +93,8 @@ children:
           path: '/tokens'
         - title: 'Dependencies'
           path: '/dependencies'
+        - title: 'Enhancers'
+          path: '/enhancers'
         - title: 'Creating endpoints'
           path: '/creating-endpoints'
         - title: 'Using services'

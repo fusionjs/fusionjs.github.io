@@ -14,6 +14,7 @@ Fusion.js can also receive some start-up configuration through a few environment
 * `ROUTE_PREFIX` - A path under which the application responds. For example, if `ROUTE_PREFIX=/foo`, the app will live in `http://the-site.com/foo`. Defaults to empty string.
 * `FRAMEWORK_STATIC_ASSET_PATH` - A path under which requests are treated as static asset requests. Defaults to `_static`.
 * `ROOT_DIR` - The root directory of the app, relative to CWD. Can be configured via the `--dir` flag in Fusion CLI. Defaults to `.`
+- `DANGEROUSLY_EXPOSE_SOURCE_MAPS` - Allows serving source maps for debugging if set to `true`, defaults to `false`. This option is considered dangerous because source code will be exposed publicly. Ideally, this option is used in a "staging" environment that is only accessible in a private network. In order to prevent accidentally caching source maps in a CDN, the `CDN_URL` option is ignored when `DANGEROUSLY_EXPOSE_SOURCE_MAPS` is set.
 
 ### Static configuration
 

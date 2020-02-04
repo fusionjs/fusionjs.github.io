@@ -10,9 +10,9 @@ During the compilation process, Fusion.js places files in the `.fusion` director
 Fusion.js uses two environment variables to determine the URL prefix at which assets are served:
 
 * `ROUTE_PREFIX` (defaults to empty string)
-* `FRAMEWORK_STATIC_ASSET_PATH` (defaults to `/_static`)
+* `CDN_URL` for configuring the use of a CDN for static assets rather than serving assets from Fusion directly. Not set by default.
 
-If, for example, `ROUTE_PREFIX` is `/foo` and `FRAMEWORK_STATIC_ASSET_PATH` is `/_static`, then a request to `/foo/_static/bar.gif` in a production environment would attempt to respond with an asset at `.fusion/dist/production/client/bar.gif`
+If, for example, `ROUTE_PREFIX` is `/foo` then a request to `/foo/_static/bar.gif` in a production environment would attempt to respond with an asset at `.fusion/dist/production/client/bar.gif`.
 
 ### What is assetUrl?
 

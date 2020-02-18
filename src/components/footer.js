@@ -55,7 +55,7 @@ export default ({styleProps = {}}) => {
                 <LinkText {...{styleProps}}>Stack Overflow</LinkText>
               </ExternalLink>
               &nbsp;&nbsp; | &nbsp;&nbsp;
-              <ExternalLink href="https://join.slack.com/t/fusionjs/shared_invite/enQtNDE1NjY2Mjk0OTMxLTg0NmZhY2FiZjQzZjU3ZTA4ODQ0NTNjNjhhYjVlNTk3NDQzMWJkOGFhNmU0Yzc1NjE0YmMxYjEwMTFlYjE2OWI">
+              <ExternalLink href="https://join.slack.com/t/fusionjs/shared_invite/enQtOTQ2NDYwNTQ5NjgzLWI2ZDkzNDM2MTMyNzFiNmJiMDFmMGEyY2NkMTYyOTZiN2EzYjU1MmI4NDAyN2Y3OGIxMDZhODkzNThiZWU4ZGE">
                 <LinkText {...{styleProps}}>Slack Channel</LinkText>
               </ExternalLink>
               &nbsp;&nbsp; | &nbsp;&nbsp;

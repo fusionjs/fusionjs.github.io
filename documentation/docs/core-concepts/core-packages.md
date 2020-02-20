@@ -19,7 +19,7 @@ Under the hood, `FusionApp` is not running an HTTP server. Rather, it receives p
 
 ## fusion-react
 
-`fusion-react` extends `fusion-core` and replaces the internal rendering engine with React. Both client and server side rendering support for React are included, including [hooks support](http://localhost:8000/api/fusion-react#useservice). `fusion-react` also exports methods that assist with server side rendering, such as [React suspense-like API's](http://localhost:8000/api/fusion-react#prepared).
+`fusion-react` extends `fusion-core` and replaces the internal rendering engine with React. Both client and server side rendering support for React are included, including [hooks support](/api/fusion-react#useservice). `fusion-react` also exports methods that assist with server side rendering, such as [React suspense-like API's](/api/fusion-react#prepared).
 
 If you are using React, you will be using the exported `App` class from this package rather than from `fusion-core`.
 

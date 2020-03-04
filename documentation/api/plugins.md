@@ -35,3 +35,4 @@ path: /plugins/
 - <a target="_blank" href="https://github.com/IcculusC/fusion-plugin-redux-observable">Redux Observable</a> - Installs the redux-observable middleware and runs the provided epic with minimal boilerplate.
 - <a target="_blank" href="https://github.com/IcculusC/fusion-plugin-redux-thunk">Redux Thunk</a> - Installs the redux-thunk middleware for asynchronous dispatch.
 - <a target="_blank" href="https://github.com/mrmuhammadali/fusion-plugin-socket-io">Socket.io</a> - Provides a Socket.io implementation.
+- <a target="_blank" href="https://github.com/robsonkades/fusion-plugin-robots">Robots.txt</a> - Robots.txt instructions for search engine crawlers.

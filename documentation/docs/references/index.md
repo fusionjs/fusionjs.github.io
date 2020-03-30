@@ -18,3 +18,5 @@ This section contains articles that deep dive into specific parts of Fusion.js.
 - [Security](/docs/references/security)
 - [Typing](/docs/references/typing)
 - [Universal Rendering](/docs/references/universal-rendering)
+- [SVG React components](/docs/references/svg-react-components)
+- [CSS Modules](/docs/references/css-modules)

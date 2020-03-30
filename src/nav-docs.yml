@@ -105,3 +105,7 @@ children:
         path: '/typing'
       - title: 'Universal rendering'
         path: '/universal-rendering'
+      - title: 'SVG React components'
+        path: '/svg-react-components'
+      - title: 'CSS Modules'
+        path: '/css-modules'

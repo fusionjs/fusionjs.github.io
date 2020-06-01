@@ -23,7 +23,7 @@ $ npx create-fusion-app my-fusion-app
 
 Keep in mind however that Fusion.js assumes you are using `yarn` throughout development and production workflows, not `npm`.
 
-For an overview of what the scaffold contains and how to use it, view the documentation for [create-fusion-app](https://github.com/fusionjs/fusionjs/tree/master/create-fusion-app).
+For an overview of what the scaffold contains and how to use it, view the documentation for <a href="https://github.com/fusionjs/fusionjs/tree/master/create-fusion-app">create-fusion-app</a>.
 
 ## Creating a new project from scratch
 

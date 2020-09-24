@@ -31,16 +31,6 @@ export default [
     username: 'ganemone',
   },
   {
-    face: angus,
-    name: 'Angus Croll',
-    username: 'angus-c',
-  },
-  {
-    face: nadiia,
-    name: 'Nadiia Dmytrenko',
-    username: 'nadiia',
-  },
-  {
     face: lhorie,
     name: 'Leo Horie',
     username: 'lhorie',
@@ -59,11 +49,6 @@ export default [
     face: derekj,
     name: 'Derek Ju',
     username: 'derekju',
-  },
-  {
-    face: gergelyn,
-    name: 'Gergely Nemeth',
-    username: 'gergelyke',
   },
   {
     face: deacy,

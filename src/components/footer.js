@@ -32,7 +32,7 @@ const LinkText = styled('span', ({styleProps = {}}) => ({
 }));
 
 export default ({styleProps = {}}) => {
-  const date = new Date().getFullYear()
+  const year = new Date().getFullYear()
   return (
     <Footer {...{styleProps}}>
       <PageWidth>
@@ -44,7 +44,7 @@ export default ({styleProps = {}}) => {
           }}
         >
           <FlexItem>
-            <p>© {date} Uber Technologies Inc.</p>
+            <p>© {year} Uber Technologies Inc.</p>
           </FlexItem>
           <FlexItem>
             <p>

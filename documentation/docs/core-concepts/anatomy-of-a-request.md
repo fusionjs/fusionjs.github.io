@@ -11,12 +11,12 @@ We'll be using the following example for this discussion.
 
 ```js
 const app = new App();
-app.register(FirstPlugin);
 app.register(SecondPlugin);
 app.register(StandalonePlugin);
+app.register(FirstPlugin);
 ```
 
-> **NOTE**: The actual ordering of registration here does not matter since Fusion.js will resolve all plugin dependencies when your app loads. This greatly simplifies configuration of your app since you don't need to manually re-order things around!
+> **NOTE**: You do not need to manage the ordering of registrations here if any of the plugins have dependencies on each other. Under the hood, Fusion.js will sort out the dependency graph for you.
 
 Let's also assume that `SecondPlugin` depends on `FirstPlugin` but `StandalonePlugin` is stand-alone with no dependencies.
 
@@ -54,14 +54,14 @@ When Fusion.js initializes, it builds a dependency graph of all registered plugi
 In the above example, because `SecondPlugin` depends on `FirstPlugin`, the `console.log` order that the middleware will be accessed is:
 
 1. `FirstPlugin`
-2. `StandalonePlugin`
-3. `SecondPlugin`
+2. `SecondPlugin`
+3. `StandalonePlugin`
 
-> **Note**: The order of `FirstPlugin` and `StandalonePlugin` is not deterministic since both are not dependent on anything else. This is ok in our case though since we have no preference.
+This ordering occurs even though `SecondPlugin` was registered earlier than `FirstPlugin` and `FirstPlugin` was registered last, after `StandalonePlugin`. Under the hood, Fusion.js will process plugins in the order that they are registered unless they have a dependency on another plugin, in which case that plugin is processed ahead of it. This causes `FirstPlugin` to be processed first by proxy of `SecondPlugin` and thus ahead of `StandalonePlugin`.
 
 ### Server rendering
 
-After all plugins have run, the last task is to render out the current page on the server. This is **always** the last action that the server takes. This presents an opportunity for registered plugins to modify the HTML template if necessary to add/remove HTML elements while the request chain is processing.
+After all plugins have run, the last task is to render out the current page on the server. This is **always** the last action that the server takes. This presents an opportunity for registered plugins to modify the HTML template if necessary to add/remove HTML elements in any middleware.
 
 Finally, the server render will flush the page HTML onto the client.
 

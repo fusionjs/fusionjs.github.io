@@ -11,8 +11,8 @@ We'll be using the following example for this discussion.
 
 ```js
 const app = new App();
-app.register(FirstPlugin);
 app.register(SecondPlugin);
+app.register(FirstPlugin);
 app.register(StandalonePlugin);
 ```
 
@@ -57,11 +57,11 @@ In the above example, because `SecondPlugin` depends on `FirstPlugin`, the `cons
 2. `StandalonePlugin`
 3. `SecondPlugin`
 
-> **Note**: The order of `FirstPlugin` and `StandalonePlugin` is not deterministic since both are not dependent on anything else. This is ok in our case though since we have no preference.
+This ordering occurs even though `SecondPlugin` was registered earlier than `FirstPlugin`. Under the hood, Fusion.js will process plugins in the order that they are registered unless they have a dependency on another plugin, in which case that plugin is processed first. This ensures that the dependency graph is fully resolved for each plugin.
 
 ### Server rendering
 
-After all plugins have run, the last task is to render out the current page on the server. This is **always** the last action that the server takes. This presents an opportunity for registered plugins to modify the HTML template if necessary to add/remove HTML elements while the request chain is processing.
+After all plugins have run, the last task is to render out the current page on the server. This is **always** the last action that the server takes. This presents an opportunity for registered plugins to modify the HTML template if necessary to add/remove HTML elements in any middleware.
 
 Finally, the server render will flush the page HTML onto the client.
 

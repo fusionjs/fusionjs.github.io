@@ -205,7 +205,7 @@ const Home = () => {
                 href="https://github.com/fusionjs/fusionjs"
                 target="_blank"
               >
-                Github
+                GitHub
               </CTASecondaryButton>
             </CTALeftBox>
             <CTARightBox>

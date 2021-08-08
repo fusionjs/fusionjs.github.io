@@ -42,6 +42,7 @@ const PageHeader = ({
                 data={[docsContents, apiContents]}
                 location={location}
                 pathPrefix={pathPrefix}
+                setOpenMobileMenu={handlSetOpen}
               />
             </MainNavContainer>
           </FlexItem>
@@ -52,6 +53,7 @@ const PageHeader = ({
               data={[docsContents, apiContents]}
               location={location}
               pathPrefix={pathPrefix}
+              setOpenMobileMenu={handlSetOpen}
             />
           </MobileNavContainer>
         )}

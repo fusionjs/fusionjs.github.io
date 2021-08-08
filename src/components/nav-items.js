@@ -45,6 +45,8 @@ const NavItems = props => {
     return matchPath(reNews);
   }
 
+  const handleLinkClick = () => props.setOpenMobileMenu()
+
   return (
     <React.Fragment>
       {data.map((item, index) => {
@@ -55,6 +57,7 @@ const NavItems = props => {
           <InternalLink
             key={index}
             to={item.path || getPath(item.pathPrefix, item.children[0])}
+            onClick={handleLinkClick}
           >
             {isActive ? (
               <Helmet
@@ -66,7 +69,7 @@ const NavItems = props => {
           </InternalLink>
         );
       })}
-      <InternalLink to="/support">
+      <InternalLink to="/support" onClick={handleLinkClick}>
         <MainNavItem
           styleProps={{
             isActive: isActive('/support'),

@@ -9,7 +9,17 @@ const {
   fontFamily,
 } = require('./style-settings');
 
-exports.MainNavContainer = styled('div', {});
+exports.MainNavContainer = styled('div', () => ({
+  '@media (max-width: 587px)': {
+    display: 'none',
+  },
+}));
+
+exports.MobileNavContainer = styled('div', () => ({
+  '@media (min-width: 588px)': {
+    display: 'none',
+  },
+}));
 
 exports.SearchField = styled('input', ({styleProps = {}}) => ({
   boxSizing: 'border-box',
@@ -94,6 +104,48 @@ exports.SideNavUl = styled('ul', ({styleProps = {}}) => ({
   ...styleProps.overrides,
 }));
 
+exports.StyledBurger = styled('button', ({styleProps = {}}) => ({
+  position: 'absolute',
+  top: '10px',
+  right: '15px',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-around',
+  width: '32px',
+  height: '32px',
+  background: 'transparent',
+  border: 'none',
+  cursor: 'pointer',
+  padding: '0',
+  zIndex: '99',
+
+  ':focus': {
+    outline: 'none'
+  },
+}));
+
+exports.StyledBurgerBar = styled('div', ({ styleProps = {} }) => ({
+    width: '32px',
+    height: '2px',
+    backgroundColor: whiteColor,
+    transition: 'all 0.3s linear',
+    position: 'relative',
+    transformOrigin: '1px',
+
+    ':first-child': {
+      transform: styleProps.open ? 'rotate(45deg)' : 'rotate(0)',
+    },
+
+    ':nth-child(2)': {
+      opacity: styleProps.open ? '0' : '1',
+      transform: styleProps.open ? 'translateX(20px)' : 'translateX(0)',
+    },
+
+    ':nth-child(3)': {
+      transform: styleProps.open ? 'rotate(-45deg)' : 'rotate(0)',
+    },
+}));
+
 exports.SideNavLi = styled('li', ({styleProps = {}}) => ({
   margin: '0',
   ...styleProps.overrides,
@@ -130,13 +182,9 @@ exports.Header = styled('div', {
   left: 0,
   right: 0,
   height: '52px',
-  overflow: 'visible',
   background: '#041725',
   color: whiteColor,
   zIndex: '999',
-  '@media (max-width: 623px)': {
-    height: '100px',
-  },
 });
 
 exports.HeaderTitle = styled('span', {

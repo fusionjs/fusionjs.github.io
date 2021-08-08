@@ -16,6 +16,7 @@ exports.MainNavContainer = styled('div', () => ({
 }));
 
 exports.MobileNavContainer = styled('div', () => ({
+  paddingBottom: '15px',
   '@media (min-width: 588px)': {
     display: 'none',
   },
@@ -65,10 +66,10 @@ exports.MainNavItem = styled('span', ({styleProps = {}}) => ({
   textDecoration: 'none',
   lineHeight: '1',
   padding: '17px 15px 19px 15px',
-  borderTopWidth: '4px',
-  borderTopStyle: 'solid',
+  borderBottomWidth: '4px',
+  borderBottomStyle: 'solid',
   color: styleProps.isActive ? whiteColor : white120Color,
-  borderTopColor: styleProps.isActive ? primaryColor : 'transparent',
+  borderBottomColor: styleProps.isActive ? primaryColor : 'transparent',
   ':hover': {
     color: whiteColor,
   },
@@ -78,6 +79,9 @@ exports.MainNavItem = styled('span', ({styleProps = {}}) => ({
   '@media (max-width: 348px)': {
     padding: '17px 4px 19px 4px',
     letterSpacing: '1px',
+  },
+  '@media (max-width: 587px)': {
+    width: '97vw'
   },
   ...styleProps.overrides,
 }));
@@ -121,6 +125,10 @@ exports.StyledBurger = styled('button', ({styleProps = {}}) => ({
 
   ':focus': {
     outline: 'none'
+  },
+
+  '@media (min-width: 588px)': {
+    display: 'none',
   },
 }));
 
@@ -181,7 +189,7 @@ exports.Header = styled('div', {
   top: 0,
   left: 0,
   right: 0,
-  height: '52px',
+  minHeight: '52px',
   background: '#041725',
   color: whiteColor,
   zIndex: '999',

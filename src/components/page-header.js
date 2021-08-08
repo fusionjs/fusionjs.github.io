@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'gatsby-link';
 import {
   H1,
   Header,
   HeaderTitle,
+  MainNavContainer,
+  MobileNavContainer,
 } from './styled-elements';
 import {
   PageWidth,
   FlexContainer,
   FlexItem,
 } from '../layouts/styled-elements';
-import MainNav from './main-nav';
+import Burger from './burger-menu-button';
+import NavItems from './nav-items';
 import docsContents from '../nav-docs.yml';
 import apiContents from '../nav-api.yml';
 
@@ -18,8 +21,12 @@ const PageHeader = ({
   location,
   pathPrefix,
 }) => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const handlSetOpen = () => { setMobileMenuOpen(!mobileMenuOpen) };
+
   return (
     <Header>
+      <Burger open={mobileMenuOpen} setOpen={handlSetOpen} />
       <PageWidth>
         <FlexContainer>
           <FlexItem>
@@ -30,13 +37,24 @@ const PageHeader = ({
             </H1>
           </FlexItem>
           <FlexItem>
-            <MainNav
+            <MainNavContainer data-test="main-nav">
+              <NavItems
+                data={[docsContents, apiContents]}
+                location={location}
+                pathPrefix={pathPrefix}
+              />
+            </MainNavContainer>
+          </FlexItem>
+        </FlexContainer>
+        {mobileMenuOpen && (
+          <MobileNavContainer>
+            <NavItems
               data={[docsContents, apiContents]}
               location={location}
               pathPrefix={pathPrefix}
             />
-          </FlexItem>
-        </FlexContainer>
+          </MobileNavContainer>
+        )}
       </PageWidth>
     </Header>
   )

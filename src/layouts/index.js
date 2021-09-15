@@ -1,21 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
 import {
   Page,
   PageWidth,
-  H1,
-  Header,
-  HeaderTitle,
   Body,
   FlexContainer,
   FlexItem,
   SideNavContainer,
   Content,
 } from './styled-elements';
-import MainNav from '../components/main-nav';
 import SideNav from '../components/side-nav';
+import PageHeader from '../components/page-header';
 import Footer from '../components/footer';
 import docsContents from '../nav-docs.yml';
 import apiContents from '../nav-api.yml';
@@ -59,26 +55,10 @@ class Template extends React.Component {
             {name: 'keywords', content: 'web, light, javascript, react, ssr'},
           ]}
         />
-        <Header>
-          <PageWidth>
-            <FlexContainer>
-              <FlexItem>
-                <H1>
-                  <Link to="/" style={{backgroundColor: 'transparent'}}>
-                    <HeaderTitle>Fusion.js</HeaderTitle>
-                  </Link>
-                </H1>
-              </FlexItem>
-              <FlexItem>
-                <MainNav
-                  data={[docsContents, apiContents]}
-                  location={location}
-                  pathPrefix={pathPrefix}
-                />
-              </FlexItem>
-            </FlexContainer>
-          </PageWidth>
-        </Header>
+        <PageHeader
+          location={location}
+          pathPrefix={pathPrefix}
+        />
         <Body>
           <PageWidth>
             <FlexContainer>

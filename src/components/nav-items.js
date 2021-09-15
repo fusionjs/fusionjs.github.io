@@ -2,7 +2,7 @@ import React from 'react';
 import {styled} from 'styletron-react';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
-import {MainNavContainer, MainNavItem, SearchField} from './styled-elements';
+import { MainNavItem, SearchField } from './styled-elements';
 import {getPath} from '../utils';
 
 const InternalLink = props => {
@@ -20,7 +20,7 @@ class DocsSearch extends React.Component {
       <SearchField
         styleProps={{
           overrides: {
-            '@media (max-width: 355px)': {
+            '@media (max-width: 587px)': {
               display: 'none',
             },
             verticalAlign: 'baseline !important',
@@ -33,7 +33,7 @@ class DocsSearch extends React.Component {
   }
 }
 
-const Nav = props => {
+const NavItems = props => {
   const {data, location, pathPrefix} = props;
 
   function matchPath(regexp) {
@@ -45,8 +45,10 @@ const Nav = props => {
     return matchPath(reNews);
   }
 
+  const handleLinkClick = () => props.setOpenMobileMenu()
+
   return (
-    <MainNavContainer data-test="main-nav">
+    <React.Fragment>
       {data.map((item, index) => {
         const re = new RegExp(`^${pathPrefix}${item.pathPrefix}(/|$)`);
         const isActive = matchPath(re);
@@ -55,6 +57,7 @@ const Nav = props => {
           <InternalLink
             key={index}
             to={item.path || getPath(item.pathPrefix, item.children[0])}
+            onClick={handleLinkClick}
           >
             {isActive ? (
               <Helmet
@@ -66,23 +69,18 @@ const Nav = props => {
           </InternalLink>
         );
       })}
-      <InternalLink to="/support">
+      <InternalLink to="/support" onClick={handleLinkClick}>
         <MainNavItem
           styleProps={{
             isActive: isActive('/support'),
-            overrides: {
-              '@media (max-width: 474px)': {
-                display: 'none',
-              },
-            },
           }}
         >
           Support
         </MainNavItem>
       </InternalLink>
       <DocsSearch />
-    </MainNavContainer>
+    </React.Fragment>
   );
 };
 
-export default Nav;
+export default NavItems;

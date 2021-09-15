@@ -24,47 +24,6 @@ exports.PageWidth = styled('div', {
   margin: '0 auto',
 });
 
-exports.H1 = styled('h1', {
-  marginTop: '0',
-  marginBottom: '0',
-  marginLeft: '0',
-  marginRight: '0',
-});
-
-exports.Header = styled('div', {
-  position: 'fixed',
-  top: 0,
-  left: 0,
-  right: 0,
-  height: '52px',
-  overflow: 'visible',
-  background: '#041725',
-  color: whiteColor,
-  zIndex: '999',
-  '@media (max-width: 623px)': {
-    height: '100px',
-  },
-});
-
-exports.HeaderTitle = styled('span', {
-  backgroundColor: 'transparent',
-  display: 'inline-block',
-  fontWeight: '100',
-  fontSize: '20px',
-  textTransform: 'uppercase',
-  letterSpacing: '4px',
-  textDecoration: 'none',
-  color: whiteColor,
-  paddingTop: '16px',
-  paddingBottom: '16px',
-  paddingLeft: '15px',
-  paddingRight: '15px',
-  lineHeight: '1',
-  ':hover': {
-    textDecoration: 'none',
-  },
-});
-
 exports.Body = styled('div', {
   display: 'flex',
   flexDirection: 'column',

@@ -9,7 +9,18 @@ const {
   fontFamily,
 } = require('./style-settings');
 
-exports.MainNavContainer = styled('div', {});
+exports.MainNavContainer = styled('div', () => ({
+  '@media (max-width: 587px)': {
+    display: 'none',
+  },
+}));
+
+exports.MobileNavContainer = styled('div', () => ({
+  paddingBottom: '15px',
+  '@media (min-width: 588px)': {
+    display: 'none',
+  },
+}));
 
 exports.SearchField = styled('input', ({styleProps = {}}) => ({
   boxSizing: 'border-box',
@@ -55,10 +66,10 @@ exports.MainNavItem = styled('span', ({styleProps = {}}) => ({
   textDecoration: 'none',
   lineHeight: '1',
   padding: '17px 15px 19px 15px',
-  borderTopWidth: '4px',
-  borderTopStyle: 'solid',
+  borderBottomWidth: '4px',
+  borderBottomStyle: 'solid',
   color: styleProps.isActive ? whiteColor : white120Color,
-  borderTopColor: styleProps.isActive ? primaryColor : 'transparent',
+  borderBottomColor: styleProps.isActive ? primaryColor : 'transparent',
   ':hover': {
     color: whiteColor,
   },
@@ -68,6 +79,9 @@ exports.MainNavItem = styled('span', ({styleProps = {}}) => ({
   '@media (max-width: 348px)': {
     padding: '17px 4px 19px 4px',
     letterSpacing: '1px',
+  },
+  '@media (max-width: 587px)': {
+    width: '97vw'
   },
   ...styleProps.overrides,
 }));
@@ -92,6 +106,52 @@ exports.SideNavUl = styled('ul', ({styleProps = {}}) => ({
   margin: '0',
   listStyle: 'none',
   ...styleProps.overrides,
+}));
+
+exports.StyledBurger = styled('button', ({styleProps = {}}) => ({
+  position: 'absolute',
+  top: '10px',
+  right: '15px',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-around',
+  width: '32px',
+  height: '32px',
+  background: 'transparent',
+  border: 'none',
+  cursor: 'pointer',
+  padding: '0',
+  zIndex: '99',
+
+  ':focus': {
+    outline: 'none'
+  },
+
+  '@media (min-width: 588px)': {
+    display: 'none',
+  },
+}));
+
+exports.StyledBurgerBar = styled('div', ({ styleProps = {} }) => ({
+    width: '32px',
+    height: '2px',
+    backgroundColor: whiteColor,
+    transition: 'all 0.3s linear',
+    position: 'relative',
+    transformOrigin: '1px',
+
+    ':first-child': {
+      transform: styleProps.open ? 'rotate(45deg)' : 'rotate(0)',
+    },
+
+    ':nth-child(2)': {
+      opacity: styleProps.open ? '0' : '1',
+      transform: styleProps.open ? 'translateX(20px)' : 'translateX(0)',
+    },
+
+    ':nth-child(3)': {
+      transform: styleProps.open ? 'rotate(-45deg)' : 'rotate(0)',
+    },
 }));
 
 exports.SideNavLi = styled('li', ({styleProps = {}}) => ({
@@ -123,3 +183,40 @@ exports.SideNavItem = styled('span', ({styleProps = {}}) => ({
   },
   ...styleProps.overrides,
 }));
+
+exports.Header = styled('div', {
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  right: 0,
+  minHeight: '52px',
+  background: '#041725',
+  color: whiteColor,
+  zIndex: '999',
+});
+
+exports.HeaderTitle = styled('span', {
+  backgroundColor: 'transparent',
+  display: 'inline-block',
+  fontWeight: '100',
+  fontSize: '20px',
+  textTransform: 'uppercase',
+  letterSpacing: '4px',
+  textDecoration: 'none',
+  color: whiteColor,
+  paddingTop: '16px',
+  paddingBottom: '16px',
+  paddingLeft: '15px',
+  paddingRight: '15px',
+  lineHeight: '1',
+  ':hover': {
+    textDecoration: 'none',
+  },
+});
+
+exports.H1 = styled('h1', {
+  marginTop: '0',
+  marginBottom: '0',
+  marginLeft: '0',
+  marginRight: '0',
+});

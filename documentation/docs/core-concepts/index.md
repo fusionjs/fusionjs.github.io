@@ -10,7 +10,7 @@ This section introduces the main foundations of Fusion.js. If you prefer to lear
 ### Table of Contents
 
 - [Hello World](/docs/core-concepts/hello-world)
-- [Basic Princicples](/docs/core-concepts/basic-principles)
+- [Basic Principles](/docs/core-concepts/basic-principles)
 - [Plugins](/docs/core-concepts/plugins)
 - [Anatomy of a Request](/docs/core-concepts/anatomy-of-a-request)
 - [Universal Framework](/docs/core-concepts/universal-framework)

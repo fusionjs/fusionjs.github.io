@@ -91,7 +91,7 @@ Before we move on, take a minute to look at the code and familiarize yourself wi
 
 Obviously, we could call this current implementation done but given that the state will be lost on a refresh, we can do better here. While using something like `localStorage` would work to save the data between page refreshes, let's persist this data on the server instead so that on subsequent reloads (no matter which client we use), our to-do list data will be retrieved on page load.
 
-In order to do this, we'll need to build some Fusion.js plugins to accomplish this. We'll dive into this in the [next section](/docs/learning-fusionjs-tutorial/adding-data).
+In order to do this, we'll need to build some Fusion.js plugins to accomplish this. We'll dive into this in the [next section](/docs/learning-fusionjs-tutorial/loading-data).
 
 ---
 

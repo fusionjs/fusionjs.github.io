@@ -12,7 +12,7 @@
   "keywords": [],
   "dependencies": {
     "express": "^4.16.2",
-    "gatsby": "^1.9.17",
+    "gatsby": "^4.0.0",
     "gatsby-link": "^1.6.16",
     "gatsby-plugin-catch-links": "^1.0.17",
     "gatsby-plugin-google-analytics": "^1.0.14",
